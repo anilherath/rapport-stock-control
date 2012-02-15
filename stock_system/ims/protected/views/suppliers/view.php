@@ -1,0 +1,45 @@
+<?php
+$this->breadcrumbs=array(
+	'Suppliers'=>array('index'),
+	$model->name,
+);
+
+$this->menu=array(
+	array('label'=>'List Suppliers', 'url'=>array('index')),
+	array('label'=>'Create Suppliers', 'url'=>array('create')),
+	array('label'=>'Update Suppliers', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Delete Suppliers', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Manage Suppliers', 'url'=>array('admin')),
+);
+?>
+
+<h1>View Suppliers #<?php echo $model->id; ?></h1>
+
+<?php $this->widget('zii.widgets.CDetailView', array(
+	'data'=>$model,
+	'attributes'=>array(
+		'id',	
+		'name',
+		'contact_person',
+		'address',
+		'town',
+		'postcode',
+		'country',
+		'contact_number',
+		'email',
+		'website',
+		'lead_time_days',
+		'free_carriage_min_amt',
+		'vat_reg_no',
+		//'prefered_supplier',
+		 array(
+      		'label'=>'prefered_supplier',
+      		'value'=>$model->prefered_supplier ? "Yes" : "No",
+    	),	
+		'logo_url',
+		'api_url',
+		'active',	
+		'created',
+		'modified',
+	),
+)); ?>
