@@ -1,20 +1,30 @@
 <?php
-$ourFileName = "dir/dir/main.php";
+
+if($_POST['finish'])
+{
+$ourFileName = "test.php";
 $fh = fopen($ourFileName, 'w') or die("can't open file");
 
-$company_name="Purva Softtech Limited - ";
+$company_name=$_POST['company_name'];
 $company_name.="Stock Control System";
 
-$mail_host="mail.google.com";
-$sendmail_username="sweetpullo";
-$sendmail_password="241986";
-$smtp_port="587";
-$adminEmail="admin@sweetpullo.com";
-$company_address="143 LIG JAWAHAR NAGAR DEWAS MP";
-$phone="251018";
-$vat_in_percentage="12.5";	
+$company_address=$_POST['company_address'];
 
-$contact_details=$phone;
+$telephone=$_POST['telephone'];
+$mobile=$_POST['mobile'];
+$fax=$_POST['fax'];
+$company_email=$_POST['company_email'];
+$contact_details='Telephone:'.$telephone.' Fax:'.$fax.' E-mail:'.$company_email;
+
+$mail_host=$_POST['smtp_host'];
+$sendmail_username=$_POST['smtp_username'];
+$sendmail_password=$_POST['smtp_password'];
+$smtp_port=$_POST['smtp_port'];
+
+$adminEmail=$_POST['company_email'];
+$vat_in_percentage=$_POST['vat'];
+
+
 
 
 $stringData = "<?php
@@ -212,18 +222,54 @@ return array(
 	),
 );";
 
-
-
-
-
-
 fwrite($fh, $stringData);
-
-
 fclose($fh);
 
+echo 'Configuration File successfully created<br><hr>';
+//echo $stringData;
 
 
+if (( ($_FILES["logo_url"]["type"] == "image/png")) && ($_FILES["logo_url"]["size"] < 1000000))
+{
+
+	echo "YEPPTY";
+
+
+	if ($_FILES["logo_url"]["error"] > 0)
+	{
+		echo "Return Code: " . $_FILES["logo_url"]["error"] . "<br />";
+	}
+	else
+	{
+		echo "Upload: " . $_FILES["logo_url"]["name"] . "<br />";
+		echo "Type: " . $_FILES["logo_url"]["type"] . "<br />";
+		echo "Size: " . ($_FILES["logo_url"]["size"] / 1024) . " Kb<br />";
+		echo "Temp uploaded: " . $_FILES["logo_url"]["tmp_name"] . "<br />";
+		$uploadedname="company_logo.png";
+
+
+
+
+			if (move_uploaded_file($_FILES["logo_url"]["tmp_name"],	'../images/'.$uploadedname))
+			{
+			echo "Stored";
+			}
+			else
+				{
+					echo "Not Stored: ";
+				}
+				
+			}
+		}
+		else
+		{
+			echo "Invalid FILE";
+		}
+
+
+
+echo "<SCRIPT LANGUAGE='javascript'>location.href='../index.php';</SCRIPT>";
+}///end of if_POST
 
 
 ?>

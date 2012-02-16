@@ -17,29 +17,43 @@
 
 	<script type="text/javascript" src="/stock_system/ims/assets/fcebde54/jquery.js"></script>
 <script type="text/javascript" src="/stock_system/ims/assets/fcebde54/jquery.yiiactiveform.js"></script>
-<title>Stock Control System - Login</title>
+<title>ISE - Login</title>
 </head>
 
 <body>
 
 <div class="container" id="page">
 	
-	<img src="/stock_system/ims/images/logo.jpg" alt="ballpop" />	
-	<div id="header">
-		<div id="logo">Welcome To Stock Control System- Installation </div>
-	</div><!-- header -->
-
-	<div class="breadcrumbs">
-</div><!-- breadcrumbs -->
+	<table><tr>
+		<td style="margin:20px; vertical-align:middle;" ><div id="logo" >ISE&nbsp;Stock System</div></td>
+		<td style="margin:20px; text-align:right;" >
+	<img width="200" height="75" src="/stock_system/ims/images/company_logo.png" alt="ballpop" />	</td>
+	<tr>
+	</table>
 	
+	
+	<div id="header">
+		</div><!-- header -->
+
+	<div id="mainmenu">
+		<ul id="yw0">
+<li><a href="/stock_system/ims/items/freeSearch">Items</a></li>
+<li><a href="/stock_system/ims/items/inboundSearch">Inbound</a></li>
+<li><a href="/stock_system/ims/items/outboundSearch">Outbound</a></li>
+<li><a href="/stock_system/ims/suppliers/admin">Suppliers</a></li>
+<li><a href="/stock_system/ims/purchaseOrder/admin">Purchase Order</a></li>
+<li><a href="/stock_system/ims/itemOnOrder/admin">Items on Order</a></li>
+<li ><a href="/stock_system/ims/site/login">Login</a></li>
+</ul>	</div><!-- mainmenu -->
+
+
 	<div class="container">
 	<div id="content">
-		
 <p>Please fill out the following form to configure system to your needs:</p>
 
 <div class="form">
 
-<form id="install" action="install.php" method="post">
+<form id="install" action="install.php" enctype="multipart/form-data" method="post">
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 	
 	<table>
@@ -78,48 +92,67 @@
 				<label class="required">E-mail<span class="required">*</span></label>		
 				<input name="company_email" id="company_email" type="text" size ='40'/>
 		</div>
+		
+		
 		</td>
 		<td>
 		
 		<div class="row">
 				<label class="required">Outgoing Mail (SMTP) Server<span class="required">*</span></label>		
-				<input name="company_email" id="company_email" type="text" size ='40'/>
+				<input name="smtp_host" id="smtp_host" type="text" size ='40'/>
 		</div>
 		<div class="row">
 				<label class="required">User Name<span class="required">*</span></label>		
-				<input name="company_email" id="company_email" type="text" size ='40'/>
+				<input name="smtp_username" id="smtp_username" type="text" size ='40'/>
 		</div>
 		<div class="row">
 				<label class="required">Password<span class="required">*</span></label>		
-				<input name="company_email" id="company_email" type="text" size ='40'/>
+				<input name="smtp_password" id="smtp_password" type="text" size ='40'/>
 		</div>
 		<div class="row">
 				<label class="required">Port<span class="required">*</span></label>		
-				<input name="company_email" id="company_email" type="text" size ='40'/>
+				<input name="smtp_port" id="smtp_port" type="text" size ='40'/>
 		</div>
 		
-		<br><br><br>
-		<h4>Upload your company Logo</h4>
-		<input type="file" name='logo_url'/> 
+		<h4>Tax</h4>
+		<div class="row">
+				<label class="required">VAT(tax)<span class="required">*</span></label>		
+				<input name="vat" id="vat" type="text" size ='40'/>
+		</div>
 		
+		
+		<h4>Upload your company Logo</h4>
+		<small>Ideal size is 200 x 75 (in pixels)</small><br>
+		<input type="file" name='logo_url'/>
 		
 		</td>		
+		</tr>
+		<tr><td colspan="2" style="text-align:center">
 		
 		
-		</tr></table>
 		<div class="row buttons">
 		<input type="submit" name="finish" value="Finish" />	</div>
+		
+		</td></tr>		
+		</table>
+		
 
 </form></div><!-- form -->
 </div><!-- content -->
 </div>
 
 	<div id="footer">
+	
+	<table><tr><td>
+	<img width="170" height="56.6" src="/stock_system/ims/images/rapport_stock_logo.png" alt="ballpop" />	</td>
+	<td style="text-align:right;">
 		Copyright &copy; 2012 by UK Whitegoods Ltd.<br/>
 		All Rights Reserved.<br/>
 		System Designed by Sudeep Talati, Kruthika &amp; Team
 		
-	</div><!-- footer -->
+	
+	</td></tr></table>
+</div><!-- footer -->
 
 </div><!-- page -->
 

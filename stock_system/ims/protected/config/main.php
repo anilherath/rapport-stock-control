@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Stock Control System',
+	'name'=>'ISE',
 	'defaultController'=>'items/freeSearch',
 	
 		
@@ -22,6 +22,8 @@ return array(
 //		'application.modules.models*',
 //		'application.modules.user.components.*',
 		'application.extensions.yii-mail.*',
+		'application.extensions.yii-zip.*',
+			
 		//'application.extensions.*',
 		'application.vendors.*',
 

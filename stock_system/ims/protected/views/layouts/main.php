@@ -21,11 +21,17 @@
 
 <div class="container" id="page">
 	
-	<?php echo CHtml::image(Yii::app()->request->baseUrl."/images/logo.jpg","ballpop"); ?>
+	<table><tr>
+		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><?php echo CHtml::encode(Yii::app()->name); ?>&nbsp;Stock System</div></td>
+		<td style="margin:20px; text-align:right;" >
+	<?php echo CHtml::image(Yii::app()->request->baseUrl."/images/company_logo.png","ballpop",array("width"=>"200", "height"=>"75")); ?>
+	</td>
+	<tr>
+	</table>
+	
 	
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+		</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
@@ -39,12 +45,15 @@
 				array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
 				array('label'=>'Purchase Order', 'url'=>array('/purchaseOrder/admin')),
 				array('label'=>'Items on Order', 'url'=>array('/itemOnOrder/admin')),
+
 				//array('label'=>'My Account', 'url'=>array('/userGroups/admin')),
 				//array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'My Account', 'url'=>array('/user/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Back Up', 'url'=>array('/site/backup'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 
+					
 			),
 				
 		)); ?>
@@ -58,14 +67,18 @@
 	<?php echo $content; ?>
 
 	<div id="footer">
+	
+	<table><tr><td>
+	<?php echo CHtml::image(Yii::app()->request->baseUrl."/images/rapport_stock_logo.png","ballpop", array("width"=>"170", "height"=>"56.6")); ?>
+	</td>
+	<td style="text-align:right;">
 		Copyright &copy; <?php echo date('Y'); ?> by UK Whitegoods Ltd.<br/>
 		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-		<br/>
-		System Designed by Sudeep Talati, Kruthika & Team
+		System Designed by Sudeep Talati, Kruthika &amp; Team
 		
-	</div><!-- footer -->
-
+	
+	</td></tr></table>
+</div><!-- footer -->
 </div><!-- page -->
 
 </body>

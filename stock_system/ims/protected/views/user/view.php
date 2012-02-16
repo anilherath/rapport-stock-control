@@ -4,6 +4,8 @@ $this->breadcrumbs=array(
 	$model->name,
 );
 
+
+
 $this->menu=array(
 	array('label'=>'List User', 'url'=>array('index')),
 	array('label'=>'Create User', 'url'=>array('create')),
@@ -11,6 +13,9 @@ $this->menu=array(
 	//array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage User', 'url'=>array('admin')),
 );
+
+
+
 ?>
 
 <h1>View User #<?php echo $model->id; ?></h1>
