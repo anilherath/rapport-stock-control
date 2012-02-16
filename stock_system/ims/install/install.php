@@ -2,7 +2,7 @@
 
 if($_POST['finish'])
 {
-$ourFileName = "test.php";
+$ourFileName = "../protected/config/xxxx.php";
 $fh = fopen($ourFileName, 'w') or die("can't open file");
 
 $company_name=$_POST['company_name'];
