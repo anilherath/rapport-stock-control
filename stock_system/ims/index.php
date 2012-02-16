@@ -1,4 +1,7 @@
 <?php
+if (file_exists('install/index.php')) {
+	echo "<SCRIPT LANGUAGE='javascript'>location.href='../install/index.php';</SCRIPT>";
+}
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../framework/yii.php';

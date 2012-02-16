@@ -268,3 +268,35 @@ Stack trace:
 #9 C:\xampp\htdocs\eclipse-php\workspace\ims_working\IMS_LocalWorking\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #10 C:\xampp\htdocs\eclipse-php\workspace\ims_working\IMS_LocalWorking\ims\index.php(13): CApplication->run()
 #11 {main} REQUEST_URI=/eclipse-php/workspace/ims_working/IMS_LocalWorking/ims/user/admin
+2012/02/16 12:35:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "install".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('install')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('install')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/install/in...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(18): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/install/index.php
+2012/02/16 12:35:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "install".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('install')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('install')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/install/in...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(18): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/install/index.php
+2012/02/16 12:36:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "install".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('install')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('install')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/install/in...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/install/index.php
+2012/02/16 12:36:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "install".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('install')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('install')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/install/in...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/install/index.php
