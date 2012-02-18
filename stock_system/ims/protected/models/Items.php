@@ -66,21 +66,23 @@ class Items extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('part_number, name, description, barcode, location_room, location_row, location_column, location_shelf, current_quantity, available_quantity, recommended_lowest_quantity, recommended_highest_quantity, remarks', 'required'),
+			array('part_number, name, location_room, location_row, location_column, location_shelf, current_quantity, available_quantity', 'required'),
 			array('company_id, category_id, active, suppliers_id', 'numerical', 'integerOnly'=>true),
 			array('current_quantity, available_quantity, recommended_lowest_quantity, recommended_highest_quantity, sale_price', 'numerical'),
 			array('part_number', 'length', 'max'=>255),
 			array('location_room', 'length', 'max'=>32),
 			array('location_row, location_column, location_shelf', 'length', 'max'=>4),
 			array('image_url, factory_due_date, fits_in_model, created, modified, deleted', 'safe'),
+			
+		
 			//customised rulers. 
 			array('available_quantity, current_quantity', 'nonzero'),
 			array('part_number,barcode','unique','message'=>'{attribute}:{value} already exists!'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('item_id, company_id, part_number, name, description, barcode, location_room, location_row, location_column, location_shelf, category_id, current_quantity, available_quantity, recommended_lowest_quantity, recommended_highest_quantity, remarks, image_url, sale_price, factory_due_date, suppliers_id, fits_in_model', 'safe', 'on'=>'search'),
-			array( 'supplier_name', 'safe', 'on'=>'search' ),
-		);
+			array('supplier_name, item_id, company_id, part_number, name, description, barcode, location_room, location_row, location_column, location_shelf, category_id, current_quantity, available_quantity, recommended_lowest_quantity, recommended_highest_quantity, remarks, image_url, sale_price, factory_due_date, suppliers_id, fits_in_model', 'safe', 'on'=>'search'),
+
+			);
 	}
 	
 	public function nonzero($attribute,$params)
@@ -107,24 +109,27 @@ class Items extends CActiveRecord
 	
 	protected function beforeSave()
 	{
+		
+		
 		if(parent::beforeSave())
 		{
+			
+			$this->company_id=0;
+			$this->category_id=0;
+			$this->active=1;
+			$this->factory_due_date=strtotime($this->factory_due_date);
+			
+			
 			if($this->isNewRecord)
 			{
-				$this->company_id=0;
-				$this->category_id=0;
-				$this->active=1;
-				$this->created=date("F j, Y, g:i a");
-				//$this->created=date("d/m/Y h:i:s a", time());
-				//$this->create_time=$this->update_time=time();
-				//$this->author_id=Yii::app()->user->id;
+				
+				$this->created=time();
+				$this->modified=time();
 			}
 			else
 			{
-				$this->company_id=0;
-				$this->category_id=0;
-				$this->active=1;
-				$this->modified=date("F j, Y, g:i a");
+				
+				$this->modified=time();
 				//$this->modified=date("d/m/Y h:i:s a", time());
 			}
 			return true;
@@ -158,7 +163,7 @@ class Items extends CActiveRecord
 			'location_shelf' => 'Location Shelf',
 			'category_id' => 'Category',
 			'current_quantity' => 'Current Quantity',
-			'available_quantity' => 'Availablity',
+			'available_quantity' => 'Available Quantity',
 			'recommended_lowest_quantity' => 'Recommended Lowest Quantity',
 			'recommended_highest_quantity' => 'Recommended Highest Quantity',
 			'remarks' => 'Remarks',

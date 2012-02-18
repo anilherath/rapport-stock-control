@@ -73,13 +73,16 @@
 		<?php //echo $form->error($model,'category_id'); ?>
 	</div>
 
-	--><div class="row">
+	-->
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'current_quantity'); ?>
 		<?php echo $form->textField($model,'current_quantity'); ?>
 		<?php echo $form->error($model,'current_quantity'); ?>
 		<input type="hidden" name="original_quantity" value="<?php echo $model->current_quantity; ?>" />
 	</div>
-
+		<small>This is same as current balance and available balance concept of bank</small>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'available_quantity'); ?>
 		<?php echo $form->textField($model,'available_quantity'); ?>
@@ -105,16 +108,17 @@
 		<?php echo $form->error($model,'remarks'); ?>
 	</div>
 
-	<!--<div class="row">
-		<?php //echo $form->labelEx($model,'active'); ?>
+	<div class="row">
+		<?php echo $form->labelEx($model,'active'); ?>
 		<?php //echo $form->textField($model,'active'); ?>
-		<?php //echo $form->error($model,'active'); ?>
+		<?php echo $form->DropDownList($model,'active',array('1'=>'Yes', '0'=>'No')); ?>
+		<?php echo $form->error($model,'active'); ?>
 	</div>
 
-	--><div class="row">
-		<?php echo $form->labelEx($model,'image_url'); ?>
-		<?php echo $form->textField($model,'image_url',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'image_url'); ?>
+	<div class="row">
+		<?php //echo $form->labelEx($model,'image_url'); ?>
+		<?php //echo $form->textField($model,'image_url',array('rows'=>6, 'cols'=>50)); ?>
+		<?php //echo $form->error($model,'image_url'); ?>
 	</div>
 
 	<div class="row">
@@ -125,7 +129,23 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'factory_due_date'); ?>
-		<?php echo $form->textField($model,'factory_due_date'); ?>
+		<?php 
+		
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+				 'name'=>CHtml::activeName($model, 'factory_due_date'),
+				'model'=>$model,
+        		'value' => $model->attributes['factory_due_date'],
+			    // additional javascript options for the date picker plugin
+			    'options'=>array(
+			        'showAnim'=>'fold',
+					'dateFormat' => 'dd-mm-yy',
+			    ),
+			    'htmlOptions'=>array(
+			        'style'=>'height:20px;'
+			    ),
+		));
+		
+		///echo $form->textField($model,'factory_due_date'); ?>
 		<?php echo $form->error($model,'factory_due_date'); ?>
 	</div>
 

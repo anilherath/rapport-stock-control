@@ -40,6 +40,10 @@ $('#submit-button').click(function(){
 ?>
 
 
+
+
+
+
 <h1>Manage Items</h1>
 
 <p>
@@ -47,16 +51,19 @@ You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&g
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
 
-<?php echo "<br><br>";?>
 
-<?php echo CHtml::link('Advanced Search and Export Excel','#',array('class'=>'search-button')); ?>
+
+<?php //echo CHtml::link('Advanced Search and Export Excel','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
 </div><!-- search-form -->
-
-<?php echo "<br><br>";?>
+<?php 
+	$url=Yii::app()->request->getBaseUrl().'/items/admin/?&export=true';
+	echo CHtml::link('Export to excel',$url);
+?>
+<small>&nbsp;(Only Available Quantities Items will be Exported)</small>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'items-grid',
@@ -67,6 +74,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	 	array(            
             'name'=>'available_quantity',
 	 	 	'type'=>'html',
+	 		'filter'=>false,
+	 			
             'value'=>array($this,'gridStatusColumn'), 
         ),
 		//'company_id',
@@ -81,6 +90,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		//'suppliers_id',
 		'current_quantity',
 		'available_quantity',
+		array(  'name'=>'modified',
+				'type'=>'datetime',
+				'filter'=>false,	
+			),
 
 	//	array( 'name'=>'supplier_name', 'value'=>'$data->suppliers->name' ),
 	/*	

@@ -97,6 +97,12 @@ class ItemsController extends Controller
 		if(isset($_POST['Items']))
 		{
 			$model->attributes=$_POST['Items'];
+			echo "DUE ADTE  ".$model->factory_due_date;
+			
+			
+			
+			
+			
 			if($model->save())
 			{
 				$original_quantity=$_POST['original_quantity'];
