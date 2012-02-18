@@ -81,19 +81,28 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		//'company_id',
 		'part_number',
 		'name',
-		'description',
-		'barcode',
-		'location_room',
-		'location_row',
-		'location_column',
-		'location_shelf',
+		//'description',
+		//'barcode',
+// 		'location_room',
+// 		'location_row',
+// 		'location_column',
+// 		'location_shelf',
+		array(  'name'=>'location_room',
+				'value'=>'"$data->location_room"."$data->location_row"."$data->location_column"."$data->location_shelf"',
+				
+			),
+			
+			
 		//'suppliers_id',
 		'current_quantity',
 		'available_quantity',
+		'fits_in_model',
+			
 		array(  'name'=>'modified',
 				'type'=>'datetime',
 				'filter'=>false,	
 			),
+
 
 	//	array( 'name'=>'supplier_name', 'value'=>'$data->suppliers->name' ),
 	/*	

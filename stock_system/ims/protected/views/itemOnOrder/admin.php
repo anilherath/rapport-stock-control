@@ -66,6 +66,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'value'=>'$data->getItemStatus($data->item_status)',
 					//'filter'=>Lookup::items('PostStatus'),
 			),
+
+			'modified',
 			
 			/*
 		array(
@@ -80,13 +82,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'template'=>'{view}',
 			),
 			
+
 		/*
 		'factory_due_date',
 		'quantity_ordered',
 		'unit_price',
 		'total_price',
 		'created',
-		'modified',
 		
 		array(
 			'class'=>'CButtonColumn',

@@ -7,18 +7,22 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Suppliers', 'url'=>array('index')),
 	array('label'=>'Create Suppliers', 'url'=>array('create')),
-	array('label'=>'Update Suppliers', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Suppliers', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Suppliers', 'url'=>array('admin')),
+// 	array('label'=>'Update Suppliers', 'url'=>array('update', 'id'=>$model->id)),
+// 	array('label'=>'Delete Suppliers', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+// 	array('label'=>'Manage Suppliers', 'url'=>array('admin')),
 );
 ?>
 
 <h1>View Suppliers #<?php echo $model->id; ?></h1>
+<div style="text-align: right;">
+<?php echo CHtml::link('Edit',array('update', 'id'=>$model->id)); ?>
+</div>
+
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',	
+	//	'id',	
 		'name',
 		'contact_person',
 		'address',
@@ -36,9 +40,13 @@ $this->menu=array(
       		'label'=>'prefered_supplier',
       		'value'=>$model->prefered_supplier ? "Yes" : "No",
     	),	
-		'logo_url',
-		'api_url',
-		'active',	
+// 		'logo_url',
+// 		'api_url',
+			array(
+					'label'=>'active',
+					'value'=>$model->prefered_supplier ? "Yes" : "No",
+			),
+			
 		'created',
 		'modified',
 	),

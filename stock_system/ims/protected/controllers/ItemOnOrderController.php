@@ -447,11 +447,15 @@ class ItemOnOrderController extends Controller
 				{
 				$item_status=$_GET['item_status'];
 				$purchase_id=$_GET['purchase_id'];
+				$comments=$_GET['comments'];
+				$comments.='<br>Status Reset to On Order by: '.Yii::app()->user->name." on ".date("d-M-y H:i").'<br>';
+				
 				echo 'THIS IHJS CPDE   '.$item_status;
 				
 				ItemOnOrder::model()->updateByPk($id, array(
 														'item_status'=>$item_status,
 														'quantity_recieved'=>'0.0',
+														'comments'=>$comments,
 						
 						));
 				

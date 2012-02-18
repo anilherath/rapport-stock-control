@@ -87,7 +87,7 @@ class InboundItemsHistory extends CActiveRecord
 			'available_quantity_in_stock' => 'Available Quantity In Stock',
 			'comments' => 'Comments',
 			'user_id' => 'User',
-			'items_on_order_id' => 'Items On Order',
+			'items_on_order_id' => 'Purchase Order No.',
 			'created' => 'Created',
 		);
 	}
@@ -98,7 +98,7 @@ protected function beforeSave()
 		{
 			if($this->isNewRecord)
 			{
-				$this->created=date("F j, Y, g:i a");
+				$this->created=time();
 				//$this->created=time();
 				$this->current_quantity_in_stock=$this->current_quantity_in_stock+$this->quantity_moved;
 				$this->available_quantity_in_stock=$this->available_quantity_in_stock+$this->quantity_moved;
@@ -107,7 +107,7 @@ protected function beforeSave()
 			}
 			else
 			{
-				$this->created=date("F j, Y, g:i a");
+				$this->created=time();
 				//$this->update_time=time();
 			}
 			return true;

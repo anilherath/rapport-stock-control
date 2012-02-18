@@ -63,9 +63,10 @@ $this->menu=array(
 	
 	?>
 	
-<a href="#" onClick="javascript:history.go(-2)">Back</a>
-
-	
+	<?php 
+		$url=Yii::app()->getBaseUrl().'/purchaseOrder/'	;
+		echo CHtml::link('Back',$url);
+	?>
 	<!-- FIRST PART OF THE FORM WHICH DISPLAYS PURCHASE ORDER DETAILS --> 
  
 	<div class="row">

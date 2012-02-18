@@ -89,6 +89,7 @@
 		<?php echo $form->error($model,'prefered_supplier'); ?>
 	</div>
 
+	<!-- 
 	<div class="row">
 		<?php echo $form->labelEx($model,'logo_url'); ?>
 		<?php echo $form->textField($model,'logo_url'); ?>
@@ -99,6 +100,7 @@
 		<?php echo $form->textField($model,'api_url'); ?>
 		<?php echo $form->error($model,'api_url'); ?>
 	</div>
+	 -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'active'); ?>
 		<?php echo $form->dropDownList($model,'active', array('1'=>'Active','0'=>'Inactive',)); ?>

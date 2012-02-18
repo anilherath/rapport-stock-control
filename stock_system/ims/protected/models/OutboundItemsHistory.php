@@ -117,7 +117,7 @@ class OutboundItemsHistory extends CActiveRecord
 			if($this->isNewRecord)
 			{
 				
-				$this->created=date("F j, Y, g:i a");
+				$this->created=time();
 				$this->current_quantity_in_stock=$this->current_quantity_in_stock-$this->quantity_moved;
 				$this->available_quantity_in_stock=$this->available_quantity_in_stock-$this->quantity_moved;
 				$this->user_id=Yii::app()->user->id;
@@ -125,7 +125,7 @@ class OutboundItemsHistory extends CActiveRecord
 			}
 			else
 			{
-				$this->created=date("F j, Y, g:i a");
+				$this->created=time();
 				//$this->update_time=time();
 			}
 				

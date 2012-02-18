@@ -70,7 +70,9 @@ class ItemOnOrder extends CActiveRecord
 						
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, purchase_order_id, order_number, supplier_name items_id, suppliers_id, item_name, part_number, item_status, out_of_stock_factory_date, factory_due_date, quantity_ordered, unit_price, total_price, created, modified, comments', 'safe', 'on'=>'search'),
+//			array('id',  'modified', 'comments', 'safe', 'on'=>'search'),
+
+			array('id, purchase_order_id, order_number, supplier_name, items_id, suppliers_id, item_name, part_number, item_status, out_of_stock_factory_date, factory_due_date, quantity_ordered, unit_price, total_price, created, modified, comments', 'safe', 'on'=>'search'),
 		);
 	}
 	
@@ -139,6 +141,8 @@ class ItemOnOrder extends CActiveRecord
 		$criteria->with = array('items');	
 		$criteria->with = array('purchaseOrder');
 		$criteria->with = array('suppliers');
+		
+//		$criteria->order = 'modified DESC';
 		
 		
 // 		$criteria->compare('id',$this->id);

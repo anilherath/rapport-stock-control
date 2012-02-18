@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Suppliers', 'url'=>array('index')),
 	array('label'=>'Create Suppliers', 'url'=>array('create')),
-	array('label'=>'View Suppliers', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Suppliers', 'url'=>array('admin')),
+ 	array('label'=>'View Supplier', 'url'=>array('view', 'id'=>$model->id)),
+// 	array('label'=>'Manage Suppliers', 'url'=>array('admin')),
 );
 ?>
 

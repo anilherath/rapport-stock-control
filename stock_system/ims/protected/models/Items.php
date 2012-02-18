@@ -174,7 +174,7 @@ class Items extends CActiveRecord
 			'suppliers_id' => 'Suppliers',
 			'fits_in_model' => 'Fits In Model',
 			'created' => 'Created',
-			'modified' => 'Modified',
+			'modified' => 'Last Modified',
 			'deleted' => 'Deleted',
 			'status' => 'Status',
 		);
@@ -215,7 +215,7 @@ class Items extends CActiveRecord
 //		$criteria->compare('sale_price',$this->sale_price);
 //		$criteria->compare('factory_due_date',$this->factory_due_date,true);
 //		$criteria->compare('suppliers_id',$this->suppliers_id);
-//		$criteria->compare('fits_in_model',$this->fits_in_model,true);
+		$criteria->compare('fits_in_model',$this->fits_in_model,true);
 //		$criteria->compare('created',$this->created,true);
 //		$criteria->compare('modified',$this->modified,true);
 //		$criteria->compare('deleted',$this->deleted,true);

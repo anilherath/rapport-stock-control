@@ -74,9 +74,12 @@
 	<td style="text-align:right;">
 		Copyright &copy; <?php echo date('Y'); ?> by UK Whitegoods Ltd.<br/>
 		All Rights Reserved.<br/>
-		System Designed by Sudeep Talati, Kruthika &amp; Team
-		
-	
+		System Designed by 
+			<a href="mailto:sudeep.talati@gmail.com">Sudeep Talati</a>, 
+		  	<a href="mailto:kruthika.bethur@gmail.com">Kruthika Bethur</a>
+		  	&amp; Team
+
+			
 	</td></tr></table>
 </div><!-- footer -->
 </div><!-- page -->

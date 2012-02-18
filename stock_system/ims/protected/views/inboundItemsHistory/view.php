@@ -13,23 +13,30 @@ $this->menu=array(
 );
 ?>
 
-<h1>View InboundItemsHistory #<?php echo $model->history_id_item; ?></h1>
+<h1>Inbound History # <?php echo $model->mainItem->part_number; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'history_id_item',
-		'main_item_id',
+// 		'history_id_item',
+// 		'main_item_id',
 		'mainItem.name',
+		'mainItem.part_number',
 		'quantity_moved',
 		'current_quantity_in_stock',
 		'available_quantity_in_stock',
 		'comments',
 		//'user_id',
 		'user.username',
+		array(  'name'=>'items_on_order_id',
+				'value'=>$model->itemsOnOrder->purchaseOrder->order_number,
+			),	
+			
 		//'items_on_order_id',
-		'created',
-	),
+
+		array(  'name'=>'created',
+					'value'=>(date('d-M-Y H:i',$model->created)),
+			),	),
 )); ?>
 
 <?php 

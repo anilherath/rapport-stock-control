@@ -31,9 +31,14 @@ $this->menu=array(
 	
 	
 	?>
+
+	<?php 
+		$url=Yii::app()->getBaseUrl().'/purchaseOrder/preview/'.$purchase_id	;
+		echo CHtml::link('Back',$url);
+	?>
+	
 	
 	<!-- FIRST PART OF THE FORM WHICH DISPLAYS PURCHASE ORDER DETAILS --> 
-	
 	<div class="row">
 	<table>
 	<tr>
@@ -161,17 +166,12 @@ $this->menu=array(
 					echo $item_status;
 					if ($model->order_status<10)//i.e. if order is complete, this will not be visible
 						{
-						$reset_url=Yii::app()->baseUrl.'/ItemOnOrder/updateStatus/'.$item_on_order_id.'?item_status=2&purchase_id='.$purchase_id;
+						$reset_url=Yii::app()->baseUrl.'/ItemOnOrder/updateStatus/'.$item_on_order_id.'?item_status=2&purchase_id='.$purchase_id.'&comments='.$ordered_items->comments;
 						echo '<b>'.CHtml::link('Reset',$reset_url).'</b><br>';
 						}
 					echo "</td>";
 					echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 
-					if ($item_model->item_status<3   )//i.e. if order is complete, this will not be visible
-					{
-						$cancel_url=Yii::app()->baseUrl.'/ItemOnOrder/CancelItems/'.$item_on_order_id;
-						echo '<b>'.CHtml::link('Cancel Remaining Items ',$cancel_url).'</b>';
-					}
 					
 				//	echo "<td style='vertical-align:top;'>".$ordered_items->comments."</td>";
 					
@@ -220,15 +220,20 @@ $this->menu=array(
 				$this->endWidget(); //end of form
 				}//end of else
 				?>
+				
 			</td>
 			<td>
 			<?php
-
-
-			?>
-			</td>
+					if ($item_model->item_status>3  )//i.e. if order is complete, this will not be visible
+					{
+						$cancel_url=Yii::app()->baseUrl.'/ItemOnOrder/CancelItems/'.$item_on_order_id;
+						echo '<b>'.CHtml::link('Cancel Remaining Items ',$cancel_url).'</b>';
+					}
+	 		?></td>
 	 		</tr>
-	 		<tr><td colspan="7"><small><?php echo $item_model->comments.'<hr>';?></small></td></tr>
+	 		<tr><td colspan="7"><small><?php echo $item_model->comments.'<hr>';?></small></td>
+	 		
+	 		</tr>
 	 		
 			<?php 
 	 		$i++;		

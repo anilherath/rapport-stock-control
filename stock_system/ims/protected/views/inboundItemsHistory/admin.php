@@ -69,12 +69,18 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'current_quantity_in_stock',
 		'available_quantity_in_stock',
 		
-		array(
-					'name'=>'comments',
-					'type'=>'html',
-					'value'=>'$data->comments',
-			),
+// 		array(
+// 					'name'=>'comments',
+// 					'type'=>'html',
+// 					'value'=>'$data->comments',
+// 			),
 		array( 'name'=>'username', 'value'=>'$data->user->name' ),
+		
+			array(  'name'=>'created',
+					'type'=>'datetime',
+					'filter'=>false,
+			),	
+			
 		/*
 		'user_id',
 		'items_on_order_id',
