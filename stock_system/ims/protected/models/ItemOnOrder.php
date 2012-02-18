@@ -20,6 +20,8 @@
  * @property integer $user_id
  * @property double $quantity_recieved
  * @property double $quantity_damaged
+ * @property integer $servicecall_id
+ * @property integer $reference_id
  * 
  *  The followings are the available model relations:
  * @property InboundItemsHistory[] $inboundItemsHistories
@@ -64,7 +66,7 @@ class ItemOnOrder extends CActiveRecord
 			array('quantity_ordered, unit_price', 'required'),
 			array('purchase_order_id, items_id, user_id suppliers_id, item_status', 'numerical', 'integerOnly'=>true),
 			array('quantity_ordered, quantity_recieved, unit_price, total_price', 'numerical'),
-			array('quantity_damaged ,ordered_recieved_difference, out_of_stock_factory_date, factory_due_date, created, modified,comments', 'safe'),
+			array('servicecall_id, reference_id, quantity_damaged ,ordered_recieved_difference, out_of_stock_factory_date, factory_due_date, created, modified,comments', 'safe'),
 			//customised rules.
 			//array('quantity_ordered', 'nonzero'),
 						
@@ -178,7 +180,7 @@ class ItemOnOrder extends CActiveRecord
 			if($this->isNewRecord)
 			{
 				
-				$this->created=date("F j, Y, g:i a");
+				$this->created=time();
 				$this->total_price=$this->unit_price*$this->quantity_ordered;
 				$x=$this->unit_price;
 				$itemModel = Items::model()->updateByPk(
@@ -201,7 +203,7 @@ class ItemOnOrder extends CActiveRecord
 														'sale_price'=>$x
 														)														
 														);
-				$this->modified=date("F j, Y, g:i a");
+				$this->modified=time();
 			}
 			return true;
 		}

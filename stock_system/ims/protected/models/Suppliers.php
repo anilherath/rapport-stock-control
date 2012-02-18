@@ -113,13 +113,14 @@ class Suppliers extends CActiveRecord
 		{
 			if($this->isNewRecord)
 			{
-				$this->created=date("F j, Y, g:i a");
+				$this->created=time();
+				$this->modified=time();
 				//$this->user_id=Yii::app()->user->id;
 				
 			}
 			else
 			{
-				$this->modified=date("F j, Y, g:i a");
+				$this->modified=time();
 				//$this->update_time=time();
 			}
 				

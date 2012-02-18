@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Item On Order', 'url'=>array('index')),
 	//array('label'=>'Create ItemOnOrder', 'url'=>array('create')),
-	array('label'=>'View Item On Order', 'url'=>array('view', 'id'=>$model->id)),
+//	array('label'=>'View Item On Order', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Item On Order', 'url'=>array('admin')),
 );
 ?>

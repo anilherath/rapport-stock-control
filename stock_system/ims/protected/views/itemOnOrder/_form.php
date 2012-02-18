@@ -218,7 +218,9 @@ $model->unit_price=$itemModel->sale_price;
 </td><td>
 	<div class="row">
 		<?php echo $form->labelEx($model,'comments'); ?>
-		<?php echo $form->textArea($model,'comments'); ?>
+		<small>(Comments will be visible to supplier)</small><br>
+		
+		<?php echo $form->textArea($model,'comments',array('rows'=>3, 'cols'=>20)); ?>
 		<?php echo $form->error($model,'comments'); ?>
 	</div>
 

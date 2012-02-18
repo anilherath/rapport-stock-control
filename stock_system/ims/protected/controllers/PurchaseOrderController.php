@@ -369,6 +369,7 @@ class PurchaseOrderController extends Controller
 	    													(
 	    													'order_status'=>'2',/*Since 2 is static order status for send*/
 	    													'user_id'=>Yii::app()->user->id,
+	    													'date_of_order'=>time(),
 	    													)
 	    		);
 	    		
@@ -454,7 +455,7 @@ class PurchaseOrderController extends Controller
 				$order_status=3;///i.e. order is recieved
 				
 				PurchaseOrder::model()->updateByPk($id, array(
-						'date_of_order_recieved'=>date("F j, Y, g:i a"),
+						'date_of_order_recieved'=>time(),
 				
 				));
 			}

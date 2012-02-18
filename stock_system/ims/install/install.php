@@ -2,7 +2,7 @@
 
 if($_POST['finish'])
 {
-$ourFileName = "../protected/config/xxxx.php";
+$ourFileName = "../protected/config/main.php";
 $fh = fopen($ourFileName, 'w') or die("can't open file");
 
 $company_name=$_POST['company_name'];
@@ -51,6 +51,7 @@ return array(
 //		'application.modules.models*',
 //		'application.modules.user.components.*',
 		'application.extensions.yii-mail.*',
+		'application.extensions.yii-zip.*',
 		//'application.extensions.*',
 		'application.vendors.*',
 

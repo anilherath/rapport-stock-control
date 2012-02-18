@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Item On Orders</h1>
+<h1>Item On Orders</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
@@ -64,11 +64,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 					'type'=>'html',
 					'name'=>'item_status',
 					'value'=>'$data->getItemStatus($data->item_status)',
-					//'filter'=>Lookup::items('PostStatus'),
+					'filter'=>false,
 			),
 
-			'modified',
-			
+			array(  'name'=>'created',
+					'type'=>'datetime',
+				//	'filter'=>false,
+			),
 			/*
 		array(
 					'name'=>'item_status',

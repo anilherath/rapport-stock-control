@@ -3397,3 +3397,596 @@ REQUEST_URI=/stock_system/ims/purchaseOrder/orderRecieved/441
 in C:\xampp\htdocs\stock_system\ims\protected\views\purchaseOrder\orderRecieved.php (36)
 in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (484)
 in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 16:52:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 16:52:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:52:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 16:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 16:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 16:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:52:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 16:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 16:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 16:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:55:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 16:55:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:55:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:56:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 16:56:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 16:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 16:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:56:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:56:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 16:56:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 16:56:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 16:56:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:56:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:56:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 16:56:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 16:58:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:58:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 16:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 16:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 16:59:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 16:59:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 17:07:56 [error] [php] date() expects parameter 2 to be long, string given (C:\xampp\htdocs\stock_system\framework\utils\CFormatter.php:178)
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\zii\widgets\grid\CDataColumn.php(136): CFormatter->format()
+#1 C:\xampp\htdocs\stock_system\framework\zii\widgets\grid\CGridColumn.php(135): CDataColumn->renderDataCellContent()
+#2 C:\xampp\htdocs\stock_system\framework\zii\widgets\grid\CGridView.php(512): CDataColumn->renderDataCell()
+#3 C:\xampp\htdocs\stock_system\framework\zii\widgets\grid\CGridView.php(485): CGridView->renderTableRow()
+#4 C:\xampp\htdocs\stock_system\framework\zii\widgets\grid\CGridView.php(395): CGridView->renderTableBody()
+#5 C:\xampp\htdocs\stock_system\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#6 unknown(0): CGridView->renderSection()
+#7 C:\xampp\htdocs\stock_system\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#8 C:\xampp\htdocs\stock_system\framework\zii\widgets\CBaseListView.php(126): CGridView->renderContent()
+#9 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(166): CGridView->run()
+#10 C:\xampp\htdocs\stock_system\ims\protected\views\purchaseOrder\admin.php(82): PurchaseOrderController->widget()
+#11 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(119): require()
+#12 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): PurchaseOrderController->renderInternal()
+#13 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): PurchaseOrderController->renderFile()
+#14 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): PurchaseOrderController->renderPartial()
+#15 C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php(169): PurchaseOrderController->render()
+#16 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(50): PurchaseOrderController->actionAdmin()
+#17 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams()
+#18 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): PurchaseOrderController->runAction()
+#19 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#20 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#21 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): PurchaseOrderController->filterAccessControl()
+#22 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#23 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#24 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): PurchaseOrderController->runActionWithFilters()
+#25 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): PurchaseOrderController->run()
+#26 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#27 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\stock_system\ims\index.php(16): CWebApplication->run()
+REQUEST_URI=/stock_system/ims/purchaseOrder/admin
+in C:\xampp\htdocs\stock_system\ims\protected\views\purchaseOrder\admin.php (82)
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (169)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:09:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 17:09:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 17:09:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 17:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 17:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 17:09:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 17:09:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 17:09:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 17:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 17:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 17:17:15 [error] [exception.CException] exception 'CException' with message 'Property "Items.comments" is not defined.' in C:\xampp\htdocs\stock_system\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\db\ar\CActiveRecord.php(129): CComponent->__get('comments')
+#1 C:\xampp\htdocs\stock_system\ims\protected\views\purchaseOrder\orderPreview.php(98): CActiveRecord->__get('comments')
+#2 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): CController->renderPartial('orderPreview', Array, true)
+#6 C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php(398): CController->render('orderPreview', Array, true)
+#7 [internal function]: PurchaseOrderController->actionOrderPreview('444')
+#8 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(PurchaseOrderController), Array)
+#9 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PurchaseOrderController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#17 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('orderPreview')
+#19 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('purchaseOrder/o...')
+#20 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#22 {main} REQUEST_URI=/stock_system/ims/purchaseOrder/orderPreview/444
+2012/02/18 17:17:25 [error] [exception.CException] exception 'CException' with message 'Property "Items.comment" is not defined.' in C:\xampp\htdocs\stock_system\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\db\ar\CActiveRecord.php(129): CComponent->__get('comment')
+#1 C:\xampp\htdocs\stock_system\ims\protected\views\purchaseOrder\orderPreview.php(98): CActiveRecord->__get('comment')
+#2 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): CController->renderPartial('orderPreview', Array, true)
+#6 C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php(398): CController->render('orderPreview', Array, true)
+#7 [internal function]: PurchaseOrderController->actionOrderPreview('444')
+#8 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(PurchaseOrderController), Array)
+#9 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PurchaseOrderController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#17 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('orderPreview')
+#19 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('purchaseOrder/o...')
+#20 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#22 {main} REQUEST_URI=/stock_system/ims/purchaseOrder/orderPreview/444
+2012/02/18 17:22:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ims".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('ims')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('ims')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('itemOnOrder/ims...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/itemOnOrder/ims/install/index.php
+2012/02/18 17:23:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ims".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('ims')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('ims')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('itemOnOrder/ims...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/itemOnOrder/ims/install/index.php
+2012/02/18 17:35:13 [error] [php] date() expects parameter 2 to be long, string given (C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\view.php:38)
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): ItemOnOrderController->renderInternal()
+#1 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): ItemOnOrderController->renderFile()
+#2 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): ItemOnOrderController->renderPartial()
+#3 C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php(57): ItemOnOrderController->render()
+#4 unknown(0): ItemOnOrderController->actionView()
+#5 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs()
+#6 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#7 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): ItemOnOrderController->runAction()
+#9 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#11 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): ItemOnOrderController->filterAccessControl()
+#12 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#14 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): ItemOnOrderController->runActionWithFilters()
+#15 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): ItemOnOrderController->run()
+#16 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#17 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\stock_system\ims\index.php(16): CWebApplication->run()
+REQUEST_URI=/stock_system/ims/itemOnOrder/266
+in C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\view.php (38)
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php (57)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:35:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php:195
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php(56): ItemOnOrderController->loadModel('266')
+#1 [internal function]: ItemOnOrderController->actionView('266')
+#2 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ItemOnOrderController), Array)
+#3 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemOnOrderController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('view')
+#13 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('itemOnOrder/vie...')
+#14 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#16 {main} REQUEST_URI=/stock_system/ims/itemOnOrder/266
+2012/02/18 17:38:54 [error] [exception.CException] exception 'CException' with message 'ItemOnOrderController and its behaviors do not have a method or closure named "getItemStatus".' in C:\xampp\htdocs\stock_system\framework\base\CComponent.php:269
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\view.php(30): CComponent->__call('getItemStatus', Array)
+#1 C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\view.php(30): ItemOnOrderController->getItemStatus(2)
+#2 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php(57): CController->render('view', Array)
+#7 [internal function]: ItemOnOrderController->actionView('267')
+#8 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ItemOnOrderController), Array)
+#9 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemOnOrderController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#17 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('view')
+#19 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('itemOnOrder/vie...')
+#20 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#22 {main} REQUEST_URI=/stock_system/ims/itemOnOrder/267
+2012/02/18 17:40:13 [error] [php] Use of undefined constant html - assumed 'html' (C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\view.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): ItemOnOrderController->renderFile()
+#1 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): ItemOnOrderController->renderPartial()
+#2 C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php(57): ItemOnOrderController->render()
+#3 unknown(0): ItemOnOrderController->actionView()
+#4 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): ItemOnOrderController->runAction()
+#8 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#10 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): ItemOnOrderController->filterAccessControl()
+#11 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#13 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): ItemOnOrderController->runActionWithFilters()
+#14 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): ItemOnOrderController->run()
+#15 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#16 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\stock_system\ims\index.php(16): CWebApplication->run()
+REQUEST_URI=/stock_system/ims/itemOnOrder/267
+in C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\view.php (30)
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php (57)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:43:25 [error] [php] Undefined index: po_id (C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\_form.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): ItemOnOrderController->renderFile()
+#1 C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\update.php(22): ItemOnOrderController->renderPartial()
+#2 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(119): require()
+#3 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): ItemOnOrderController->renderInternal()
+#4 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): ItemOnOrderController->renderFile()
+#5 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): ItemOnOrderController->renderPartial()
+#6 C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php(131): ItemOnOrderController->render()
+#7 unknown(0): ItemOnOrderController->actionUpdate()
+#8 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs()
+#9 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): ItemOnOrderController->runAction()
+#12 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#14 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): ItemOnOrderController->filterAccessControl()
+#15 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#17 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): ItemOnOrderController->runActionWithFilters()
+#18 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): ItemOnOrderController->run()
+#19 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#20 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\stock_system\ims\index.php(16): CWebApplication->run()
+REQUEST_URI=/stock_system/ims/itemOnOrder/update/267
+in C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\_form.php (11)
+in C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\update.php (22)
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php (131)
+2012/02/18 17:47:11 [error] [exception.CException] exception 'CException' with message 'ItemOnOrder and its behaviors do not have a method or closure named "getgetItemStatus".' in C:\xampp\htdocs\stock_system\framework\base\CComponent.php:269
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\db\ar\CActiveRecord.php(214): CComponent->__call('getgetItemStatu...', Array)
+#1 C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\admin.php(67): CActiveRecord->__call('getgetItemStatu...', Array)
+#2 C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\admin.php(67): ItemOnOrder->getgetItemStatus(1)
+#3 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(119): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): CController->renderPartial('admin', Array, true)
+#7 C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php(183): CController->render('admin', Array)
+#8 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(50): ItemOnOrderController->actionAdmin()
+#9 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#16 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('admin')
+#18 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('itemOnOrder/adm...')
+#19 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#21 {main} REQUEST_URI=/stock_system/ims/itemOnOrder/admin
+2012/02/18 17:47:27 [error] [php] Missing argument 1 for ItemOnOrder::getItemStatus(), called in C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\admin.php on line 67 and defined (C:\xampp\htdocs\stock_system\ims\protected\models\ItemOnOrder.php:246)
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CBaseController.php(88): ItemOnOrderController->renderInternal()
+#1 C:\xampp\htdocs\stock_system\framework\web\CController.php(866): ItemOnOrderController->renderFile()
+#2 C:\xampp\htdocs\stock_system\framework\web\CController.php(779): ItemOnOrderController->renderPartial()
+#3 C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php(183): ItemOnOrderController->render()
+#4 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(50): ItemOnOrderController->actionAdmin()
+#5 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): ItemOnOrderController->runAction()
+#7 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): ItemOnOrderController->filterAccessControl()
+#10 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#11 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#12 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): ItemOnOrderController->runActionWithFilters()
+#13 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): ItemOnOrderController->run()
+#14 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#15 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\stock_system\ims\index.php(16): CWebApplication->run()
+REQUEST_URI=/stock_system/ims/itemOnOrder/admin
+in C:\xampp\htdocs\stock_system\ims\protected\models\ItemOnOrder.php (246)
+in C:\xampp\htdocs\stock_system\ims\protected\views\itemOnOrder\admin.php (67)
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\ItemOnOrderController.php (183)
+2012/02/18 17:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/18 17:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/18 17:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/18 17:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/18 17:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/18 17:50:13 [warning] [application] Failed to set unsafe attribute "supplier_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:50:13 [warning] [application] Failed to set unsafe attribute "user_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:50:16 [warning] [application] Failed to set unsafe attribute "supplier_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:50:16 [warning] [application] Failed to set unsafe attribute "user_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:50:27 [warning] [application] Failed to set unsafe attribute "supplier_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:50:27 [warning] [application] Failed to set unsafe attribute "user_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:50:34 [warning] [application] Failed to set unsafe attribute "supplier_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/18 17:50:34 [warning] [application] Failed to set unsafe attribute "user_name" of "PurchaseOrder".
+in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
+in C:\xampp\htdocs\stock_system\ims\index.php (16)

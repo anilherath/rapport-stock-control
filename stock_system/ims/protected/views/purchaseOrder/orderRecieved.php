@@ -224,7 +224,7 @@ $this->menu=array(
 			</td>
 			<td>
 			<?php
-					if ($item_model->item_status>3  )//i.e. if order is complete, this will not be visible
+					if ($item_model->item_status>3 && $model->order_status<10  )//i.e. if order is complete, this will not be visible
 					{
 						$cancel_url=Yii::app()->baseUrl.'/ItemOnOrder/CancelItems/'.$item_on_order_id;
 						echo '<b>'.CHtml::link('Cancel Remaining Items ',$cancel_url).'</b>';

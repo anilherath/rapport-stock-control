@@ -115,7 +115,9 @@ class PurchaseOrder extends CActiveRecord
 			if($this->isNewRecord)
 			{
 							
-				$this->created=date("F j, Y, g:i a");
+				$this->created=time();
+				$this->modified=time();
+				
 				$this->user_id=Yii::app()->user->id;
 				
 								
@@ -150,7 +152,7 @@ class PurchaseOrder extends CActiveRecord
             }//end of if($this->isNewRecord).
 			else
 			{
-				$this->created=date("F j, Y, g:i a");
+				$this->modified=time();
 				
 			}
 				

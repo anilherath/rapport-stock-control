@@ -88,14 +88,14 @@
 				<label class="required">Fax<span class="required">*</span></label>		
 				<input name="fax" id="fax" type="text" size ='40'/>
 		</div>
-		<div class="row">
-				<label class="required">E-mail<span class="required">*</span></label>		
-				<input name="company_email" id="company_email" type="text" size ='40'/>
-		</div>
 		
 		
 		</td>
 		<td>
+		<div class="row">
+				<label class="required">E-mail<span class="required">*</span></label>		
+				<input name="company_email" id="company_email" type="text" size ='40'/>
+		</div>
 		
 		<div class="row">
 				<label class="required">Outgoing Mail (SMTP) Server<span class="required">*</span></label>		

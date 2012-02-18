@@ -14,7 +14,7 @@ $this->menu=array(
 	if ($net_cost<$free_shipping_amt && $model->order_status==1)//i.e if model is in draft stage only
 	{
 	$diff=$free_shipping_amt-$net_cost;
-	$message='You can get free shipping from this supplier if you add value of  £'.$diff.'  to this order ';
+	$message='You can get free shipping from this supplier if you add value of '.$diff.'  to this order ';
 
 	$this->beginWidget('zii.widgets.jui.CJuiDialog',array(
 			'id'=>'juiDialog',
@@ -67,6 +67,8 @@ $this->menu=array(
 		$url=Yii::app()->getBaseUrl().'/purchaseOrder/'	;
 		echo CHtml::link('Back',$url);
 	?>
+	
+	
 	<!-- FIRST PART OF THE FORM WHICH DISPLAYS PURCHASE ORDER DETAILS --> 
  
 	<div class="row">

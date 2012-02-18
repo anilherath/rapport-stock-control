@@ -333,7 +333,7 @@ class ItemOnOrderController extends Controller
 				{
 					$comments=$diff.' recieved. ';
 					//$comments.=' under the purchase order number '.$model->purchaseOrder->order_number;
-					$comments.=' Processed by '.Yii::app()->user->name." on ".date("d-M-Y").'<br>';
+					$comments.=' Processed by '.Yii::app()->user->name." on ".date("d-M-y H:i").'<br>';
 					
 					$model->comments.=$comments;
 					if ($quantity_ordered==$quantity_recieved)
@@ -382,7 +382,7 @@ class ItemOnOrderController extends Controller
 					
 					$comments=$diff;
 					$comments.=' damaged. '; 
-					$comments.=' Processed by: '.Yii::app()->user->name." on ".date("d-M-y").'<br>';
+					$comments.=' Processed by: '.Yii::app()->user->name." on ".date("d-M-y H:i").'<br>';
 					$quantity_recieved=0.0;
 					$model->comments.=$comments;
 					

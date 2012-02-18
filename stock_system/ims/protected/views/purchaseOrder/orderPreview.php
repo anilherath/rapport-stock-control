@@ -80,7 +80,7 @@ echo "<br> ".$company_contact_details;
 		<th style="width:10%;text-align:left">Quantity</th>
 		<th style="width:10%;text-align:left">Price</th>
 		<th style="width:10%;text-align:left">Total</th>
-		<th style="width:10%;text-align:left">Reference</th>
+	    <th style="width:10%;text-align:left">Comments</th>
 		
 	</tr>
 	
@@ -95,7 +95,7 @@ echo "<br> ".$company_contact_details;
 	 			echo "<td>".$ordered_items->quantity_ordered."</td>";
 	 			echo "<td>".$ordered_items->unit_price."</td>";
 	 			echo "<td>".$ordered_items->total_price."</td>";
-	 			echo "<td>".$ordered_items->items->part_number."</td>";
+	 			echo "<td>".$ordered_items->comments."</td>";
 	 			echo "</tr>"; 
 		$i++;		
 		}///end of for each

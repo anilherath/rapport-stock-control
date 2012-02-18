@@ -43,9 +43,17 @@ $this->menu=array(
 			'type'=>'html',
 			'name'=>'order_status',
 			'value'=>'$data->getOrderStatus($data->order_status)',
-			//'filter'=>Lookup::items('PostStatus'),
+			'filter'=>false,
 		),
-		'date_of_order',
+			array(  'name'=>'date_of_order',
+					'type'=>'datetime',
+					
+			),
+			array(  'name'=>'date_of_order_recieved',
+					'type'=>'datetime',
+					
+				),
+			
 		/*
 		'total_cost',
 		'vat',
