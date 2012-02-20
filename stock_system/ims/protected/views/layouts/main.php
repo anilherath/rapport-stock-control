@@ -22,7 +22,7 @@
 <div class="container" id="page">
 	
 	<table><tr>
-		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><?php echo CHtml::encode(Yii::app()->name); ?>&nbsp;Stock System</div></td>
+		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><?php echo CHtml::encode(Yii::app()->name); ?><br><small>Stock System</small></div></td>
 		<td style="margin:20px; text-align:right;" >
 	<?php echo CHtml::image(Yii::app()->request->baseUrl."/images/company_logo.png","ballpop",array("width"=>"200", "height"=>"75")); ?>
 	</td>

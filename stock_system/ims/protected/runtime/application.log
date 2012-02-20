@@ -3990,3 +3990,71 @@ in C:\xampp\htdocs\stock_system\ims\index.php (16)
 2012/02/18 17:50:34 [warning] [application] Failed to set unsafe attribute "user_name" of "PurchaseOrder".
 in C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php (165)
 in C:\xampp\htdocs\stock_system\ims\index.php (16)
+2012/02/20 11:59:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ims/install/index.php".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('ims/install/ind...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/ims/install/index.php
+2012/02/20 12:00:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ims/install/index.php".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('ims/install/ind...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(16): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/ims/install/index.php
+2012/02/20 12:02:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "NaN".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('NaN')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('NaN')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/NaN')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(21): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/NaN
+2012/02/20 12:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "NaN".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('NaN')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('NaN')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/NaN')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(21): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/NaN
+2012/02/20 12:02:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action " ".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction(' ')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run(' ')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/ /install/...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(21): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/+/install/index.php
+2012/02/20 12:02:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action " ".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction(' ')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run(' ')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/ /install/...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(21): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/+/install/index.php
+2012/02/20 12:03:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "install".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('install')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('install')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/install/in...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(21): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/install/index.php
+2012/02/20 12:04:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "install".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('install')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('install')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/install/in...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(21): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/install/index.php
+2012/02/20 12:04:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "install".' in C:\xampp\htdocs\stock_system\framework\web\CController.php:477
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CController.php(262): CController->missingAction('install')
+#1 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('install')
+#2 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('site/install/in...')
+#3 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\stock_system\ims\index.php(21): CApplication->run()
+#5 {main} REQUEST_URI=/stock_system/ims/site/install/index.php

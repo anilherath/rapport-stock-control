@@ -31,14 +31,15 @@ class UserIdentity extends CUserIdentity
 		else
         {
         	
-        	echo '<br> USER PASS :'.$user->password;
-        	echo '<br> THIS PASS :'.$this->password;
+//         	echo '<br> USER PASS :'.$user->password;
+//         	echo '<br> THIS PASS :'.$this->password;
 
         	
         	$hashPass=hash('sha256', $this->password);	
         	if ($user->password!==$hashPass)
-        	{		echo '<br> USER PASS :'.$user->password;
-        			echo '<br> HASH PASS :'.$hashPass;
+        	{		
+//         			echo '<br> USER PASS :'.$user->password;
+//         			echo '<br> HASH PASS :'.$hashPass;
                         $this->errorCode=self::ERROR_PASSWORD_INVALID;
         	}
         	else 

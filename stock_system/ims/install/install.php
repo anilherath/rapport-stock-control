@@ -6,7 +6,7 @@ $ourFileName = "../protected/config/main.php";
 $fh = fopen($ourFileName, 'w') or die("can't open file");
 
 $company_name=$_POST['company_name'];
-$company_name.="Stock Control System";
+//$company_name.="Stock Control System";
 
 $company_address=$_POST['company_address'];
 
@@ -269,7 +269,7 @@ if (( ($_FILES["logo_url"]["type"] == "image/png")) && ($_FILES["logo_url"]["siz
 
 
 
-echo "<SCRIPT LANGUAGE='javascript'>location.href='../index.php';</SCRIPT>";
+echo "<SCRIPT LANGUAGE='javascript'>location.href='finish.php';</SCRIPT>";
 }///end of if_POST
 
 

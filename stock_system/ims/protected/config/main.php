@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'ISE',
+	'name'=>'',
 	'defaultController'=>'items/freeSearch',
 	
 		
@@ -23,7 +23,6 @@ return array(
 //		'application.modules.user.components.*',
 		'application.extensions.yii-mail.*',
 		'application.extensions.yii-zip.*',
-			
 		//'application.extensions.*',
 		'application.vendors.*',
 
@@ -72,7 +71,7 @@ return array(
 							),
 									'HTML2PDF' => array(
 									'librarySourcePath' => 'application.vendors.html2pdf.*',
-											'classFile'         => 'html2pdf.class.php', // For adding to Yii::$classMap
+											'classFile'         => 'html2pdf.class.php', // For adding to Yii::classMap
 											/*'defaultParams'     => array( // More info: http://wiki.spipu.net/doku.php?id=html2pdf:en:v4:accueil
 													'orientation' => 'P', // landscape or portrait orientation
 													'format'      => 'A4', // format A4, A5, ...
@@ -95,11 +94,11 @@ return array(
 		        'class' => 'application.extensions.yii-mail.YiiMail',
 		        'transportType'=>'smtp', /// case sensitive!
 		        'transportOptions'=>array(
-		            'host'=>'mail.laser.com',
-		            'username'=>'stalati@ukwhitegoods.co.uk',
+		            'host'=>'',
+		            'username'=>'',
 		            // or email@googleappsdomain.com
-		            'password'=>'#rev1s1on!',
-		            'port'=>'587',
+		            'password'=>'',
+		            'port'=>'',
 		            //'encryption'=>'ssl',
 		            ),
 		        'viewPath' => 'application.views.mail',
@@ -187,10 +186,10 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'admin@ukwhitegoods.co.uk',
-		'company_name'=>'UK Whitegoods Limited',
-		'company_address'=>'Unit 5/6 Bonnyton Industrial Estate, Munro Place, Kilmarnock, East Ayrshire, KA1 2NP, Scotland',
-		'company_contact_details'=>' phone:0845 172 8003  fax:0845 172 8003 email:admin@ukwhitegoods.co.uk',
-		'vat_in_percentage'=>'20',	
+		'adminEmail'=>'',
+		'company_name'=>'',
+		'company_address'=>'',
+		'company_contact_details'=>'Telephone: Fax: E-mail:',
+		'vat_in_percentage'=>'',	
 	),
 );
