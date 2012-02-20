@@ -88,8 +88,8 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			
 			
-			echo '<br>USERNAME   -'.$model->username;
-			echo '<br>PASS  -'.$model->password;
+// 			echo '<br>USERNAME   -'.$model->username;
+// 			echo '<br>PASS  -'.$model->password;
 
 			//$model->login();
 			// validate user input and redirect to the previous page if valid

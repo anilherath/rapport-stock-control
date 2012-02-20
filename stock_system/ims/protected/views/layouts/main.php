@@ -18,13 +18,17 @@
 </head>
 
 <body>
+<?php
+$company_logo=Yii::app()->request->baseUrl."/images/company_logo.png";
+$rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png";
+?>
 
 <div class="container" id="page">
 	
 	<table><tr>
 		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><?php echo CHtml::encode(Yii::app()->name); ?><br><small>Stock System</small></div></td>
 		<td style="margin:20px; text-align:right;" >
-	<?php echo CHtml::image(Yii::app()->request->baseUrl."/images/company_logo.png","ballpop",array("width"=>"200", "height"=>"75")); ?>
+	<?php echo CHtml::image($company_logo,"ballpop",array("width"=>"200", "height"=>"75")); ?>
 	</td>
 	<tr>
 	</table>
@@ -69,7 +73,7 @@
 	<div id="footer">
 	
 	<table><tr><td>
-	<?php echo CHtml::image(Yii::app()->request->baseUrl."/images/rapport_stock_logo.png","ballpop", array("width"=>"170", "height"=>"56.6")); ?>
+	<?php echo CHtml::image($rapport_stock_logo,"ballpop", array("width"=>"170", "height"=>"56.6")); ?>
 	</td>
 	<td style="text-align:right;">
 		Copyright &copy; <?php echo date('Y'); ?> by UK Whitegoods Ltd.<br/>
