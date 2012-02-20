@@ -120,12 +120,12 @@ class User extends CActiveRecord
         	
         	if($this->isNewRecord)  // Creating new record 
             {
-        		$this->created=date("F j, Y, g:i a");
+        		$this->created=time();
     			return true;
             }
             else
             {
-            	$this->modified=date("F j, Y, g:i a");
+            	$this->modified=time();
                 return true;
             }
         }//end of if(parent())

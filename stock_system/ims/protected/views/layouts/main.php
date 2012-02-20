@@ -42,10 +42,10 @@
 				array('label'=>'Items', 'url'=>array('/items/freeSearch/')),
 				array('label'=>'Inbound', 'url'=>array('/items/inboundSearch')),
 				array('label'=>'Outbound', 'url'=>array('/items/outboundSearch')),
-				array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
+
 				array('label'=>'Purchase Order', 'url'=>array('/purchaseOrder/admin')),
 				array('label'=>'Items on Order', 'url'=>array('/itemOnOrder/admin')),
-
+					array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
 				//array('label'=>'My Account', 'url'=>array('/userGroups/admin')),
 				//array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

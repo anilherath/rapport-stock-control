@@ -1,12 +1,11 @@
 <?php
 $this->breadcrumbs=array(
-	'Outbound Items Histories'=>array('index'),
-	'Manage',
+	'Outbound History'=>array('index'),
 );
 
 $this->menu=array(
-	array('label'=>'List Outbound Items History', 'url'=>array('index')),
-	//array('label'=>'Create OutboundItemsHistory', 'url'=>array('create')),
+	array('label'=>'Create Oubound Entry', 'url'=>array('/items/outboundSearch')),
+	//array('label'=>'Create InboundItemsHistory', 'url'=>array('create')),
 );
 
 /*original.
@@ -39,7 +38,7 @@ $('#submit-button').click(function(){
 
 ?>
 
-<h1>Manage Outbound Items Histories</h1>
+<h1> Outbound History</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

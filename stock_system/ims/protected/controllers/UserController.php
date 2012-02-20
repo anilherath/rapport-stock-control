@@ -90,10 +90,10 @@ class UserController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		echo '<br>HASH PASSWORD   :  '.$model->password;
+//		echo '<br>HASH PASSWORD   :  '.$model->password;
 		$pass=$model->password;
 		$decode_pass=sha1($pass);
-		echo '<br>My PASSWORD   :  '.$decode_pass;
+///		echo '<br>My PASSWORD   :  '.$decode_pass;
 		
 		
 		if(isset($_POST['User']))

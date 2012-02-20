@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Inbound Items History', 'url'=>array('index')),
+	array('label'=>'Create Inbound Entry', 'url'=>array('/items/inboundSearch')),
 	//array('label'=>'Create InboundItemsHistory', 'url'=>array('create')),
 );
 /*original
@@ -42,7 +42,7 @@ $('#submit-button').click(function(){
 ?>
 
 
-<h1>Manage Inbound Items Histories</h1>
+<h1>Inbound History</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>

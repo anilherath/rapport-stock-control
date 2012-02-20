@@ -2,7 +2,7 @@
 <?php
 
 $this->menu=array(
-	array('label'=>'Manage Outbound Items History', 'url'=>array('/OutboundItemsHistory/admin')),
+	array('label'=>'List  Outbound History', 'url'=>array('/OutboundItemsHistory/admin')),
 );
 ?>
 
@@ -13,6 +13,13 @@ $this->menu=array(
 //)); ?>
 </div> <!--search-form -->
 
+<div>Click on <?php $add_img_url=Yii::app()->request->baseUrl.'/images/remove.png'; 
+					echo CHtml::image($add_img_url,"ballpop",array("width"=>"16", "height"=>"16")); 
+				?> 
+	to remove items from stock. You can search by any of the following fields</div>
+	
+	
+	
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	//'id'=>'items-grid',
 	'dataProvider'=>$model->search(),

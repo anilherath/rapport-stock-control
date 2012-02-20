@@ -11,7 +11,10 @@ $this->menu=array(
  
 ?>
 
+
+
 <h1>Manage Purchase Orders</h1>
+
  
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'purchase-order-grid',

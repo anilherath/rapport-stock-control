@@ -159,14 +159,29 @@ class SuppliersController extends Controller
 		
     	$model=new Suppliers;
 
-	    // uncomment the following code to enable ajax-based validation
-	    /*
-	    if(isset($_POST['ajax']) && $_POST['ajax']==='suppliers-purchaseOrder-form')
-	    {
-	        echo CActiveForm::validate($model);
-	        Yii::app()->end();
-	    }
-	    */
+    	$count_sql = "SELECT COUNT(*) FROM purchase_order";
+    	$total_records = Yii::app()->db->createCommand($count_sql)->queryScalar();
+    	 		if ($total_records==0)
+    				{
+    		 			$this->beginWidget('zii.widgets.jui.CJuiDialog',array(
+    		 					'id'=>'juiDialog',
+    		 					'options'=>array(
+    		 							'title'=>'Add Suppliers',
+    		 							'autoOpen'=>true,
+    		 							'modal'=>'true',
+    		 							'show' => 'blind',
+    		 							'hide' => 'explode'
+    		 							//'width'=>'40px',
+    		 			//'height'=>'40px',
+    		 					),
+    		 					'cssFile'=>Yii::app()->request->baseUrl.'/css/jquery-ui.css',
+    	   	
+    	 			));
+    	   			echo 'Please add some suppliers to raise purchase order';
+    		 			$this->endWidget();
+    	
+    		 		}
+    	
     	
 	
 	    if(isset($_POST['Suppliers']))

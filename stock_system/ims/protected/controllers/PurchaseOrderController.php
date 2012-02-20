@@ -161,6 +161,8 @@ class PurchaseOrderController extends Controller
 	{
 		$model=new PurchaseOrder('search');
 		$model->unsetAttributes();  // clear any default values
+		
+		
 		if(isset($_GET['PurchaseOrder']))
 			$model->attributes=$_GET['PurchaseOrder'];
 

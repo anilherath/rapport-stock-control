@@ -1,7 +1,7 @@
 <?php 
   
   $this->menu=array(
-	array('label'=>'Manage Inbound Items History', 'url'=>array('/InboundItemsHistory/admin')),
+	array('label'=>'List Inbound History', 'url'=>array('/InboundItemsHistory/admin')),
 );
   
   ?>
@@ -12,6 +12,11 @@
 )); ?>
 </div> <!--search-form -->
 
+<div>Click on <?php $add_img_url=Yii::app()->request->baseUrl.'/images/add.png'; 
+					echo CHtml::image($add_img_url,"ballpop",array("width"=>"16", "height"=>"16")); 
+				?> 
+	to add items in stock. You can search by any of the following fields</div>
+ 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	//'id'=>'items-grid',
 	'dataProvider'=>$model->search(),

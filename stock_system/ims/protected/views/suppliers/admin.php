@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Suppliers'=>array('index'),
-	'Manage',
+	'List',
 );
 
 $this->menu=array(
@@ -23,7 +23,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Suppliers</h1>
+<h1>Suppliers List</h1>
 
 <p>
 You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
