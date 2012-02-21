@@ -4719,3 +4719,120 @@ REQUEST_URI=/stock_system/ims/user/admin
 in C:\xampp\htdocs\stock_system\ims\protected\views\user\admin.php (63)
 in C:\xampp\htdocs\stock_system\ims\protected\controllers\UserController.php (154)
 in C:\xampp\htdocs\stock_system\ims\index.php (19)
+2012/02/21 15:13:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/21 15:13:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/21 15:13:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/21 15:13:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/21 15:13:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/21 15:13:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/21 15:13:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/21 15:13:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/21 15:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/21 15:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/21 15:14:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('assets/fcebde54...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/assets/fcebde54/jui/css/base//stock_system/ims/css/jquery-ui.css
+2012/02/21 15:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_flat_75_ffffff_40x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_flat_75_ffffff_40x100.png
+2012/02/21 15:14:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_highlight-soft_75_cccccc_1x100.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+2012/02/21 15:14:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-icons_454545_256x240.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-i...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-icons_454545_256x240.png
+2012/02/21 15:14:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/images/ui-bg_glass_75_dadada_1x400.png".' in C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('css/images/ui-b...')
+#1 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/stock_system/ims/css/images/ui-bg_glass_75_dadada_1x400.png
+2012/02/21 15:15:05 [error] [exception.Swift_RfcComplianceException] exception 'Swift_RfcComplianceException' with message 'Address in mailbox given [] does not comply with RFC 2822, 3.6.2.' in C:\xampp\htdocs\stock_system\ims\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Mime\Headers\MailboxHeader.php:309
+Stack trace:
+#0 C:\xampp\htdocs\stock_system\ims\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Mime\Headers\MailboxHeader.php(239): Swift_Mime_Headers_MailboxHeader->_assertValidAddress('')
+#1 C:\xampp\htdocs\stock_system\ims\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Mime\Headers\MailboxHeader.php(97): Swift_Mime_Headers_MailboxHeader->normalizeMailboxes(Array)
+#2 C:\xampp\htdocs\stock_system\ims\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Mime\Headers\MailboxHeader.php(61): Swift_Mime_Headers_MailboxHeader->setNameAddresses(Array)
+#3 C:\xampp\htdocs\stock_system\ims\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Mime\SimpleMimeEntity.php(571): Swift_Mime_Headers_MailboxHeader->setFieldBodyModel(Array)
+#4 C:\xampp\htdocs\stock_system\ims\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Mime\SimpleMessage.php(199): Swift_Mime_SimpleMimeEntity->_setHeaderFieldModel('From', Array)
+#5 [internal function]: Swift_Mime_SimpleMessage->setFrom(Array)
+#6 C:\xampp\htdocs\stock_system\ims\protected\extensions\yii-mail\YiiMailMessage.php(94): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php(347): YiiMailMessage->__call('setFrom', Array)
+#8 C:\xampp\htdocs\stock_system\ims\protected\controllers\PurchaseOrderController.php(347): YiiMailMessage->setFrom(Array)
+#9 [internal function]: PurchaseOrderController->actionSendOrder('2')
+#10 C:\xampp\htdocs\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(PurchaseOrderController), Array)
+#11 C:\xampp\htdocs\stock_system\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PurchaseOrderController), Object(ReflectionMethod), Array)
+#12 C:\xampp\htdocs\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\xampp\htdocs\stock_system\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\stock_system\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\xampp\htdocs\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#19 C:\xampp\htdocs\stock_system\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(277): CController->run('SendOrder')
+#21 C:\xampp\htdocs\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('PurchaseOrder/S...')
+#22 C:\xampp\htdocs\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\stock_system\ims\index.php(19): CApplication->run()
+#24 {main} REQUEST_URI=/stock_system/ims/PurchaseOrder/SendOrder/2
