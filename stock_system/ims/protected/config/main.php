@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'',
+	'name'=>'UK Whitegoods',
 	'defaultController'=>'items/freeSearch',
 	
 		
@@ -94,11 +94,11 @@ return array(
 		        'class' => 'application.extensions.yii-mail.YiiMail',
 		        'transportType'=>'smtp', /// case sensitive!
 		        'transportOptions'=>array(
-		            'host'=>'',
-		            'username'=>'',
+		            'host'=>'mail.laser.com',
+		            'username'=>'stalati@ukwhitegoods.co.uk',
 		            // or email@googleappsdomain.com
-		            'password'=>'',
-		            'port'=>'',
+		            'password'=>'#rev1s1on!',
+		            'port'=>'587',
 		            //'encryption'=>'ssl',
 		            ),
 		        'viewPath' => 'application.views.mail',
@@ -186,11 +186,16 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'',
-		'company_name'=>'',
-		'company_address'=>'',
-		'company_contact_details'=>'Telephone: Fax: E-mail:',
-		'vat_in_percentage'=>'',	
+		'adminEmail'=>'stalati@ukwhitegoods.co.uk',
+		'company_name'=>'UK Whitegoods',
+		'company_address'=>'Unit 5/6 Bonnyton Industrial Estate
+Munro Place
+Kilmarnock
+Ayrshire
+Scotland
+UK',
+		'company_contact_details'=>'Telephone:0845 172 8002 Fax:0845 172 8002 E-mail:stalati@ukwhitegoods.co.uk',
+		'vat_in_percentage'=>'20',	
 		'software_version'=>'0.5beta',	
 
 	),

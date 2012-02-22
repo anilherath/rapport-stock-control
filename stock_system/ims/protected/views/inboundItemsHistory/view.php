@@ -28,9 +28,11 @@ $this->menu=array(
 		'comments',
 		//'user_id',
 		'user.username',
+/*
 		array(  'name'=>'items_on_order_id',
 				'value'=>$model->itemsOnOrder->purchaseOrder->order_number,
 			),	
+	*/		
 			
 		//'items_on_order_id',
 
