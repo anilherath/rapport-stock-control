@@ -191,5 +191,7 @@ return array(
 		'company_address'=>'',
 		'company_contact_details'=>'Telephone: Fax: E-mail:',
 		'vat_in_percentage'=>'',	
+		'software_version'=>'0.5beta',	
+
 	),
 );
