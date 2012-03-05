@@ -162,9 +162,11 @@ class PurchaseOrderController extends Controller
 		$model=new PurchaseOrder('search');
 		$model->unsetAttributes();  // clear any default values
 		
-		
 		if(isset($_GET['PurchaseOrder']))
+		{
 			$model->attributes=$_GET['PurchaseOrder'];
+		}
+			
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -516,6 +518,57 @@ class PurchaseOrderController extends Controller
 			}//end of else
 			
 	}//end of function notify supplier
+	
+	
+	public function actionTestConnection()
+	{
+		//echo "IN ACTION TEST CONNECTION <br>";
+		
+		if(!$conn = @fsockopen("google.com", 80, $errno, $errstr, 30))
+		{
+			echo "PLEASE CHECK YOUR INTERNET CONNECTION";
+		}
+		else 
+		{
+			
+			$model=new PurchaseOrder;
+			
+			$reciever_email='stalati@ukwhitegoods.co.uk';
+			$sender_email='stalati@ukwhitegoods.co.uk';
+			
+			$message = new YiiMailMessage();
+			$message->setTo(array($reciever_email));
+		    $message->setFrom(array($sender_email));
+		    $message->setSubject('hi');
+			
+		    $message->setBody("This is a test mail");
+		    $numsent = Yii::app()->mail->send($message);
+		   	//$numsent=1;
+//		   	try 
+//		   	{
+//		   		if(!Yii::app()->mail->send($message))
+//		   			throw new Exception();
+//		   		else 
+//		   			echo "Test email is sent, Connection is OK";	
+//		   	}
+//		   	catch (Exception $e)
+//		   	{
+//		   		echo "Please check internet connection : ERROR IS :".$e->getMessage();
+//		   	}
+		   	
+		   	if(Yii::app()->mail->send($message))
+		   	{
+		   		echo "Test email is sent, Connection is OK"; 
+		   	}
+			else
+			{
+				//$this->raiseEvent('Error', 'error');
+				echo "Please check your internet connection";
+				die("Please check your internet connection");
+			}
+		}//end of else.
+		
+	}//end of testConnection.
 	
 	
 	

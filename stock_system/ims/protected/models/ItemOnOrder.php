@@ -28,6 +28,7 @@
  * @property Suppliers $suppliers
  * @property PurchaseOrder $purchaseOrder
  * @property Items $items
+ * @property Status $status
  */
 class ItemOnOrder extends CActiveRecord
 {
@@ -101,6 +102,7 @@ class ItemOnOrder extends CActiveRecord
 			'suppliers' => array(self::BELONGS_TO, 'Suppliers', 'suppliers_id'),
 			'purchaseOrder' => array(self::BELONGS_TO, 'PurchaseOrder', 'purchase_order_id'),
 			'items' => array(self::BELONGS_TO, 'Items', 'items_id'),
+			'status' => array(self::BELONGS_TO, 'Status', 'item_status'),
 		);
 	}
 

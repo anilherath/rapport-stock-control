@@ -51,9 +51,10 @@ $this->menu=array(
 		<td>		
 		<?php echo $form->labelEx($model,'order_status'); ?>
 		<?php
-		$status_code=$model->order_status;
-	//	echo $status_code;
-		echo $model->getOrderStatus($status_code);
+//		$status_code=$model->order_status;
+//		echo $status_code;
+		echo $model->status->name;
+//		echo $model->getOrderStatus($status_code);
 		  
 		?>
 		<?php //echo $form->textField($model,$status_str, array('disabled'=>'disabled')); ?>
@@ -137,14 +138,13 @@ $this->menu=array(
 			echo "<tr>";
 			}
 			?>
-				<td>
-				<?php 			$item_status_code=$ordered_items->item_status;
-								$item_status=ItemOnOrder::model()->getItemStatus($item_status_code);
-								echo $item_status;
-								echo "<br>";
-								?>
 				
-				</td>			
+				<?php 	//		$item_status_code=$ordered_items->item_status;
+//								$item_status=ItemOnOrder::model()->getItemStatus($item_status_code);
+//								echo $item_status;
+//								echo "<br>";
+								?>
+				<td><?php echo $ordered_items->status->name; ?></td>			
 				<td><?php echo $ordered_items->items->part_number; ?></td>
 	 			<td><?php echo $ordered_items->items->name; ?></td>
 	 			<td><?php echo $ordered_items->quantity_ordered; ?></td>

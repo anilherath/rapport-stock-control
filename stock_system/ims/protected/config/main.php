@@ -95,9 +95,9 @@ return array(
 		        'transportType'=>'smtp', /// case sensitive!
 		        'transportOptions'=>array(
 		            'host'=>'mail.laser.com',
-		            'username'=>'stalati@ukwhitegoods.co.uk',
+		            'username'=>'amspares',
 		            // or email@googleappsdomain.com
-		            'password'=>'#rev1s1on!',
+		            'password'=>'#general!',
 		            'port'=>'587',
 		            //'encryption'=>'ssl',
 		            ),

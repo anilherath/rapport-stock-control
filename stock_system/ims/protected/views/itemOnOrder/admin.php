@@ -58,14 +58,21 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		array( 'name'=>'part_number', 'value'=>'$data->items->part_number'),
 			//'order_status',
 		
-			
 		array
-			(
-					'type'=>'html',
-					'name'=>'item_status',
-					'value'=>'$data->getItemStatus($data->item_status)',
-					'filter'=>false,
-			),
+		(
+			'type'=>'html',
+			'name'=>'item_status',
+			'value'=>'$data->status->name',
+			//'filter'=>false,
+		),
+			
+//		array
+//			(
+//					'type'=>'html',
+//					'name'=>'item_status',
+//					'value'=>'$data->getItemStatus($data->item_status)',
+//					'filter'=>false,
+//			),
 
 			array(  'name'=>'created',
 					'type'=>'datetime',

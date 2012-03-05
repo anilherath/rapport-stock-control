@@ -21,12 +21,14 @@
  * @property double $shipping_cost
  * @property string $delivery_address_id
  * @property string $date_of_order_recieved
+ * 
  *  
  * The followings are the available model relations:
  * @property ItemOnOrder[] $itemOnOrders
  * @property ItemOnOrderBack[] $itemOnOrderBacks
  * @property User $user
  * @property Suppliers $suppliers
+ * @property Status $status
  */
 class PurchaseOrder extends CActiveRecord
 {
@@ -34,6 +36,7 @@ class PurchaseOrder extends CActiveRecord
 	public $str;
 	public $supplier_name;
 	public $user_name;
+	public $status_of_order;
 	
 	/**
 	 * Returns the static model of the specified AR class.
@@ -66,7 +69,7 @@ class PurchaseOrder extends CActiveRecord
 			array('date_of_order, date_of_order_recieved, created, modified, cancelled', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, suppliers_id, user_id, order_number, order_status, date_of_order, total_cost, vat, net_cost, created, modified, cancelled', 'safe', 'on'=>'search'),
+			array('id, suppliers_id, user_id, order_number, user_name, status_of_order, order_status, date_of_order, total_cost, vat, net_cost, created, modified, cancelled', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -82,6 +85,7 @@ class PurchaseOrder extends CActiveRecord
 			'itemOnOrderBacks' => array(self::HAS_MANY, 'ItemOnOrderBack', 'purchase_order_id'),
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 			'suppliers' => array(self::BELONGS_TO, 'Suppliers', 'suppliers_id'),
+			'status' => array(self::BELONGS_TO, 'Status', 'order_status'),
 		);
 	}
 
@@ -173,13 +177,16 @@ class PurchaseOrder extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
+		/*working*/
+		$criteria->with=array('status');
+		$criteria->compare('status.name', $this->status_of_order, true);
 
 		$criteria->order = 'order_number DESC';
 		$criteria->compare('id',$this->id);
 		$criteria->compare('suppliers_id',$this->suppliers_id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('order_number',$this->order_number);
-		$criteria->compare('order_status',$this->order_status);
+		//$criteria->compare('order_status',$this->order_status);
 		$criteria->compare('date_of_order',$this->date_of_order,true);
 		$criteria->compare('total_cost',$this->total_cost);
 		$criteria->compare('vat',$this->vat);
@@ -191,6 +198,10 @@ class PurchaseOrder extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+		
+//		return new CActiveDataProvider( 'PurchaseOrder' , array(
+//				'criteria'=>$criteria,
+//		));
 	}
 	
 	public function getOrderStatus($staus_code)
@@ -231,11 +242,13 @@ class PurchaseOrder extends CActiveRecord
 	{
 		//return "Yeppy;";
 		return ItemOnOrder::model()->findByPk($item_on_order_id);
-	}
+	}//end of getItemOnOrder.
+	
+	public function getStatus()
+	{
+		return array(1=>'Draft', 2=>'Complete');
+	}//end of getStatus.
 	
 	
 	
-	
-	
-	
-}
+}//end of class.

@@ -84,9 +84,14 @@ $this->menu=array(
 		<td>		
 		<?php echo $form->labelEx($model,'order_status'); ?>
 		<?php
+		
+		
 		$staus_code=$model->order_status;
-		 echo $model->getOrderStatus($staus_code);
-		 if ($staus_code<10 && $staus_code>1)
+		//echo $model->getOrderStatus($staus_code);
+//		echo $staus_code;
+		echo $model->status->name;	
+		
+		if ($staus_code<10 && $staus_code>1)
 		 {
 		 	echo '<br><b>';		 	
 			echo CHtml::link('Order Recieved',array('orderRecieved',
@@ -188,7 +193,8 @@ $this->menu=array(
 				$item_status_code=$ordered_items->item_status;
 				$item_status=ItemOnOrder::model()->getItemStatus($item_status_code);
 				
-				echo "<td>".$item_status."</td>";
+				//echo "<td>".$item_status."</td>";
+				echo "<td>".$ordered_items->status->name."</td>";
 	 			echo "<td>".$ordered_items->items->part_number."</td>";
 	 			echo "<td>".$ordered_items->items->name."</td>";
 	 			echo "<td>".$ordered_items->quantity_ordered."</td>";

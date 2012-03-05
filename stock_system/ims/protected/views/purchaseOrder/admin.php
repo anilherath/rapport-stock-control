@@ -39,15 +39,27 @@ $this->menu=array(
 				),
 	*/
 		//'user_id',
-		array( 'name'=>'user_name', 'value'=>'$data->user->name'),
+		array( 'name'=>'user_name', 
+			   'value'=>'$data->user->username',
+			 ),
 		//'order_status',
 		array
 		(
 			'type'=>'html',
-			'name'=>'order_status',
-			'value'=>'$data->getOrderStatus($data->order_status)',
-			'filter'=>false,
+			'name'=>'status_of_order',
+			//'filter'=>$model->getStatus(),
+			'value'=>'$data->status->name',
+			//'filter' => CHtml::listData(Status::model()->findAll(), 'id','name'),
+			//'filter' => array(1=>'Draft', 2=>'Complete'),
+			//'filter'=>Lookup::items('PostStatus'),
 		),
+//		array
+//		(
+//			'type'=>'html',
+//			'name'=>'order_status',
+//			'value'=>'$data->getOrderStatus($data->order_status)',
+//			'filter'=>false,
+//		),
 			array(  'name'=>'date_of_order',
 					'type'=>'datetime',
 					
