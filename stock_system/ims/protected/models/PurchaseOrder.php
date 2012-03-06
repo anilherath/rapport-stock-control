@@ -82,7 +82,7 @@ class PurchaseOrder extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'itemOnOrders' => array(self::HAS_MANY, 'ItemOnOrder', 'purchase_order_id'),
-			'itemOnOrderBacks' => array(self::HAS_MANY, 'ItemOnOrderBack', 'purchase_order_id'),
+			//'itemOnOrderBacks' => array(self::HAS_MANY, 'ItemOnOrderBack', 'purchase_order_id'),
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 			'suppliers' => array(self::BELONGS_TO, 'Suppliers', 'suppliers_id'),
 			'status' => array(self::BELONGS_TO, 'Status', 'order_status'),
@@ -246,7 +246,8 @@ class PurchaseOrder extends CActiveRecord
 	
 	public function getStatus()
 	{
-		return array(1=>'Draft', 2=>'Complete');
+		//return array(1=>'Draft', 2=>'Complete');
+		return CHtml::dropDownList('', 'Status_of_order', array(1=>'draft', 2=>'<span style="color:green;"><b>Complete</b></span>'), $htmlOptions=array('type'=>'html'));
 	}//end of getStatus.
 	
 	

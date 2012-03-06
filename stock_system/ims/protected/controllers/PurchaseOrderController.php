@@ -409,6 +409,84 @@ class PurchaseOrderController extends Controller
 
 	}///end of orderpreview
 	
+	public function actionOrderExcel($id)
+	{
+		//echo "ID IN CONTROLLR".$id;
+		$model=$this->loadModel($id);
+		$order_id=$model->order_number;
+		
+		header( "Content-Type: application/vnd.ms-excel; charset=utf-8" );
+  		header( "Content-Disposition: inline; filename=\"Purchase Order  ".$model->order_number.".xls\"" );
+		
+		$itemModel=$model->getItemsOnOrder($id);
+		
+		?>
+		
+		<th style="text-align: right"><?php echo "Purchase Order No: ".$model->order_number;?></th>
+		<th style="text-align: right"><?php echo "<br>Order placed by: ".$model->user->name; ?></th>
+		
+		<table border="1"><tr>
+		<th>Order number</th>
+		<th>Part Number</th>
+		<th>Part Name</th>
+		<th>Quantity Ordered</th>
+		<th>Price</th>
+		<th>Total</th>
+		</tr>
+		 
+		<?php 
+		foreach($itemModel as $data)
+		{
+			echo "<tr>";
+			echo "<td>".$model->order_number."</td>";
+			echo "<td>".$data->items->part_number."</td>";
+			echo "<td>".$data->items->name."</td>";
+			echo "<td>".$data->quantity_ordered."</td>";
+			echo "<td>".$data->unit_price."</td>";
+			echo "<td>".$data->total_price."</td>";
+			echo "</tr>";
+		}
+		?></table>
+		<?php 
+		
+	}///end of orderExcel
+	
+	public function actionOrderCsv($id)
+	{
+		//echo "IN ACTION CSV";
+		
+		$model=$this->loadModel($id);
+		
+		header('Content-Description: File Transfer');
+		header('Content-Type: application/csv');
+		header('Content-disposition: attachment; filename=Purchase Order  '.$model->order_number.'.csv');
+		
+		//$enrollment = Reports::getEnrollment($courseId);
+		//$order=PurchaseOrder::getItemsOnOrder($id);
+		$itemModel=$model->getItemsOnOrder($id);
+		$separator=",";
+		
+		foreach ($itemModel as $data)
+		{
+	    	$tmp = array(
+	        $data->items->part_number,
+	        $data->items->name,
+	        $data->quantity_ordered,
+	        $data->quantity_ordered,
+	        $data->unit_price,
+	        $data->total_price,
+	       
+	        	);
+
+    		echo join($separator, $tmp)."\n";
+
+		}
+		
+		Yii::app()->end();
+		
+	}//end of orderCsv
+	
+	
 	
 	public function actionFinaliseOrder($id)
 	{

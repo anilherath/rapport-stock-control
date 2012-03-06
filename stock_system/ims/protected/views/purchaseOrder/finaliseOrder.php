@@ -292,8 +292,18 @@ $this->menu=array(
 		</td>
 			
 		
-		 <th colspan="4" style="text-align: right"><?php  echo CHtml::link('Preview',array('orderPreview',
+		 <th colspan="4" style="text-align: right"><?php  echo CHtml::link('PDF',array('orderPreview',
                    'id'=>$purchase_id), array('target'=>'_blank'));
+		 ?>
+		 </th>
+		 
+		 <th
+		 colspan="4" style="text-align: right"><?php  echo CHtml::link('Excel', array('orderExcel', 'id'=>$purchase_id));
+		 ?>
+		 </th>
+		 
+		 <th
+		 colspan="4" style="text-align: right"><?php  echo CHtml::link('CSV', array('orderCsv', 'id'=>$purchase_id));
 		 ?>
 		 </th>
 		
