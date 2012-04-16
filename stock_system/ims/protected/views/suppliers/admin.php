@@ -46,7 +46,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'name',
 		'address',
 		'town',
-		'postcode',
+		'postcode_s',
 	//	'country',
         array(
       		'name'=>'prefered_supplier',

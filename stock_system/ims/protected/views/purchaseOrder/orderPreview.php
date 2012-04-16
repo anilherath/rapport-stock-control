@@ -19,7 +19,7 @@ $this->layout=false;
 
 
 <table style="width:100%; ">
-<tr>
+
 <tr>
 <td><h2>Purchase Order</h2></td>
 </tr>
@@ -65,7 +65,7 @@ echo "<br> ".$company_contact_details;
 	</tr>
 	<tr>
 		<td>Address</td>
-		<td><?php echo $model->suppliers->address."<br>".$model->suppliers->town."<br>".$model->suppliers->postcode ;?></td>
+		<td><?php echo $model->suppliers->address."<br>".$model->suppliers->town."<br>".$model->suppliers->postcode_s." ".$model->suppliers->postcode_e ;?></td>
 		<td>Placed By:</td>
 		<td><?php echo $model->user->profile ;?></td>
 	</tr>

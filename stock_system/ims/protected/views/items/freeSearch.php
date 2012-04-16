@@ -98,27 +98,34 @@ echo "Service ref no :".$reference_id ;
 ?>
 
  
-
-
-
-
-
-
-
-
-			
-		<input type="hidden" id="current_url" value="<?php echo $current_url;?>"/> 
-	 	<input type="hidden" id="ref_id" value="<?php echo $reference_id ;?>"/> 
-	 	<input type="hidden" id="cust_id" value="<?php echo $customer_id ;?>"/>  
-                Enter Item Name, Part Number or barcode<br><br>
-                <!-- The Searchbox Starts Here  -->
-                <form  name="search_form">
-                 <input  name="query" type="text" id="faq_search_input" style="background-color: #FFFFFF" />
-                </form>
-                <!-- The Searchbox Ends  Here  -->
-        <div id="searchresultdata" class="faq-articles"> </div>
+	<input type="hidden" id="current_url" value="<?php echo $current_url;?>"/> 
+	<input type="hidden" id="ref_id" value="<?php echo $reference_id ;?>"/> 
+	<input type="hidden" id="cust_id" value="<?php echo $customer_id ;?>"/>  
+              Enter Item Name, Part Number or barcode<br><br>
+              <!-- The Searchbox Starts Here  -->
+              <form  name="search_form">
+              <input  name="query" type="text" id="faq_search_input" style="background-color: #FFFFFF" />
+              </form>
+             <!-- The Searchbox Ends  Here  -->
+       <div id="searchresultdata" class="faq-articles"> </div>
      </div>
 
 
 
+<!-- ***************** CODE FOR SEARCH BOX ********************* -->
+<!---->
+<!--	<br><hr>-->
+<!--	-->
+<!--	<h3>google search</h3>-->
+<!--	-->
+<!--	<form method="get" action="http://www.google.com/search" target="_blank">-->
+<!---->
+<!--	<input type="text"   name="q" size="31"-->
+<!-- 	maxlength="255" value="" />-->
+<!--	<input type="submit" value="Google Search" />-->
+<!--	<input type="radio"  name="sitesearch" value="" />-->
+<!-- 	The Web-->
+<!--	<input type="radio"  name="sitesearch"-->
+<!-- 	value="askdavetaylor.com" checked /> Ask Dave Taylor<br />-->
 
+<!--	</form>-->

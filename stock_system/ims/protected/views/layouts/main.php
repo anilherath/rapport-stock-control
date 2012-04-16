@@ -43,7 +43,7 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 		<td style="margin:20px; text-align:right;" >
 	<?php echo CHtml::image($company_logo,"ballpop",array("width"=>"200", "height"=>"75")); ?>
 	</td>
-	<tr>
+	</tr>
 	</table>
 	
 	

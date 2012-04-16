@@ -108,7 +108,7 @@ $this->menu=array(
 	<table style="vertical-align:top;" >
 	<tr>
 		<td colspan="5" style="color:#0066CC;"><b>Ordered Items</b></td>
-		<tr>
+		</tr>
 		 <tr>
 					<th>Status</th>
 					<th>Part Number</th>

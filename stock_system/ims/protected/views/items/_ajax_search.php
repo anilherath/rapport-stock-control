@@ -32,6 +32,7 @@ echo "<br><br>";?>
 <th>Status</th>
 <th>Part Number</th>
 <th>Name </th>
+<th></th>
 <th>Current<br>Quantity</th>
 <th>Available<br> Quantity</th>
 <th>Location</th>
@@ -80,7 +81,14 @@ foreach ($results as $row)
 	?>
 	</td>
 	<td><a href="<?php echo Yii::app()->baseUrl.'/Items/View/'.$id; ?>"><?php echo $row['part_number']?></a></td>
-	<td><?php echo $row['name']?></td>
+	<td><?php echo $row['name'];?></td>
+	<td>
+		<form method="get" action="http://www.google.com/search" target="_blank">
+			<input type="hidden"   name="q" size="10"
+		 	maxlength="255" value= "<?php echo $row['part_number']." ".$row['name'];?>" />
+			<input type ="image" src="<?php echo Yii::app()->baseUrl.'/images/google.jpg';?>" height="30" width="50" alt="submit form" />
+		</form>	
+	</td>
 	<td><?php echo $row['current_quantity']?></td>
 	<td><?php echo $row['available_quantity']?></td>
 	<td><?php echo $row['location_room']."  ".$row['location_row']."  ".$row['location_column']."  ".$row['location_shelf']."  "?></td>

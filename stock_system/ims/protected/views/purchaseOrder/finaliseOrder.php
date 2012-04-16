@@ -152,7 +152,7 @@ $this->menu=array(
 	<table>
 	<tr>
 		<td colspan="5">Ordered Items</td>
-		<tr>
+		</tr>
 		 <tr>
 					<th>Item Status</th>
 					<th>Part Number</th>
@@ -219,9 +219,9 @@ $this->menu=array(
 		 			?>
 		 			
 		 			
-						<a href="<?php echo $del_url; ?>" onclick="return confirm('Are you sure you want to delete?')"><img src="<?php echo $delete_image_url?>" /></a> 
+					<a href="<?php echo $del_url; ?>" onclick="return confirm('Are you sure you want to delete?')"><img src="<?php echo $delete_image_url?>" /></a> 
 		 			<?php
-	 			}///end of id of orderstatus<10
+	 			}///end of if of orderstatus<3
 	 			
 	 			echo '&nbsp;&nbsp;&nbsp;&nbsp;';
 	 			echo "</td>";
@@ -265,7 +265,7 @@ $this->menu=array(
 	</tr>
 	
 	<tr>
-		<td colspan="3">
+		<td colspan="2">
 		<?php $send_order_url=Yii::app()->request->baseUrl.'/PurchaseOrder/SendOrder/'.$purchase_id; ?>
 
 			<?php if ($model->order_status<3) {?>
@@ -281,7 +281,7 @@ $this->menu=array(
 				{?>
 			
 			<?php $supplier_notification_url=Yii::app()->request->baseUrl.'/PurchaseOrder/notifySupplier/'.$purchase_id; ?>
-			<a href="<?php echo $supplier_notification_url; ?>" onclick="return confirm('Are you sure you wanna send email. ?')"> 
+			<a href="<?php echo $supplier_notification_url; ?>" onclick="return confirm('Are you sure you wanna send email?')"> 
 			<?php 
 				echo CHtml::button( 'Notify Supplier');
 				?>
@@ -289,21 +289,28 @@ $this->menu=array(
 			<br>
 			<small>The supplier will be notified by email about the Item status</small>
 			<?php }// end of else?>
-		</td>
 			
+		</td>
 		
-		 <th colspan="4" style="text-align: right"><?php  echo CHtml::link('PDF',array('orderPreview',
+		<td>
+			<?php $testUrl=Yii::app()->request->baseUrl.'/PurchaseOrder/testConnection/'.$purchase_id;?>
+			<a href="<?php echo $testUrl;?>" onclick = "return confirm('Are you sure you wanna send email?')">
+			<?php echo CHtml::button('Test Connection');?>
+			</a>
+		</td>
+		
+		<th colspan="4" style="text-align: right"><?php  echo CHtml::link('PDF',array('orderPreview',
                    'id'=>$purchase_id), array('target'=>'_blank'));
 		 ?>
 		 </th>
 		 
 		 <th
-		 colspan="4" style="text-align: right"><?php  echo CHtml::link('Excel', array('orderExcel', 'id'=>$purchase_id));
+		 	style="text-align: right"><?php  echo CHtml::link('Excel', array('orderExcel', 'id'=>$purchase_id));
 		 ?>
 		 </th>
 		 
 		 <th
-		 colspan="4" style="text-align: right"><?php  echo CHtml::link('CSV', array('orderCsv', 'id'=>$purchase_id));
+		 	style="text-align: right"><?php  echo CHtml::link('CSV', array('orderCsv', 'id'=>$purchase_id));
 		 ?>
 		 </th>
 		

@@ -214,7 +214,10 @@ class OutboundItemsHistoryController extends Controller
 				echo "</tr>";
 			
 				//echo $data->history_id_item , "\t", $data->mainItem->name, "\t", $data->quantity_moved, "\t", $data->current_quantity_in_stock, "\t", $data->created, "\n";
-			}
+			}//end of foreach().
+		?>
+		</table>
+		<?php 
 			
 			Yii::app()->end();
 		}//end of if(isset())

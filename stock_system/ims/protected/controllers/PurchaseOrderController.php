@@ -419,34 +419,60 @@ class PurchaseOrderController extends Controller
   		header( "Content-Disposition: inline; filename=\"Purchase Order  ".$model->order_number.".xls\"" );
 		
 		$itemModel=$model->getItemsOnOrder($id);
-		
 		?>
+		<table>
+		<tr>
+		<td><?php echo "Company name : ";?></td>
+		<td><?php echo Yii::app()->params['company_name'];?></td>
+		<td><?php echo "Purchase Order No: ";?></td>
+		<td><?php echo $model->order_number;?></td>
+		</tr>
+		<tr>
+		<td><?php echo "Address :";?></td>
+		<td><?php echo $model->suppliers->town."\n".$model->suppliers->postcode_s." ".$model->suppliers->postcode_e;?></td>
+		<td><?php echo "Order placed by: ";?></td>
+		<td><?php echo $model->user->name;?></td>
+		</tr>
+		</table>
 		
-		<th style="text-align: right"><?php echo "Purchase Order No: ".$model->order_number;?></th>
-		<th style="text-align: right"><?php echo "<br>Order placed by: ".$model->user->name; ?></th>
 		
 		<table border="1"><tr>
-		<th>Order number</th>
 		<th>Part Number</th>
 		<th>Part Name</th>
 		<th>Quantity Ordered</th>
 		<th>Price</th>
 		<th>Total</th>
+		<th>Comments</th>
 		</tr>
 		 
 		<?php 
 		foreach($itemModel as $data)
 		{
-			echo "<tr>";
-			echo "<td>".$model->order_number."</td>";
-			echo "<td>".$data->items->part_number."</td>";
-			echo "<td>".$data->items->name."</td>";
-			echo "<td>".$data->quantity_ordered."</td>";
-			echo "<td>".$data->unit_price."</td>";
-			echo "<td>".$data->total_price."</td>";
-			echo "</tr>";
+			?>
+			
+			<tr>
+			<td style="vertical-align:middle";align="center"><?php echo $data->items->part_number;?></td>
+			<td style="vertical-align:middle";align="center"><?php echo $data->items->name;?></td>
+			<td style="vertical-align:middle";align="center"><?php echo $data->quantity_ordered;?></td>
+			<td style="vertical-align:middle";align="center"><?php echo $data->unit_price;?></td>
+			<td style="vertical-align:middle";align="center"><?php echo $data->total_price;?></td>
+			<td><?php echo $data->comments;?></td>
+			</tr>
+			
+			
+		<?php 
 		}
-		?></table>
+		?>
+		<tr><td colspan="6"></td></tr>
+		<tr><th colspan="4" style="width:10%;text-align:right">Subtotal</th>
+		<td colspan="2" style="width:10%;text-align:left"><?php echo $model->total_cost;?></td></tr>
+		<tr><th colspan="4" style="width:10%;text-align:right">Shipping Cost</th>
+		<td colspan="2" style="width:10%;text-align:left"><?php  echo $model->shipping_cost;?></td></tr>
+		<tr><th colspan="4" style="width:10%;text-align:right">VAT @ <?php echo Yii::app()->params['vat_in_percentage'];?>%</th>
+		<td colspan="2" style="width:10%;text-align:left"><?php echo $model->vat;?></td></tr>
+		<tr><th colspan="4" style="width:10%;text-align:right">Total</th>
+		<td colspan="2" style="width:10%;text-align:left"><?php echo $model->net_cost; ?></td></tr>
+		</table>
 		<?php 
 		
 	}///end of orderExcel
@@ -598,29 +624,56 @@ class PurchaseOrderController extends Controller
 	}//end of function notify supplier
 	
 	
-	public function actionTestConnection()
+	public function actionTestConnection($id)
 	{
+		$model=$this->loadModel($id);
 		//echo "IN ACTION TEST CONNECTION <br>";
 		
 		if(!$conn = @fsockopen("google.com", 80, $errno, $errstr, 30))
 		{
 			echo "PLEASE CHECK YOUR INTERNET CONNECTION";
+			echo $model->id;
 		}
 		else 
 		{
 			
 			$model=new PurchaseOrder;
 			
-			$reciever_email='stalati@ukwhitegoods.co.uk';
+			$reciever_email='kruthika.bethur@gmail.com';
 			$sender_email='stalati@ukwhitegoods.co.uk';
 			
 			$message = new YiiMailMessage();
 			$message->setTo(array($reciever_email));
 		    $message->setFrom(array($sender_email));
-		    $message->setSubject('hi');
+		    $message->setSubject('Test');
 			
-		    $message->setBody("This is a test mail");
+		    //$message->setBody("This is a test mail with attachment");
+		    
+		    
+		    # You can easily override default constructor's params
+			$mPDF1 = Yii::app()->ePdf->mPDF('', 'A5');
+			# render (full page)
+			$mPDF1->WriteHTML($this->render('orderPreview',array('model'=>$model,), true));
+		    # Load a stylesheet
+		    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/main.css');
+		    $message->setBody($mPDF1->WriteHTML($stylesheet, 1));
 		    $numsent = Yii::app()->mail->send($message);
+		    
+//		    $url=Yii::app()->request->baseurl;
+//			//echo $url;
+//			$path=$url.'/purchaseOrder/preview/'.$id;
+//		
+//		    $files = CUploadedFile::getInstances($model, 'preview/'.$id);
+//		    foreach ($files as $file)
+//    			$message->attach(new Swift_Attachment(file_get_contents($file->myfile), $file->preview, $file->html));
+
+//		     $uploadedFile = CUploadedFile::getInstances($model, 'finaliseOrder');
+//		     $uploadedFileName = $uploadedFile->tempName;
+//			 $swiftAttachment = Swift_Attachment::fromPath('C:\Users\Kruthika\Desktop\attach.docx');
+//			 $message->attach($swiftAttachment);
+		    
+			
+    		
 		   	//$numsent=1;
 //		   	try 
 //		   	{
@@ -636,15 +689,29 @@ class PurchaseOrderController extends Controller
 		   	
 		   	if(Yii::app()->mail->send($message))
 		   	{
-		   		echo "Test email is sent, Connection is OK"; 
+		   		echo "TEST EMAIL IS SENT, CONNECTION IS OK"; 
 		   	}
-			else
-			{
-				//$this->raiseEvent('Error', 'error');
-				echo "Please check your internet connection";
-				die("Please check your internet connection");
-			}
 		}//end of else.
+		
+//			$this->beginWidget('zii.widgets.jui.CJuiDialog',array(
+//	    				'id'=>'juiDialog',
+//	    				'options'=>array(
+//	    						'title'=>'Test Connection',
+//	    						'autoOpen'=>true,
+//	    						'modal'=>'true',
+//	    						'show' => 'blind',
+//                            	'hide' => 'explode'
+//	    						//'width'=>'40px',
+//	    						//'height'=>'40px',
+//	    						),
+//	    				'cssFile'=>Yii::app()->request->baseUrl.'/css/jquery-ui.css',
+//       					
+//	    				
+//	    		));
+//	    		
+//	    		echo $display;
+//	    		$this->endWidget();
+		
 		
 	}//end of testConnection.
 	

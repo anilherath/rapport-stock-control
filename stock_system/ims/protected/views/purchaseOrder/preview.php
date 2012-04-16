@@ -123,7 +123,7 @@ $this->menu=array(
 	<table>
 	<tr>
 		<td colspan="5">Ordered Items</td>
-		<tr>
+		</tr>
 		 <tr>
 					<th>Sr. No.</th>
 					<th>Part Number</th>
@@ -151,6 +151,7 @@ $this->menu=array(
 					<td colspan=7>
 					<small>This item is already added, you can update the quantity or delete it</small>
 					</td>
+					
 					
 					<?php 
 					echo "<tr style='color:maroon;margin-left:20px;'>";

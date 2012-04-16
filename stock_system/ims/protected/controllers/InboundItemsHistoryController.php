@@ -177,7 +177,7 @@ class InboundItemsHistoryController extends Controller
                         
                ?>
         		
-        		<table border="1"> <tr>
+        	<table border="1"> <tr>
 			<th>history_id_item</th>
 			<th>Part Number</th>
 			<th>Item name</th>
@@ -201,7 +201,10 @@ class InboundItemsHistoryController extends Controller
 				echo "</tr>";
 				
 				//echo $data->history_id_item, "\t",$data->mainItem->name, "\t", $data->quantity_moved, "\t", $data->current_quantity_in_stock, "\t", $data->created, "\n";
-			}
+			}//end of foreach().
+		?>
+		</table>
+		<?php 
 				
 		
 			Yii::app()->end();

@@ -27,7 +27,7 @@ $this->menu=array(
 		'contact_person',
 		'address',
 		'town',
-		'postcode',
+		'postcode_s',
 		'country',
 		'contact_number',
 		'email',
