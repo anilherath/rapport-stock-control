@@ -35,8 +35,7 @@ class PurchaseOrderController extends Controller
 				
 				
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('notifySupplier', 'orderRecieved','finaliseOrder','create','update','index','view','admin','autoCreate','preview','itemsAdmin','sendOrder','OrderPreview'),
-					
+				'actions'=>array('notifySupplier', 'orderRecieved','finaliseOrder','create','update','index','view','admin','autoCreate','preview','itemsAdmin','sendOrder','OrderPreview','testConnection'),
 				'users'=>array('@'),
 			),
 				
@@ -637,10 +636,12 @@ class PurchaseOrderController extends Controller
 		else 
 		{
 			
+			//echo "INTERNET IS CONNECTED";
+			
 			$model=new PurchaseOrder;
 			
 			$reciever_email='kruthika.bethur@gmail.com';
-			$sender_email='stalati@ukwhitegoods.co.uk';
+			$sender_email='kruthika.bethur@gmail.com';
 			
 			$message = new YiiMailMessage();
 			$message->setTo(array($reciever_email));
@@ -658,60 +659,17 @@ class PurchaseOrderController extends Controller
 		    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/main.css');
 		    $message->setBody($mPDF1->WriteHTML($stylesheet, 1));
 		    $numsent = Yii::app()->mail->send($message);
-		    
-//		    $url=Yii::app()->request->baseurl;
-//			//echo $url;
-//			$path=$url.'/purchaseOrder/preview/'.$id;
-//		
-//		    $files = CUploadedFile::getInstances($model, 'preview/'.$id);
-//		    foreach ($files as $file)
-//    			$message->attach(new Swift_Attachment(file_get_contents($file->myfile), $file->preview, $file->html));
-
-//		     $uploadedFile = CUploadedFile::getInstances($model, 'finaliseOrder');
-//		     $uploadedFileName = $uploadedFile->tempName;
-//			 $swiftAttachment = Swift_Attachment::fromPath('C:\Users\Kruthika\Desktop\attach.docx');
-//			 $message->attach($swiftAttachment);
-		    
-			
-    		
-		   	//$numsent=1;
-//		   	try 
-//		   	{
-//		   		if(!Yii::app()->mail->send($message))
-//		   			throw new Exception();
-//		   		else 
-//		   			echo "Test email is sent, Connection is OK";	
-//		   	}
-//		   	catch (Exception $e)
-//		   	{
-//		   		echo "Please check internet connection : ERROR IS :".$e->getMessage();
-//		   	}
-		   	
-		   	if(Yii::app()->mail->send($message))
+		    if(Yii::app()->mail->send($message))
 		   	{
 		   		echo "TEST EMAIL IS SENT, CONNECTION IS OK"; 
 		   	}
+		   	
+		   		
+		   
+		   	
+			
+			
 		}//end of else.
-		
-//			$this->beginWidget('zii.widgets.jui.CJuiDialog',array(
-//	    				'id'=>'juiDialog',
-//	    				'options'=>array(
-//	    						'title'=>'Test Connection',
-//	    						'autoOpen'=>true,
-//	    						'modal'=>'true',
-//	    						'show' => 'blind',
-//                            	'hide' => 'explode'
-//	    						//'width'=>'40px',
-//	    						//'height'=>'40px',
-//	    						),
-//	    				'cssFile'=>Yii::app()->request->baseUrl.'/css/jquery-ui.css',
-//       					
-//	    				
-//	    		));
-//	    		
-//	    		echo $display;
-//	    		$this->endWidget();
-		
 		
 	}//end of testConnection.
 	

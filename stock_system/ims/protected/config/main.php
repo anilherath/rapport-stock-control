@@ -1,5 +1,7 @@
 <?php
 
+	echo "HELLO WELCOME TO MAIN";
+$smtp_host='smtp.gmail.com';
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
@@ -94,11 +96,16 @@ return array(
 		        'class' => 'application.extensions.yii-mail.YiiMail',
 		        'transportType'=>'smtp', /// case sensitive!
 		        'transportOptions'=>array(
-		            'host'=>'mail.laser.com',
-		            'username'=>'amspares',
-		            // or email@googleappsdomain.com
-		            'password'=>'#general!',
-		            'port'=>'587',
+		            //'host'=>'mail.laser.com',
+		            'host'=>$smtp_host,
+					//'username'=>'amspares',
+					'username'=>'kruthika.bethur@gmail.com',
+					// or email@googleappsdomain.com
+		            //'password'=>'#general!',
+		            'password'=>'openminds',
+		            //'port'=>'587',
+		            'encryption'=>'tls',
+					'port'=>'465',
 		            //'encryption'=>'ssl',
 		            ),
 		        'viewPath' => 'application.views.mail',
