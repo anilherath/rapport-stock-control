@@ -640,8 +640,8 @@ class PurchaseOrderController extends Controller
 			
 			$model=new PurchaseOrder;
 			
-			$reciever_email='kruthika.bethur@gmail.com';
-			$sender_email='kruthika.bethur@gmail.com';
+			$reciever_email='mailtest.test10@gmail.com';
+			$sender_email='mailtest.test10@gmail.com';
 			
 			$message = new YiiMailMessage();
 			$message->setTo(array($reciever_email));
@@ -658,10 +658,11 @@ class PurchaseOrderController extends Controller
 		    # Load a stylesheet
 		    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/main.css');
 		    $message->setBody($mPDF1->WriteHTML($stylesheet, 1));
-		    $numsent = Yii::app()->mail->send($message);
+		   	//$message->setBody('THIS IS TEST MAIL');
+		    //$numsent = Yii::app()->mail->send($message);
 		    if(Yii::app()->mail->send($message))
 		   	{
-		   		echo "TEST EMAIL IS SENT, CONNECTION IS OK"; 
+		   		echo "TEST EMAIL IS SENT, CONNECTION IS OK<br>"; 
 		   	}
 		   	
 		   		
