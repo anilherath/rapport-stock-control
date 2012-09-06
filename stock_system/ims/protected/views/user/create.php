@@ -1,14 +1,11 @@
-<?php
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	'Create',
-);
+<div id="sidemenu">             
+<?php include('setup_sidemenu.php'); ?>   
+</div>
 
-$this->menu=array(
-	//array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'List Users', 'url'=>array('admin')),
-);
-?>
+<table><tr>
+	<td> <?php echo CHtml::link('Manage Users',array('admin')); ?></td>
+	<td> <?php echo CHtml::link('Create New User',array('create')); ?></td>
+</tr></table>
 
 <h1>Create User</h1>
 

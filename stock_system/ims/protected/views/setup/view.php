@@ -3,18 +3,17 @@ $this->breadcrumbs=array(
 	'Setups'=>array('index'),
 	$model->id,
 );
-
-$this->menu=array(
-//	array('label'=>'List Setup', 'url'=>array('index')),
-//	array('label'=>'Create Setup', 'url'=>array('create')),
-//	array('label'=>'Update Setup', 'url'=>array('update', 'id'=>$model->id)),
-//	array('label'=>'Delete Setup', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-//	array('label'=>'Manage Setup', 'url'=>array('admin')),
-	array('label'=>'Mail Server', 'url'=>array('mailServer')),
-);
 ?>
 
-<h1>View Setup #<?php echo $model->id; ?></h1>
+<div id="sidemenu">             
+<?php include('setup_sidemenu.php'); ?>   
+</div>
+
+<h1>Setup</h1>
+
+<div style="text-align:right;" >
+<?php echo CHtml::link('Edit',array('update', 'id'=>$model->id)); ?>
+</div>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

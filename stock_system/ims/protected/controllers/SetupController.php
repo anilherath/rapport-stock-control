@@ -31,7 +31,7 @@ class SetupController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','mailServer','mailSettings'),
+				'actions'=>array('restoreDatabase', 'about', 'changeLogo', 'create','update','mailServer','mailSettings'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -236,6 +236,77 @@ class SetupController extends Controller
 //	    }
 	    $this->render('mailSettings',array('model'=>$model));
 	}//end of mailSettings().
+	
+	public function actionAbout()
+	{
+	    $this->render('about');
+	}//end of about().
+	
+	
+	public function actionChangeLogo()
+	{
+	    $model=new Setup('view');
+	
+	    // uncomment the following code to enable ajax-based validation
+	    /*
+	    if(isset($_POST['ajax']) && $_POST['ajax']==='setup-changeLogo-form')
+	    {
+	        echo CActiveForm::validate($model);
+	        Yii::app()->end();
+	    }
+	    */
+	
+	    if(isset($_POST['Setup']))
+	    {
+	        $model->attributes=$_POST['Setup'];
+	        if($model->validate())
+	        {
+	            // form inputs are valid, do something here
+	            return;
+	        }
+	    }
+	    $this->render('changeLogo',array('model'=>$model));
+	}//end of change logo().
+	
+	public function actionRestoreDatabase()
+	{
+	    if(isset($_POST['finish']))
+		{
+			//			echo 'DATA BASEFILE :  '. $_FILES["database"]["error"];
+
+			if ($_FILES["database"]["type"] == "application/octet-stream" && $_FILES["database"]["name"] == "chs.db")
+			{
+				if ($_FILES["database"]["error"] > 0)
+				{
+					echo "Return Code: " . $_FILES["logo_url"]["error"] . "<br />";
+				}//end of if for error
+				else
+				{
+					echo 'YEPPY';
+
+					$uploaded_file= $_FILES["database"]["tmp_name"];
+					$location="protected/data/chs.db";
+					//echo '<br>'.$location;
+					if (move_uploaded_file($uploaded_file,$location))
+					{
+						echo "<span style='background-color:green; color:black;' > Database Restored </span><br>";
+					}
+					else
+					{
+						echo '<span style="background-color:red; color:black;">Not Stored , Please try again</span><br> ';
+					}
+
+				}//end of else
+			}///end of if for check for database file check
+			else {
+				echo '<span style="background-color:red; color:black;">Please upload chs.db file only</span><br> ';
+			}
+
+		}//ennd of if of post finish
+
+		$this->render('restoreDatabase');
+		
+	}//end of restoreDatabase.
 	
 
 

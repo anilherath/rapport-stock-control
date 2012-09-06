@@ -1,14 +1,16 @@
-<?php
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	'Manage',
-);
+<div id="sidemenu">             
+<?php include('setup_sidemenu.php'); ?>   
+</div>
 
-$this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
-);
+<table><tr>
+	<td> <?php echo CHtml::link('Manage Users',array('admin')); ?></td>
+	<td> <?php echo CHtml::link('Add New User',array('create')); ?></td>
+</tr></table>
 
+
+
+
+<?
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
