@@ -59,16 +59,15 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 				array('label'=>'Items', 'url'=>array('/items/freeSearch/')),
 				array('label'=>'Inbound', 'url'=>array('/items/inboundSearch')),
 				array('label'=>'Outbound', 'url'=>array('/items/outboundSearch')),
-
 				array('label'=>'Purchase Order', 'url'=>array('/purchaseOrder/admin')),
 				array('label'=>'Items on Order', 'url'=>array('/itemOnOrder/admin')),
-					array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
+				array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
 				//array('label'=>'My Account', 'url'=>array('/userGroups/admin')),
 				//array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'My Account', 'url'=>array('/user/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Set Up', 'url'=>array('/setup/1')),
 				array('label'=>'Back Up', 'url'=>array('/site/backup'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
 
 					
