@@ -194,7 +194,7 @@ class Setup extends CActiveRecord
 	
 					
 					
-				/*STEP 2*//*Creating a backup of database*/
+			/*STEP 2*//*Creating a backup of database*/
 			CASE 2:
 	
 				$db_current_location=getcwd().DS.'protected'.DS.'data'.DS.'chs.db';
