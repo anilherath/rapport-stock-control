@@ -4,7 +4,14 @@
 
 <?php 
 	
-$request='http://rapportsoftware.co.uk/versions/rapport_callhandling.txt';	
+
+
+$setupModel = Setup::model()->findByPk(1);
+//$request='http://rapportsoftware.co.uk/versions';
+$update_url = $setupModel->update_version_url;
+$request = $update_url.'/latest_stocksystem_version.txt';
+//echo "<br>request = ".$request;
+	
 $available_version = curl_file_get_contents($request, true);
 $current_version=Yii::app()->params['software_version'];
 ?>

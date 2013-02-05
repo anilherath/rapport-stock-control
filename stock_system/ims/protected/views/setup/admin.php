@@ -57,7 +57,7 @@ $('.search-form form').submit(function(){
 		'vat_reg_no',
 		'company_number',
 		'postcode',
-		'custom5',
+		
 		*/
 		array(
 			'class'=>'CButtonColumn',

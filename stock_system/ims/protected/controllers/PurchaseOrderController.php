@@ -426,8 +426,8 @@ class PurchaseOrderController extends Controller
 		?>
 		<table>
 		<tr>
-		<td><?php echo "Company name : ";?></td>
-		<td><?php echo $setupModel->company;?></td>
+		<td><?php echo "Supplier name : ";?></td>
+		<td><?php echo $model->suppliers->name;?></td>
 		<td><?php echo "Purchase Order No: ";?></td>
 		<td><?php echo $model->order_number;?></td>
 		</tr>

@@ -95,16 +95,6 @@
 		<?php echo $form->textArea($model,'company_number',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'postcode'); ?>
-		<?php echo $form->textArea($model,'postcode',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'custom5'); ?>
-		<?php echo $form->textArea($model,'custom5',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

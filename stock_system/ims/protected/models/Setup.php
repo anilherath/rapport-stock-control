@@ -147,10 +147,10 @@ class Setup extends CActiveRecord
 	
 		$setupModel = Setup::model()->findByPk('1');
 		//echo $setupModel->version_update_url;
-		$update_url_from_db = $setupModel->version_update_url;
+		$update_url_from_db = $setupModel->update_version_url;
 	
 		//$request='http://www.rapportsoftware.co.uk/versions_test/latest_callhandling_version.txt';
-		$request=$update_url_from_db.'/latest_callhandling_version.txt';
+		$request = $update_url.'/latest_stocksystem_version.txt';
 			
 		$installed_version=Yii::app()->params['software_version'];
 		$available_version = $this->curl_file_get_contents($request);
