@@ -39,6 +39,12 @@
 		<?php echo $form->textField($model,'postcode_s'); ?>
 		<?php echo $form->error($model,'postcode_s'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'postcode_e'); ?>
+		<?php echo $form->textField($model,'postcode_e'); ?>
+		<?php echo $form->error($model,'postcode_e'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'country'); ?>

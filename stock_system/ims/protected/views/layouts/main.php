@@ -64,7 +64,7 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 				array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
 				//array('label'=>'My Account', 'url'=>array('/userGroups/admin')),
 				//array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'My Account', 'url'=>array('/user/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
+				//array('label'=>'My Account', 'url'=>array('/user/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Set Up', 'url'=>array('/setup/1')),
 				array('label'=>'Back Up', 'url'=>array('/site/backup'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

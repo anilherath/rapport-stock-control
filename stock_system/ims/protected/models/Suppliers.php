@@ -30,6 +30,7 @@
  */
 class Suppliers extends CActiveRecord
 {
+	public $postcode;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return Suppliers the static model class
@@ -89,7 +90,8 @@ class Suppliers extends CActiveRecord
 			'name' => 'Supplier Name',
 			'address' => 'Address',
 			'town' => 'Town',
-			'postcode_s' => 'Postcode',
+			'postcode_s' => 'Postcode_s',
+			'postcode_e' => 'Postcode_e',
 			'country' => 'Country',
 			'contact_number' => 'Contact Number',
 			'email' => 'Email',

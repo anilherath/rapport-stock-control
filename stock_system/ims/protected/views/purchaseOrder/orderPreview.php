@@ -1,6 +1,6 @@
 <?php 
 $this->layout=false;
-
+$setupModel = Setup::model()->findByPk(1);
 
 ?>
 <html>
@@ -34,9 +34,12 @@ echo CHtml::image($logo_url);
 <tr>
 <td align="right" style="font-size:10px;">
 <?php 
-$company_name=Yii::app()->params['company_name'];
-$company_address=Yii::app()->params['company_address'];
-$company_contact_details=Yii::app()->params['company_contact_details'];
+//$company_name=Yii::app()->params['company_name'];
+$company_name = $setupModel->company;
+//$company_address=Yii::app()->params['company_address'];
+$company_address = $setupModel->address;
+//$company_contact_details=Yii::app()->params['company_contact_details'];
+$company_contact_details = 'Telephone: '.$setupModel->telephone.'  Fax: '.$setupModel->fax.'  Email: '.$setupModel->email;
 $vat_percentage=Yii::app()->params['vat_in_percentage'];
 
 echo $company_name."<br>".$company_address;

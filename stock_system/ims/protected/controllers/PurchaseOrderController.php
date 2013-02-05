@@ -35,7 +35,7 @@ class PurchaseOrderController extends Controller
 				
 				
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('notifySupplier', 'orderRecieved','finaliseOrder','create','update','index','view','admin','autoCreate','preview','itemsAdmin','sendOrder','OrderPreview','testConnection'),
+				'actions'=>array('notifySupplier', 'orderRecieved','finaliseOrder','create','update','index','view','admin','autoCreate','preview','itemsAdmin','sendOrder','OrderPreview','testConnection','OrderExcel','OrderCsv'),
 				'users'=>array('@'),
 			),
 				
@@ -335,12 +335,14 @@ class PurchaseOrderController extends Controller
 	{
 		
 		$model=$this->loadModel($id);
-	    
+	    $setupModel = Setup::model()->findByPk(1);
 		
 		$reciever_email=$model->suppliers->email;
 		$reciever_name=$model->suppliers->contact_person;
-		$sender_email=Yii::app()->params['adminEmail'];
-		$sender_name=Yii::app()->params['company_name'];
+		//$sender_email=Yii::app()->params['adminEmail'];
+		$sender_email = $setupModel->email;
+		//$sender_name=Yii::app()->params['company_name'];
+		$sender_name = $setupModel->company;
 		
 		$message = new YiiMailMessage();
 	    $message->setTo(
@@ -414,6 +416,9 @@ class PurchaseOrderController extends Controller
 		$model=$this->loadModel($id);
 		$order_id=$model->order_number;
 		
+		$model=$this->loadModel($id);
+		$setupModel = Setup::model()->findByPk(1);
+		
 		header( "Content-Type: application/vnd.ms-excel; charset=utf-8" );
   		header( "Content-Disposition: inline; filename=\"Purchase Order  ".$model->order_number.".xls\"" );
 		
@@ -422,7 +427,7 @@ class PurchaseOrderController extends Controller
 		<table>
 		<tr>
 		<td><?php echo "Company name : ";?></td>
-		<td><?php echo Yii::app()->params['company_name'];?></td>
+		<td><?php echo $setupModel->company;?></td>
 		<td><?php echo "Purchase Order No: ";?></td>
 		<td><?php echo $model->order_number;?></td>
 		</tr>
@@ -595,12 +600,17 @@ class PurchaseOrderController extends Controller
 	public function actionNotifySupplier($id)
 	{
 		$model=$this->loadModel($id);
+		$setupModel = Setup::model()->findByPk(1);
+		
+		$model=$this->loadModel($id);
 		$itemsOnOrderModel=$model->getItemsOnOrder($id);
 		
 		$reciever_email=$model->suppliers->email;
 		$reciever_name=$model->suppliers->contact_person;
-		$sender_email=Yii::app()->params['adminEmail'];
-		$sender_name=Yii::app()->params['company_name'];
+		//$sender_email=Yii::app()->params['adminEmail'];
+		$sender_email = $setupModel->email;
+		//$sender_name=Yii::app()->params['company_name'];
+		$sender_name = $setupModel->company;
 		
 		$message = new YiiMailMessage();
 		$message->setTo(
@@ -635,29 +645,49 @@ class PurchaseOrderController extends Controller
 		}
 		else 
 		{
+			$root = dirname(dirname(__FILE__));
+			//echo "<br>".$root;
+			$filename = $root.'/config/mail_server.json';
+			//echo "<br>file url = ".$filename;
+			
+			$send_receive_address = '';
 			
 			//echo "INTERNET IS CONNECTED";
 			
+			if(file_exists($filename))
+			{
+				//echo "<br>File is present";
+				$data = file_get_contents($filename);
+				$decodedata = json_decode($data, true);
+				$send_receive_address = $decodedata['smtp_username'];
+				//echo "<br>email addr = ".$send_receive_address;
+				
+			}//end of if file exists.
+			else
+			{
+				//echo "<br>Unable to find valid email address";
+			}
+			
 			$model=new PurchaseOrder;
 			
-			$reciever_email='mailtest.test10@gmail.com';
-			$sender_email='mailtest.test10@gmail.com';
+			$reciever_email=$send_receive_address;
+			$sender_email=$send_receive_address;
 			
 			$message = new YiiMailMessage();
 			$message->setTo(array($reciever_email));
 		    $message->setFrom(array($sender_email));
 		    $message->setSubject('Test');
 			
-		    //$message->setBody("This is a test mail with attachment");
+		    $message->setBody("This is a test mail from Stock System");
 		    
 		    
 		    # You can easily override default constructor's params
-			$mPDF1 = Yii::app()->ePdf->mPDF('', 'A5');
-			# render (full page)
-			$mPDF1->WriteHTML($this->render('orderPreview',array('model'=>$model,), true));
-		    # Load a stylesheet
-		    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/main.css');
-		    $message->setBody($mPDF1->WriteHTML($stylesheet, 1));
+// 			$mPDF1 = Yii::app()->ePdf->mPDF('', 'A5');
+// 			# render (full page)
+// 			$mPDF1->WriteHTML($this->render('orderPreview',array('model'=>$model,), true));
+// 		    # Load a stylesheet
+// 		    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/main.css');
+// 		    $message->setBody($mPDF1->WriteHTML($stylesheet, 1));
 		   	//$message->setBody('THIS IS TEST MAIL');
 		    //$numsent = Yii::app()->mail->send($message);
 		    if(Yii::app()->mail->send($message))

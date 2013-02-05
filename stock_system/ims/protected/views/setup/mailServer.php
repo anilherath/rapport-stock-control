@@ -46,9 +46,10 @@ include 'setup_sidemenu.php';
 	$smtp_port = '';
 	
 	$root = dirname(dirname(dirname(__FILE__)));
-	//echo $root."<br>";
+	echo $root."<br>";
 	
 	$filename = $root.'/config/mail_server.json';
+	echo "<br>file url = ".$filename;
 
 	if(file_exists($filename))
 	{

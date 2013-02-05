@@ -24,7 +24,13 @@ $this->menu=array(
 		'name',
 		'address',
 		'town',
-		'postcode',
+		array(
+			'name'=>'postcode',
+			//'value'=>$model->postcode_s.$model->postcode_e,
+			'value'=>'$data->postcode_s." ".$data->postcode_e',
+		),	
+// 		'postcode_s',
+// 		'postcode_e',
 		'country',
         array(
       		'name'=>'prefered_supplier',

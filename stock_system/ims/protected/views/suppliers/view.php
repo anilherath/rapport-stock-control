@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Suppliers #<?php echo $model->id; ?></h1>
+<h1>Supplier <?php echo $model->name; ?></h1>
 <div style="text-align: right;">
 <?php echo CHtml::link('Edit',array('update', 'id'=>$model->id)); ?>
 </div>
@@ -27,7 +27,13 @@ $this->menu=array(
 		'contact_person',
 		'address',
 		'town',
-		'postcode_s',
+// 		'postcode_s',
+// 		'postcode_e',
+		array(
+			'name'=>'postcode',
+			//'value'=>'$data->postcode_s." ".$data->postcode_e',
+			'value'=>$model->postcode_s." ".$model->postcode_e,
+		),
 		'country',
 		'contact_number',
 		'email',
@@ -47,7 +53,15 @@ $this->menu=array(
 					'value'=>$model->prefered_supplier ? "Yes" : "No",
 			),
 			
-		'created',
-		'modified',
+		//'created',
+		array(
+				'label'=>'created',
+				'value'=>date('d-M-Y', $model->created),
+		),
+		//'modified',
+		array(
+				'label'=>'modified',
+				'value'=>date('d-M-Y', $model->modified),
+		),
 	),
 )); ?>

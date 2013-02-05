@@ -91,7 +91,10 @@ $this->menu=array(
 		</td>
 		<td>
 		<b>Recieved On</b><br>
-		<?php echo $form->textField($model,'date_of_order_recieved', array('disabled'=>'disabled', 'size'=>'22')); 
+		<?php
+		$received_date = date('d-M-Y', $model->date_of_order_recieved); 
+		//echo $form->textField($model, $received_date, array('disabled'=>'disabled', 'size'=>'22'));
+		echo CHtml::textField('', $received_date, array('disabled'=>'disabled', 'size'=>'22')); 
 
 		?>
 		</td>

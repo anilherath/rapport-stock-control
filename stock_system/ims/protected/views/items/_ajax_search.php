@@ -86,7 +86,7 @@ foreach ($results as $row)
 		<form method="get" action="http://www.google.com/search" target="_blank">
 			<input type="hidden"   name="q" size="10"
 		 	maxlength="255" value= "<?php echo $row['part_number']." ".$row['name'];?>" />
-			<input type ="image" src="<?php echo Yii::app()->baseUrl.'/images/google.jpg';?>" height="30" width="50" alt="submit form" />
+			<input type ="image" src="<?php echo Yii::app()->baseUrl.'/images/search.jpg';?>" height="40" width="50" alt="submit form" />
 		</form>	
 	</td>
 	<td><?php echo $row['current_quantity']?></td>

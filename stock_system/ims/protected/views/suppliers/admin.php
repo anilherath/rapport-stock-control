@@ -46,7 +46,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'name',
 		'address',
 		'town',
-		'postcode_s',
+		//'postcode_s',
+		array(
+			'name'=>'postcode',
+			'value'=>'$data->postcode_s." ".$data->postcode_e',
+		),
+		
 	//	'country',
         array(
       		'name'=>'prefered_supplier',
