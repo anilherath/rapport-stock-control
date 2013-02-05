@@ -10,7 +10,7 @@
 
 
 
-<?
+<?php
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();

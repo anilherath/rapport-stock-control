@@ -1,8 +1,8 @@
 <?php
-$this->breadcrumbs=array(
-	'Setups'=>array('index'),
-	$model->id,
-);
+// $this->breadcrumbs=array(
+// 	'Setups'=>array('index'),
+// 	$model->id,
+// );
 ?>
 
 <div id="sidemenu">             
@@ -18,12 +18,13 @@ $this->breadcrumbs=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
+		//'id',
 		'company',
 		'address',
 		'town',
-		'postcode_s',
-		'postcode_e',
+		'postcode',
+// 		'postcode_s',
+// 		'postcode_e',
 		'county',
 		'country',
 		'email',
@@ -36,7 +37,6 @@ $this->breadcrumbs=array(
 		'website',
 		'vat_reg_no',
 		'company_number',
-		'postcode',
-		'custom5',
+		//'custom5',
 	),
 )); ?>

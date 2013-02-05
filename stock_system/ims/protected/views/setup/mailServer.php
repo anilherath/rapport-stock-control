@@ -97,7 +97,7 @@ alert(val);
 	
 	<b>User Name</b><br><input type="text" name="username" value=<?php echo $smtp_username;?>><br>
 	
-	<b>Password</b><br><input type="text" name="password" value=<?php echo $smtp_password;?>><br>
+	<b>Password</b><br><input type="password" name="password" value=<?php echo $smtp_password;?>><br>
 	
 	<b>Encryption Type</b><br>
 	<SELECT name="server_encryption" id="server_encryption" onchange="getSelectedValue();">
