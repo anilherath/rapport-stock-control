@@ -239,8 +239,22 @@ class SetupController extends Controller
 	
 	public function actionAbout()
 	{
-	    $this->render('about');
-	}//end of about().
+		
+		
+		$setupModel = Setup::model()->findByPk('1');
+		//echo $setupModel->version_update_url;
+		$update_url_from_db = $setupModel->version_update_url;
+		$request=$update_url_from_db.'/latest_callhandling_version.txt';
+		//$request='http://www.rapportsoftware.co.uk/versions_test/latest_callhandling_version.txt';
+		
+		$available_variable = $this->curl_file_get_contents($request);
+		//echo "<br>available version = ".$available_variable;
+		// store session data
+		$_SESSION['available_variable']=$available_variable;
+				
+		$this->render('about');
+	}//End of actionAbout().
+	
 	
 	
 	public function actionChangeLogo()
@@ -311,22 +325,21 @@ class SetupController extends Controller
 	public function actionShowUpdateProgress($curr_step)
 	{
 		$model=new Setup();
-			
+		 
 		//echo "step value in controller ".$curr_step;
-	
+		
 		$step=$curr_step;
-			
+		 
 		if($step!=0)
 		{
 			$step_info = $model->updateVersion($step);
 		}//end of if.
-		else
+		else 
 		{
-			session_unset();
+			 session_unset(); 
 		}
 		$this->renderPartial('showUpdateProgress',array('step_info'=>$step_info));
 	}//end of showUpdateProgress().
 	
-
 
 }//end of class.

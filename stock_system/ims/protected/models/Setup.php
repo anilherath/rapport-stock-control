@@ -150,21 +150,21 @@ class Setup extends CActiveRecord
 		$update_url_from_db = $setupModel->update_version_url;
 	
 		//$request='http://www.rapportsoftware.co.uk/versions_test/latest_callhandling_version.txt';
-		$request = $update_url.'/latest_stocksystem_version.txt';
+		$request = $update_url_from_db.'/latest_stocksystem_version.txt';
 			
 		$installed_version=Yii::app()->params['software_version'];
 		$available_version = $this->curl_file_get_contents($request);
 	
-		$server_update_filename = $installed_version."_to_".$available_version."_update.zip";
+		$server_update_filename = $installed_version."_to_".$available_version."_update_ims.zip";
 		//$server_update_filepath = "http://www.rapportsoftware.co.uk/versions_test/";
 		$server_update_filepath = $update_url_from_db;
 		$server_update_full_filepath=$server_update_filepath.'/'.$server_update_filename;
 	
-		$update_directory='updates';
+		$update_directory='updates_ims';
 		$local_desination_server_update_file=$update_directory.DS.$server_update_filename;
 	
 		/*THESE VARIABLEUES USED IN STEP 5 & 6*/
-		$unzip_folder = $update_directory.DS.$installed_version."_to_".$available_version."_update";
+		$unzip_folder = $update_directory.DS.$installed_version."_to_".$available_version."_update_ims";
 		$setup_file=getcwd().DS.$unzip_folder.DS.'setup.json';/*THE SETUP FILES IS LIKE CONTENTS OF NEW FILES TO BE COPIED*/
 	
 		switch ($id)
