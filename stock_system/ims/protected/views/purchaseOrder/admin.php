@@ -60,13 +60,11 @@ $this->menu=array(
 //			'value'=>'$data->getOrderStatus($data->order_status)',
 //			'filter'=>false,
 //		),
-			array(  'name'=>'date_of_order',
-					'type'=>'datetime',
-					
+			array(  
+				'name'=>'date_of_order', 'value'=>'date("d-M-Y", $data->date_of_order)'
 			),
-			array(  'name'=>'date_of_order_recieved',
-					'type'=>'datetime',
-					
+			array(  
+				'name'=>'date_of_order_recieved','value'=>'date("d-M-Y", $data->date_of_order_recieved)'
 				),
 			
 		/*

@@ -142,12 +142,12 @@ class ItemOnOrder extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 		
-		$criteria->with = array('items');	
-		$criteria->with = array('purchaseOrder');
-		$criteria->with = array('suppliers');
+		$criteria->with = array('items', 'purchaseOrder', 'suppliers');	
+// 		$criteria->with = array();
+// 		$criteria->with = array();
 		
-//		$criteria->order = 'modified DESC';
-		
+ 		$criteria->order = 'purchase_order_id DESC';
+
 		
 // 		$criteria->compare('id',$this->id);
 // 		$criteria->compare('purchase_order_id',$this->purchase_order_id);
@@ -171,6 +171,14 @@ class ItemOnOrder extends CActiveRecord
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+// 			'sort'=>array(
+// 		        'attributes'=>array(
+// 		            'order_number'=>array(
+// 		                'asc'=>'purchaseOrder.order_number',
+// 		                'desc'=>'purchaseOrder.order_number DESC',
+// 		            ),
+// 				 ),
+// 		    ),
 		));
 	}//END OF SEARCH.
 	

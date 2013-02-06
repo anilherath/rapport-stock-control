@@ -74,8 +74,10 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 //					'filter'=>false,
 //			),
 
-			array(  'name'=>'created',
-					'type'=>'datetime',
+			array(  
+				'name'=>'created',
+				//'type'=>'datetime',
+				'value'=>'date("d-M-Y",$data->created)',
 				//	'filter'=>false,
 			),
 			/*

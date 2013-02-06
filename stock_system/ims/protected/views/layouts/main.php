@@ -17,8 +17,12 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 		<?php 
 	
-		$request='http://rapportsoftware.co.uk/versions/rapport_stock.txt';	
-		$available_version = file_get_contents($request, true);
+		//$request='http://www.rapportsoftware.co.uk/versions/latest_stocksystem_version.txt';	
+		$setupModel = Setup::model()->findByPk(1);
+		$update_url = $setupModel->update_version_url;
+		$request = $update_url.'/latest_stocksystem_version.txt';
+		//$available_version = file_get_contents($request, true);
+		$available_version = curl_file_get_contents($request, true);
 		$installed_version=Yii::app()->params['software_version'];
 		if ($available_version!=$installed_version)
 		{	?>
@@ -34,12 +38,13 @@
 <?php
 $company_logo=Yii::app()->request->baseUrl."/images/company_logo.png";
 $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png";
+
 ?>
 
 <div class="container" id="page">
 	
 	<table><tr>
-		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><?php echo CHtml::encode(Yii::app()->name); ?><br><small>Stock System</small></div></td>
+		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><?php echo $setupModel->company; ?><br><small>Stock System</small></div></td>
 		<td style="margin:20px; text-align:right;" >
 	<?php echo CHtml::image($company_logo,"ballpop",array("width"=>"200", "height"=>"75")); ?>
 	</td>
@@ -100,6 +105,26 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 	</td></tr></table>
 </div><!-- footer -->
 </div><!-- page -->
+<?php 
+
+function curl_file_get_contents($request)
+{
+	$curl_req = curl_init($request);
+
+	curl_setopt($curl_req, CURLOPT_RETURNTRANSFER, TRUE);
+	curl_setopt($curl_req, CURLOPT_HEADER, FALSE);
+
+	$contents = curl_exec($curl_req);
+
+	curl_close($curl_req);
+
+	return $contents;
+}///end of functn curl File get contents
+
+
+
+
+?>
 
 </body>
 </html>

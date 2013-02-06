@@ -178,8 +178,9 @@ class PurchaseOrder extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 		/*working*/
-		$criteria->with=array('status');
+		$criteria->with=array('status', 'suppliers');
 		$criteria->compare('status.name', $this->status_of_order, true);
+		$criteria->compare( 'suppliers.name', $this->supplier_name, true );
 
 		$criteria->order = 'order_number DESC';
 		$criteria->compare('id',$this->id);
@@ -210,7 +211,6 @@ class PurchaseOrder extends CActiveRecord
 		//echo $staus_code;
 		switch ($staus_code)
 		{
-			
 			case 1: $str="Draft"; break;
 			case 2: $str="<span style='color:orange;'><b>On Order</b></span>"; break;
 			case 3: $str="<span style='color:green;'><b>Recieved</b></span>"; break;
