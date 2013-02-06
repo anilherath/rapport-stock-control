@@ -244,7 +244,8 @@ class SetupController extends Controller
 		$setupModel = Setup::model()->findByPk('1');
 		//echo $setupModel->version_update_url;
 		$update_url_from_db = $setupModel->version_update_url;
-		$request=$update_url_from_db.'/latest_callhandling_version.txt';
+		
+		$request=$update_url_from_db.'/latest_stocksystem_version.txt';
 		//$request='http://www.rapportsoftware.co.uk/versions_test/latest_callhandling_version.txt';
 		
 		$available_variable = $this->curl_file_get_contents($request);

@@ -8957,3 +8957,96 @@ Stack trace:
 #16 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #17 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
 #18 {main} REQUEST_URI=/Kruthika/stock_system/ims/setup/showUpdateProgress/?curr_step=1
+2013/02/06 18:48:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:48:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:50:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:51:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:51:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:52:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:53:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:53:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:53:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:54:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rapport_logo.png".' in C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController('images/rapport_...')
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
+#3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport_logo.png
+2013/02/06 18:55:57 [error] [php] PDO::exec(): SQLSTATE[HY000]: General error: trying to execute an empty query (C:\xampp\htdocs\Kruthika\stock_system\ims\protected\models\Setup.php:350)
+Stack trace:
+#0 unknown(0): SetupController->actionShowUpdateProgress()
+#1 C:\xampp\htdocs\Kruthika\stock_system\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs()
+#2 C:\xampp\htdocs\Kruthika\stock_system\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#3 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CController.php(300): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\Kruthika\stock_system\framework\web\filters\CFilterChain.php(134): SetupController->runAction()
+#5 C:\xampp\htdocs\Kruthika\stock_system\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CController.php(1144): CAccessControlFilter->filter()
+#7 C:\xampp\htdocs\Kruthika\stock_system\framework\web\filters\CInlineFilter.php(59): SetupController->filterAccessControl()
+#8 C:\xampp\htdocs\Kruthika\stock_system\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CController.php(283): CFilterChain->run()
+#10 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CController.php(257): SetupController->runActionWithFilters()
+#11 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(277): SetupController->run()
+#12 C:\xampp\htdocs\Kruthika\stock_system\framework\web\CWebApplication.php(136): CWebApplication->runController()
+#13 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CWebApplication->run()
+REQUEST_URI=/Kruthika/stock_system/ims/Setup/showUpdateProgress/?curr_step=5
+in C:\xampp\htdocs\Kruthika\stock_system\ims\protected\models\Setup.php (350)
+in C:\xampp\htdocs\Kruthika\stock_system\ims\protected\controllers\SetupController.php (336)
+in C:\xampp\htdocs\Kruthika\stock_system\ims\index.php (19)
