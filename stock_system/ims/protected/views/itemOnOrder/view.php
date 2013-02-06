@@ -38,11 +38,7 @@ $this->menu=array(
 		'quantity_recieved',
 		'unit_price',
 		'total_price',
-		array(  'name'=>'created',
-				'value'=>(date('d-M-Y H:i',$model->created)),
-			),
-		array(  'name'=>'modified',
-				'value'=>(date('d-M-Y H:i',$model->created)),
-			),
+		array('name'=>'created','value'=>date("d-M-Y",$model->created)),
+		array('name'=>'modified','value'=>date("d-M-Y",$model->modified)),
 	),
 )); ?>

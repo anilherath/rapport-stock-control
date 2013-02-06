@@ -65,7 +65,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'current_quantity_in_stock',
 		'available_quantity_in_stock',
 		'comments',
-		'created',
+		//'created',
+		array('name'=>'created','value'=>'date("d-M-Y",$data->created)'),
 		//'user_id',
 		array( 'name'=>'username', 'value'=>'$data->user->username' ),
 		

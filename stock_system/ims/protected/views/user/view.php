@@ -32,11 +32,7 @@ $this->menu=array(
 	//	'password',
 		'email',
 		'profile',
-		array(  'name'=>'created',
-					'value'=>(date('d-M-Y H:i',$model->created)),
-			),
-			array(  'name'=>'modified',
-					'value'=>(date('d-M-Y H:i',$model->modified)),
-			),
+		array('name'=>'created','value'=>date("d-M-Y",$model->created)),
+		array('name'=>'modified','value'=>date("d-M-Y",$model->modified)),
 	),
 )); ?>
