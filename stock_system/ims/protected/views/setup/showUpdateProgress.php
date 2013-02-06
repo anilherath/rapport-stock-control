@@ -25,7 +25,7 @@
 <body>
 <?php
 $company_logo=Yii::app()->request->baseUrl."/images/company_logo.png";
-$rapport_logo=Yii::app()->request->baseUrl."/images/rapport_logo.png";
+$rapport_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png";
 
 
 //$header_name= CHtml::encode(Yii::app()->name);
@@ -45,7 +45,7 @@ $baseUrl= Yii::app()->request->baseUrl;
 		</td>
 		
 		<td style="margin:20px; text-align:right;" ><div id="logo" >
-			<?php echo $header_name; ?><br><small>Call Handling</small></div>
+			<?php echo $header_name; ?><br><small>Stock System</small></div>
 		
 		</td>
 		
