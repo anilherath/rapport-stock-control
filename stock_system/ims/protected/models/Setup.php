@@ -52,10 +52,10 @@ class Setup extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, update_version_url', 'safe'),
+			array('company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, version_update_url', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, update_version_url', 'safe', 'on'=>'search'),
+			array('id, company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, version_update_url', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -147,7 +147,7 @@ class Setup extends CActiveRecord
 	
 		$setupModel = Setup::model()->findByPk('1');
 		//echo $setupModel->version_update_url;
-		$update_url_from_db = $setupModel->update_version_url;
+		$update_url_from_db = $setupModel->version_update_url;
 	
 		//$request='http://www.rapportsoftware.co.uk/versions_test/latest_callhandling_version.txt';
 		$request = $update_url_from_db.'/latest_stocksystem_version.txt';
