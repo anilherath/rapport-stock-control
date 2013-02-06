@@ -112,9 +112,9 @@
 	</div>
 	
 	<div class="row">
-		<?php echo $form->labelEx($model,'update_version_url'); ?>
-		<?php echo $form->textArea($model,'update_version_url',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'update_version_url'); ?>
+		<?php echo $form->labelEx($model,'version_update_url'); ?>
+		<?php echo $form->textArea($model,'version_update_url',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'version_update_url'); ?>
 	</div>
 	
 	<div class="row buttons">
