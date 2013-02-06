@@ -8820,3 +8820,9 @@ in C:\xampp\htdocs\Kruthika\stock_system\ims\index.php (19)
 2013/02/06 15:59:36 [warning] [application] Failed to set unsafe attribute "supplier_name" of "PurchaseOrder".
 in C:\xampp\htdocs\Kruthika\stock_system\ims\protected\controllers\PurchaseOrderController.php (166)
 in C:\xampp\htdocs\Kruthika\stock_system\ims\index.php (19)
+2013/02/06 18:17:43 [warning] [application] Failed to set unsafe attribute "update_version_url" of "Setup".
+in C:\xampp\htdocs\Kruthika\stock_system\ims\protected\controllers\SetupController.php (95)
+in C:\xampp\htdocs\Kruthika\stock_system\ims\index.php (19)
+2013/02/06 18:20:43 [warning] [application] Failed to set unsafe attribute "update_version_url" of "Setup".
+in C:\xampp\htdocs\Kruthika\stock_system\ims\protected\controllers\SetupController.php (95)
+in C:\xampp\htdocs\Kruthika\stock_system\ims\index.php (19)

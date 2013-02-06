@@ -110,7 +110,13 @@
 		<?php echo $form->textArea($model,'company_number',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'company_number'); ?>
 	</div>
-
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'update_version_url'); ?>
+		<?php echo $form->textArea($model,'update_version_url',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'update_version_url'); ?>
+	</div>
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

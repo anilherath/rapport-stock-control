@@ -22,7 +22,8 @@
 		$update_url = $setupModel->update_version_url;
 		$request = $update_url.'/latest_stocksystem_version.txt';
 		//$available_version = file_get_contents($request, true);
-		$available_version = curl_file_get_contents($request, true);
+		
+		$available_version = file_get_contents($request, true);
 		$installed_version=Yii::app()->params['software_version'];
 		if ($available_version!=$installed_version)
 		{	?>
@@ -105,26 +106,7 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 	</td></tr></table>
 </div><!-- footer -->
 </div><!-- page -->
-<?php 
-
-function curl_file_get_contents($request)
-{
-	$curl_req = curl_init($request);
-
-	curl_setopt($curl_req, CURLOPT_RETURNTRANSFER, TRUE);
-	curl_setopt($curl_req, CURLOPT_HEADER, FALSE);
-
-	$contents = curl_exec($curl_req);
-
-	curl_close($curl_req);
-
-	return $contents;
-}///end of functn curl File get contents
-
-
-
-
-?>
+ 
 
 </body>
 </html>

@@ -52,10 +52,10 @@ class Setup extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, custom5', 'safe'),
+			array('company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, update_version_url', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, custom5', 'safe', 'on'=>'search'),
+			array('id, company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, update_version_url', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -197,7 +197,7 @@ class Setup extends CActiveRecord
 			/*STEP 2*//*Creating a backup of database*/
 			CASE 2:
 	
-				$db_current_location=getcwd().DS.'protected'.DS.'data'.DS.'chs.db';
+				$db_current_location=getcwd().DS.'protected'.DS.'data'.DS.'ims.db';
 				$db_backup_location = $update_directory.DS.'backup'.DS.'version_'.$installed_version.'_database';
 				$db_backup_filename=$db_backup_location.DS.'ver_'.$installed_version.'.data.db';
 	
@@ -339,7 +339,7 @@ class Setup extends CActiveRecord
 				////////*NOW By reading the update file we will be changing the main database
 				try
 				{
-					$db = new PDO('sqlite:protected'.DS.'data'.DS.'chs.db');
+					$db = new PDO('sqlite:protected'.DS.'data'.DS.'ims.db');
 					//	echo '<hr>'.$db_update_file;
 					$file_handle=fopen($db_update_file,'r');
 					echo "<br />";
