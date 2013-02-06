@@ -19,7 +19,7 @@
 	
 		//$request='http://www.rapportsoftware.co.uk/versions/latest_stocksystem_version.txt';	
 		$setupModel = Setup::model()->findByPk(1);
-		$update_url = $setupModel->update_version_url;
+		$update_url = $setupModel->version_update_url;
 		$request = $update_url.'/latest_stocksystem_version.txt';
 		//$available_version = file_get_contents($request, true);
 		

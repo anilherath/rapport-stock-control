@@ -8,7 +8,7 @@
 
 $setupModel = Setup::model()->findByPk(1);
 //$request='http://rapportsoftware.co.uk/versions';
-$update_url = $setupModel->update_version_url;
+$update_url = $setupModel->version_update_url;
 $request = $update_url.'/latest_stocksystem_version.txt';
 //echo "<br>request = ".$request;
 	

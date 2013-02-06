@@ -341,5 +341,19 @@ class SetupController extends Controller
 		$this->renderPartial('showUpdateProgress',array('step_info'=>$step_info));
 	}//end of showUpdateProgress().
 	
-
+	public function curl_file_get_contents($request)
+	{
+		$curl_req = curl_init($request);
+	
+	
+		curl_setopt($curl_req, CURLOPT_URL, $request);
+		curl_setopt($curl_req, CURLOPT_RETURNTRANSFER, TRUE);
+		curl_setopt($curl_req, CURLOPT_HEADER, FALSE);
+	
+		$contents = curl_exec($curl_req);
+	
+		curl_close($curl_req);
+	
+		return $contents;
+	}///e
 }//end of class.
