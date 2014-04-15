@@ -116,7 +116,7 @@ class Items extends CActiveRecord
 			
 			$this->company_id=0;
 			$this->category_id=0;
-			$this->active=1;
+			//$this->active=1;
 			$this->factory_due_date=strtotime($this->factory_due_date);
 			
 			

@@ -9110,3 +9110,21 @@ Stack trace:
 #1 C:\xampp\htdocs\Kruthika\stock_system\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\Kruthika\stock_system\ims\index.php(19): CApplication->run()
 #3 {main} REQUEST_URI=/Kruthika/stock_system/ims/images/rapport__stock_logo.png
+2014/04/15 15:35:55 [warning] [application] Failed to set unsafe attribute "description" of "Items".
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\protected\controllers\ItemsController.php (99)
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\index.php (19)
+2014/04/15 15:35:55 [warning] [application] Failed to set unsafe attribute "remarks" of "Items".
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\protected\controllers\ItemsController.php (99)
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\index.php (19)
+2014/04/15 15:41:02 [warning] [application] Failed to set unsafe attribute "description" of "Items".
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\protected\controllers\ItemsController.php (99)
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\index.php (19)
+2014/04/15 15:41:02 [warning] [application] Failed to set unsafe attribute "remarks" of "Items".
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\protected\controllers\ItemsController.php (99)
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\index.php (19)
+2014/04/15 15:41:12 [warning] [application] Failed to set unsafe attribute "description" of "Items".
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\protected\controllers\ItemsController.php (99)
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\index.php (19)
+2014/04/15 15:41:12 [warning] [application] Failed to set unsafe attribute "remarks" of "Items".
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\protected\controllers\ItemsController.php (99)
+in C:\xampp\htdocs\purva\Rapport\stock_system\ims\index.php (19)
