@@ -38,6 +38,7 @@
 <body>
 <?php
 $company_logo=Yii::app()->request->baseUrl."/images/company_logo.png";
+
 $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png";
 
 ?>
@@ -45,9 +46,10 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 <div class="container" id="page">
 	
 	<table><tr>
-		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><?php echo $setupModel->company; ?><br><small>Stock System</small></div></td>
+		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><a href="<?php echo Yii::app()->request->baseUrl;?>"><?php echo $setupModel->company; ?></a><br><small>Stock System</small></div></td>
 		<td style="margin:20px; text-align:right;" >
-	<?php echo CHtml::image($company_logo,"ballpop",array("width"=>"200", "height"=>"75")); ?>
+	<a href="<?php echo Yii::app()->request->baseUrl;?>">
+		<?php echo CHtml::image($company_logo,"ballpop",array("width"=>"200", "height"=>"75"));?> </a>
 	</td>
 	</tr>
 	</table>
@@ -92,8 +94,12 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 	<div id="footer">
 	
 	<table><tr><td>
-	<?php echo CHtml::image($rapport_stock_logo,"ballpop", array("width"=>"170", "height"=>"56.6")); ?>
-	</td>
+	<a href="<?php echo Yii::app()->request->baseUrl;?>">
+		
+		
+		<?php echo CHtml::image($rapport_stock_logo,"ballpop", array("width"=>"170", "height"=>"56.6")); ?>
+
+	</a></td>
 	<td style="text-align:right;">
 		Copyright &copy; <?php echo date('Y'); ?> by UK Whitegoods Ltd.<br/>
 		All Rights Reserved. <br>Version <?php echo Yii::app()->params['software_version'];?><br/>
