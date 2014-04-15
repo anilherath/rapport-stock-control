@@ -39,7 +39,7 @@ var current_url = $('#current_url').val();
 
 
 
-if(faq_search_input.length>1)
+if(faq_search_input.length>3)
 
 {
 $.ajax({
@@ -67,7 +67,29 @@ if ($('input#faq_search_input').hasClass("loading")) {
 }return false;
 });
 });
-	  
+	 
+
+////////declaring keypressed function
+function keyPressed(e)
+{
+	 var key;      
+     if(window.event)
+          key = window.event.keyCode; //IE
+     else
+          key = e.which; //firefox      
+
+	if (key == 13)///checking the value of enter key press which is 13
+	{
+		return false
+	}else
+	{
+		return true;
+	}////end of else if (key == 13)
+}/////end of function keypressed ..    
+
+
+
+
 </script>
 
 <?php
@@ -104,7 +126,7 @@ echo "Service ref no :".$reference_id ;
               Enter Item Name, Part Number or barcode<br><br>
               <!-- The Searchbox Starts Here  -->
               <form  name="search_form">
-              <input  name="query" type="text" id="faq_search_input" style="background-color: #FFFFFF" />
+              <input  name="query" type="text" onKeyPress="return keyPressed(event);" id="faq_search_input" style="background-color: #FFFFFF" />
               </form>
              <!-- The Searchbox Ends  Here  -->
        <div id="searchresultdata" class="faq-articles"> </div>
