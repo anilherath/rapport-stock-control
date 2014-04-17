@@ -50,7 +50,7 @@ $this->menu=array(
 // 		'api_url',
 			array(
 					'label'=>'active',
-					'value'=>$model->prefered_supplier ? "Yes" : "No",
+					'value'=>$model->active ? "Active" : "Inactive",
 			),
 			
 		//'created',

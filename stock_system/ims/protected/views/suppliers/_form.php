@@ -71,8 +71,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'lead_time_days'); ?>
-		<?php echo $form->textField($model,'lead_time_days'); ?>
+		<?php echo $form->labelEx($model,'lead_time_days'); ?><small>(Please enter numeric value for no. of days)</small></br>
+		
+		<?php echo $form->textField($model,'lead_time_days');?>
 		<?php echo $form->error($model,'lead_time_days'); ?>
 	</div>
 

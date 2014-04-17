@@ -47,7 +47,7 @@
 $password = 'admin';
 
 //directory relative to this file to search for databases (if false, manually list databases in the $databases variable)
-$directory = 'stock_system';
+$directory = 'stock_system/ims';
 
 //whether or not to scan the subdirectories of the above directory infinitely deep
 $subdirectories = true;
