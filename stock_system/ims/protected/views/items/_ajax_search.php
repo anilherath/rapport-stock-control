@@ -80,7 +80,10 @@ foreach ($results as $row)
 	
 	?>
 	</td>
-	<td><a href="<?php echo Yii::app()->baseUrl.'/Items/View/'.$id; ?>"><?php echo $row['part_number']?></a></td>
+	<td><a href="<?php //echo Yii::app()->baseUrl.'/index.php?r=items/view&id='.$id;	
+	
+	echo $this->createUrl('items/view',array('id'=>$id));
+	?>"><?php echo $row['part_number']?></a></td>
 	<td><?php echo $row['name'];?></td>
 	<td>
 		<form method="get" action="http://www.google.com/search" target="_blank">

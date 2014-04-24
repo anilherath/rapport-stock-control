@@ -599,6 +599,7 @@ class PurchaseOrderController extends Controller
 	
 	public function actionNotifySupplier($id)
 	{
+
 		$model=$this->loadModel($id);
 		$setupModel = Setup::model()->findByPk(1);
 		
@@ -623,7 +624,7 @@ class PurchaseOrderController extends Controller
 		$numsent=1;
 		if($numsent==1)
 		{
-				echo 'Supplier Notified';
+				
 				$this->redirect(array('finaliseOrder','id'=>$model->id));
 		}else
 			{

@@ -246,7 +246,9 @@ $this->menu=array(
 		
 	<tr>
 		<td colspan="7">
-		<?php $all_recieved_url=Yii::app()->request->baseUrl.'/ItemOnOrder/updateStatus/0?all_recieved=true&purchase_id='.$purchase_id; ?>
+		<?php $all_recieved_url=Yii::app()->request->baseUrl.'/index.php?r=ItemOnOrder/updateStatus&id=0&all_recieved=true&purchase_id='.$purchase_id;
+			//$all_recieved_url=$this->createUrl('itemOnOrder/updateStatus&id=0&all_recieved=true',array('id'=>$purchase_id));
+			?>
 
 		
 			<a href="<?php echo $all_recieved_url; ?>" onclick="return confirm('Have you checked all items. ?')"> 

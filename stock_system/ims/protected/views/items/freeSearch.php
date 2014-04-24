@@ -38,14 +38,13 @@ var cust_id = $('#cust_id').val();
 var current_url = $('#current_url').val(); 
 
 
-
 if(faq_search_input.length>3)
 
 {
+
 $.ajax({
 type: "GET",
-url: current_url+"/SearchEngine",
-data: dataString,
+url: current_url,
 data: dataString+"&refid="+ref_id+"&custid="+cust_id,
 beforeSend:  function() {
 
@@ -68,11 +67,10 @@ if ($('input#faq_search_input').hasClass("loading")) {
 });
 });
 	 
-
 ////////declaring keypressed function
 function keyPressed(e)
-{
-	 var key;      
+{ 
+ 	 var key;      
      if(window.event)
           key = window.event.keyCode; //IE
      else
@@ -80,7 +78,7 @@ function keyPressed(e)
 
 	if (key == 13)///checking the value of enter key press which is 13
 	{
-		return false
+		return false;
 	}else
 	{
 		return true;
@@ -98,10 +96,21 @@ function keyPressed(e)
 //$url=Yii::app()->request->baseUrl;
 $reference_id = 88;
 $model_name=Yii::app()->controller->id;
-$current_url=$baseUrl."/".$model_name;
+////$current_url=$baseUrl."/".$model_name;
+
+$current_url=$baseUrl.'/index.php?r=items/searchEngine';
+
+/*
+echo "<br>****************<br>";
+echo $current_url;
+echo "<br>****************<br>";
+*/
+
+
 //$reference_id=$current_url;
 
 $customer_id = 77;
+
 //echo "Model Name   :".$current_url;
 
 /*

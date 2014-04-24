@@ -138,6 +138,7 @@ class SetupController extends Controller
 	 */
 	public function actionAdmin()
 	{
+	
 		$model=new Setup('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Setup']))

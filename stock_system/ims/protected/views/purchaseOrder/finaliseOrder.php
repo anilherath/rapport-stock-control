@@ -3,6 +3,7 @@
 
 $this->menu=array(
 	array('label'=>'Manage Purchase Order', 'url'=>array('/PurchaseOrder/admin')),
+	
 );
 ?>
 
@@ -266,12 +267,20 @@ $this->menu=array(
 	
 	<tr>
 		<td colspan="2">
-		<?php $send_order_url=Yii::app()->request->baseUrl.'/PurchaseOrder/SendOrder/'.$purchase_id; ?>
+		<?php //$send_order_url=Yii::app()->request->baseUrl.'/PurchaseOrder/SendOrder/'.$purchase_id;
 
+			//$send_order_url=Yii::app()->request->baseUrl.'/index.php?r=purchaseOrder/SendOrder&id='.$purchase_id;
+			 $send_order_url=$this->createUrl('purchaseOrder/sendOrder',array('id'=>$purchase_id));
+						
+			
+			?>
+
+		
 			<?php if ($model->order_status<3) {?>
 			<a href="<?php echo $send_order_url; ?>" onclick="return confirm('Are you sure?')"> 
 			<?php 
 				echo CHtml::button($model->order_status==1 ? 'Send Order' : 'Resend Order');
+				
 				?>
 		 	</a>
 		 	<br>
@@ -280,10 +289,13 @@ $this->menu=array(
 				else
 				{?>
 			
-			<?php $supplier_notification_url=Yii::app()->request->baseUrl.'/PurchaseOrder/notifySupplier/'.$purchase_id; ?>
+			<?php //$supplier_notification_url=Yii::app()->request->baseUrl.'/PurchaseOrder/notifySupplier/'.$purchase_id;
+			 $supplier_notification_url=$this->createUrl('purchaseOrder/notifySupplier',array('id'=>$purchase_id));
+			?>
 			<a href="<?php echo $supplier_notification_url; ?>" onclick="return confirm('Are you sure you wanna send email?')"> 
 			<?php 
 				echo CHtml::button( 'Notify Supplier');
+				
 				?>
 		 	</a>
 			<br>
@@ -293,7 +305,9 @@ $this->menu=array(
 		</td>
 		
 		<td>
-			<?php $testUrl=Yii::app()->request->baseUrl.'/PurchaseOrder/testConnection/'.$purchase_id;?>
+			<?php $testUrl=Yii::app()->request->baseUrl.'/PurchaseOrder/testConnection/'.$purchase_id;
+			$testUrl=$this->createUrl('purchaseOrder/testConnection',array('id'=>$purchase_id));
+			?>
 			<a href="<?php echo $testUrl;?>" onclick = "return confirm('Are you sure you wanna send email?')">
 			<?php echo CHtml::button('Test Connection');?>
 			</a>

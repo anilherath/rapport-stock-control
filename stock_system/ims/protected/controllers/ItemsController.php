@@ -557,7 +557,8 @@ class ItemsController extends Controller
 	
 	public function actionSearchEngine($keyword)
 	{
-	//	echo "THIS IS IAJAXX  ".$keyword;
+		//echo "THIS IS IAJAXX  ".$keyword;
+		
 		
 		$model=new Items();
 		$model->unsetAttributes();  // clear any default values

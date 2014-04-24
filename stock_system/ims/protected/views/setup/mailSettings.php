@@ -1,4 +1,6 @@
-<div class="form">
+<?php 
+include 'setup_sidemenu.php';
+?><div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'setup-mailSettings-form',

@@ -161,7 +161,7 @@ return array(
 			),
 		// uncomment the following to enable URLs in path-format
 		
-		'urlManager'=>array(
+		/*'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
 				//accessing gii.
@@ -176,11 +176,7 @@ return array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 			//	'<controller:\w+>/<action:\w+>/<id:\w+>'=>'<controller>/<action>',
-				/*
-				 * Dectivated by Sudeep on 6 jan 11
-				 *'<controller:\w+>/<action:\w+>/<keyword:\w+>'=>'<controller>/<action>',
-				 * 
-				 */
+				
 				'<controller:\w+>/<action:\w+>/<keyword:\w+>'=>'<controller>/<action>',
 				
 				 
@@ -188,7 +184,7 @@ return array(
 				),
     		'showScriptName'=>false,
 		),
-		
+		*/
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/ims.db',
 		),
