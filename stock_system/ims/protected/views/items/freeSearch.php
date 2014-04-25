@@ -1,12 +1,8 @@
 <?php
-$this->breadcrumbs=array(
-	'Items'=>array('index'),
-	'Manage',
-);
 
 $this->menu=array(
 	array('label'=>'List Items', 'url'=>array('index')),
-	array('label'=>'Create Items', 'url'=>array('create')),
+	array('label'=>'Add New Items', 'url'=>array('create')),
 );
 
 ?>

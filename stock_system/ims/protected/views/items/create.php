@@ -1,8 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Items'=>array('index'),
-	'Create',
-);
+	'Items'=>array('index'));
 
 $this->menu=array(
 	array('label'=>'List Items', 'url'=>array('index')),
@@ -10,6 +8,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Items</h1>
+<h1>Add New Items</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
