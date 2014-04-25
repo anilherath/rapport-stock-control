@@ -55,7 +55,12 @@ include 'setup_sidemenu.php';
 		<?php echo CHtml::textField('',$smtp_port, array('disabled'=>'disabled'));?>
 	</div>
 
-
+<div class="row">
+		<a href="<?php echo Yii::app()->request->baseUrl."/index.php?r=setup/mailServer";?>">
+		 <?php echo CHtml::button('Edit', array('button' => '')); ?><a>
+		
+		</div>
+	
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

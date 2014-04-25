@@ -1,42 +1,7 @@
-<!--<div class="form">-->
-
-
 <?php 
 include 'setup_sidemenu.php';
 ?>
-<?php
-// $form=$this->beginWidget('CActiveForm', array(
-//	'id'=>'setup-mailServer-form',
-//	'enableAjaxValidation'=>false,
-//)); 
 
-?>
-
-<!--	<p class="note">Fields with <span class="required">*</span> are required.</p>-->
-
-	<?php //echo $form->errorSummary($model); ?>
-	
-	<?php 
-	
-//	if	(isset($_POST['mail_server_values']))
-//	{
-//		$smtp_host = $_POST['host'];
-//		echo $smtp_host."<br>";
-//		$smtp_username =  $_POST['username'];
-//		echo $smtp_username."<br>";
-//		$smtp_password = $_POST['password'];
-//		echo $smtp_password."<br>";
-//		$smtp_encryption =  $_POST['encryption'];
-//		echo $smtp_encryption."<br>";
-//		$smtp_port = $_POST['port'];
-//		echo $smtp_port."<br>";
-//	}//end of if isset().
-	
-	
-	
-	
-	?>
-	
 <?php 
 	
 	$smtp_host = '';
@@ -101,14 +66,18 @@ alert(val);
 	<b>Password</b><br><input type="password" name="password" value=<?php echo $smtp_password;?>><br>
 	
 	<b>Encryption Type</b><br>
-	<SELECT name="server_encryption" id="server_encryption" onchange="getSelectedValue();">
-		<OPTION value="none" SELECTED>none</option>
-<!--		<OPTION value="smtp">smtp</option>-->
-		<OPTION value="ssl">ssl</option>
-		<OPTION value="tls">tls</option>
-	</SELECT>
-	<input type="hidden" name="encryption" id="encryption"><br>
 	
+	
+	<!--<select name="encryption" id="encryption" >
+		<option value="<?php echo $smtp_encryption;?>"><?php echo $smtp_encryption;?></option>
+		<option value="" >none</option>
+		<option value="ssl">ssl</option>
+		<option value="tls">tls</option>
+	</select>
+	-->
+	<?php echo CHtml::dropDownList( 'encryption',$smtp_encryption,array(''=>'none','ssl'=>'ssl','tls'=>'tls')); ?>
+	
+	<br>
 	<b>Port</b><br><input type="text" name="port" value=<?php echo $smtp_port;?>><br><br>
 	
 	<input name="mail_server_values"  type="submit" style="width:100px">
@@ -116,10 +85,6 @@ alert(val);
 </form>	
 
 
-
-<?php //$this->endWidget(); ?>
-
-<!--</div> form -->
 
 
 

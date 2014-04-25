@@ -259,6 +259,7 @@ class SetupController extends Controller
 	
 	
 	
+
 	public function actionChangeLogo()
 	{
 	    $model=new Setup('view');

@@ -69,9 +69,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'items-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	
+	'selectableRows'=>1,
+	'selectionChanged'=>'function(id){ location.href="'.$this->createUrl('view').'/id/"+$.fn.yiiGridView.getSelection(id);} ',
+
 	'columns'=>array(
 		//'item_id',
-	 	array(            
+	
+		array(            
             'name'=>'available_quantity',
 	 	 	'type'=>'html',
 	 		'filter'=>false,
