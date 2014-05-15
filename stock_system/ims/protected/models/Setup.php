@@ -158,7 +158,7 @@ class Setup extends CActiveRecord
 		$server_update_filename = $installed_version."_to_".$available_version."_update_ims.zip";
 		//$server_update_filepath = "http://www.rapportsoftware.co.uk/versions_test/";
 		$server_update_filepath = $update_url_from_db;
-		$server_update_full_filepath=$server_update_filepath.'/'.$server_update_filename;
+		$server_update_full_filepath=$server_update_filepath.DS.$server_update_filename;
 	
 		$update_directory='updates_ims';
 		$local_desination_server_update_file=$update_directory.DS.$server_update_filename;
@@ -388,7 +388,7 @@ class Setup extends CActiveRecord
 				$folder='';
 				$non_copied_files='';
 				$non_copied_files_flag=1;
-	
+				
 	
 	
 				$json=file_get_contents($setup_file);
@@ -418,7 +418,7 @@ class Setup extends CActiveRecord
 							////*COPY FOLDERS NOW
 							$folder_name=$key;
 							$src_folder_name=$key;
-							$folder_copy_from=getcwd().'/'.$unzip_folder.''.$val;
+							$folder_copy_from=getcwd().DS.$unzip_folder.''.$val;
 							//$folder_copy_to=getcwd().'/protected/'.$folder_name;
 							$folder_copy_to=$this->getDestinationPath($json, $src_folder_name);
 								
