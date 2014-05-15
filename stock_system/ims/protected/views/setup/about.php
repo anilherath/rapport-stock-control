@@ -28,7 +28,7 @@ $current_version=Yii::app()->params['software_version'];
 			$step = 1;
 			
 			//echo "Please delete all contents of update directory";
-			echo CHtml::button('Update',array('submit'=>'showUpdateProgress/?curr_step='.$step));
+			echo CHtml::button('Update',array('submit'=>'index.php?r=/Setup/showUpdateProgress&curr_step='.$step));
 			//echo CHtml::button('Update',array($this->showUpdateProgress($step)));
 			//echo CHtml::button('Update',array('submit'=>$configModel->showProgress($step)));
 		}

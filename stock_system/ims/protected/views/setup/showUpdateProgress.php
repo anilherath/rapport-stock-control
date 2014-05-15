@@ -127,7 +127,7 @@ $baseUrl= Yii::app()->request->baseUrl;
  if($currentStep != 0 && $currentStep < 7 )
  {
 	$next_step = $currentStep+1;
- 	$url=Yii::app()->baseUrl.'/Setup/showUpdateProgress/?curr_step='.$next_step;
+ 	$url=Yii::app()->baseUrl.'/index.php?r=/Setup/showUpdateProgress&curr_step='.$next_step;
  	//echo $url;
    echo "<SCRIPT LANGUAGE='javascript'>location.href='$url';</SCRIPT>";
  }
@@ -136,7 +136,7 @@ $baseUrl= Yii::app()->request->baseUrl;
  	/*After printing the messages We are clearing the message variable, so that when update run again for next time gives us no error*/
  	$_SESSION['message']='';
  	echo "<br>";
- 	echo CHTml::link('Restart Browser',array('../ims/'));
+ 	echo CHTml::link('Restart Browser',array(' '));
  }
 
 ?>
