@@ -66,13 +66,11 @@ class Items extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('part_number, name, location_room, location_row, location_column, location_shelf, current_quantity, available_quantity', 'required'),
+			array('part_number, name, current_quantity, available_quantity', 'required'),
 			array('company_id, category_id, active, suppliers_id', 'numerical', 'integerOnly'=>true),
 			array('current_quantity, available_quantity, recommended_lowest_quantity, recommended_highest_quantity, sale_price', 'numerical'),
 			array('part_number', 'length', 'max'=>255),
-			array('location_room', 'length', 'max'=>32),
-			array('location_row, location_column, location_shelf', 'length', 'max'=>4),
-			array('image_url, factory_due_date, fits_in_model, created, modified, deleted', 'safe'),
+			array('location_room, location_row, location_column, location_shelf, image_url, factory_due_date, fits_in_model, created, modified, deleted', 'safe'),
 			
 		
 			//customised rulers. 
