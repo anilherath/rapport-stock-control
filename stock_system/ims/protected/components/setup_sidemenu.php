@@ -4,6 +4,7 @@ $this->menu=array(
 	array('label'=>'Mail Settings', 'url'=>array('setup/mailServer')),
 	array('label'=>'Change Logo', 'url'=>array('setup/changeLogo')),
 	array('label'=>'Restore Database', 'url'=>array('setup/restoreDatabase')),
+	array('label'=>'Import Data', 'url'=>array('import/itemsimport')),
 	array('label'=>'About & Help', 'url'=>array('setup/about')),
 );
 ?>

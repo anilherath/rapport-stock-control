@@ -1,104 +1,111 @@
+
 <?php
 
 class ImportController extends Controller
 {
 	public function actionItemsimport()
 	{
-     // echo getcwd();
-		
-		echo "<table>";
-		$file_handle = fopen("../itemdata.csv","r");
-		$i=0;
-		//while loop
-		while (!feof($file_handle) ) {
-		echo "<tr>";
-		$line_of_text = fgetcsv($file_handle, 1024);
-		echo "<td>";
-		//echo $i.$line_of_text[5];
-		echo "</td>";
-		$this->updateItem($line_of_text);
-		$i++;
-		echo "</tr>";
-		}////end of while (!feof($file_handle) )
-
-		fclose($file_handle);
-		echo "</table>";
-	
 		$this->render('itemsimport');
 	}//end of action import.	
-
 	
 	
-	public function updateItem($line_of_text)
+	public function actionCsvuploadandimport()
 	{
-		//echo "I--------------";
-		
-		$model=new Items;
-		
-		$model->item_id=$line_of_text[0];	
-		$model->company_id=$line_of_text[1];	
 
-		$model->part_number=$line_of_text[2];
-		if (empty($model->part_number))
-		{
-			$model->part_number='Not Available';
-		}
-		
-				
-		$model->name=$line_of_text[3];
-		if (empty($model->name))
-		{
-			$model->name='Not Available';
-		}
-		
-		$model->description=$line_of_text[4];
-		$model->barcode=$line_of_text[5];
-		
-		
-		$model->location_room=$line_of_text[6];
-		$model->location_row=$line_of_text[7];
-		$model->location_column=$line_of_text[8];
-		$model->location_shelf=$line_of_text[9];
-	
-	
-		
-		$model->category_id=$line_of_text[10];
-		
-		$model->current_quantity=$line_of_text[11];
-		if (empty($model->current_quantity))
-		{
-			$model->current_quantity='0';
-		}
-		$model->available_quantity=$line_of_text[12];
-		if (empty($model->available_quantity))
-		{
-			$model->available_quantity='0';
-		}
+	echo "****************";
+	echo "<hr>";
+	echo $_FILES["uploadedfile"]["type"];
+	echo "<br>";
+	echo $_FILES["uploadedfile"]["name"];
+	echo "<br>";
+	echo $_FILES["uploadedfile"]["error"];
+	echo "<br>";
+
+	echo "<hr>";
+
+	$info = pathinfo($_FILES['uploadedfile']['name']);
+	if ($info["extension"] == "csv")
+	{
+
+	$mimes = array('text/csv', 'application/csv', 'text/comma-separated-values', 'application/excel', 'application/vnd.ms-excel', 'application/vnd.msexcel', 'application/octet-stream', 'application/txt', 'text/tsv');
+	if (in_array($_FILES['uploadedfile']['type'], $mimes))
+	{
+		echo "<br> This is a CSV file<br>";
+		$filepath = $this->uploadfile($_FILES);
+	//	$this->readmycsvfile($filepath);
+		$this->render('csvuploadandimport',array('filepath'=>$filepath));
 		
 		
-		
-		
-		$model->recommended_lowest_quantity=$line_of_text[13];
-		$model->recommended_highest_quantity=$line_of_text[14];
-		$model->remarks=$line_of_text[15];
-		$model->active=$line_of_text[16];
-		$model->image_url=$line_of_text[17];
-		$model->sale_price=$line_of_text[18];
-		$model->factory_due_date=$line_of_text[19];
-		$model->suppliers_id=$line_of_text[20];
-		$model->fits_in_model=$line_of_text[21];
-		$model->created=$line_of_text[22];
-		$model->modified=$line_of_text[23];
-		$model->deleted=$line_of_text[24];
-		
-		if ($model->save())
-		{
-			echo '<br>Savde'.'<br>';
-		}else
-		{ echo '<br>Not Saved';
-			print_r($model->getErrors());
-		}
-	
+	}else
+	{
+		echo "<br> Nai hUa<br>";
+
 	}
+	
+	
+}
+else
+{
+
+echo "Not a CSV Extension";
 
 }
+
+
+}///end of action csvupload
+
+
+
+public function uploadfile($_FILES)
+{
+//echo "---------------";
+	$target_path = "uploads/". basename( $_FILES['uploadedfile']['name']);
+
+	if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path))
+	{
+		echo "The file ".  basename( $_FILES['uploadedfile']['name']). " has been uploaded<BR>";
+		return $target_path;
+	
+	} 
+	else
+	{
+					echo "There was an error uploading the file, please try again!";
+	}
+	
+	
+	
+	
+}//END OF FUNCTION UPLAOD LFILR
+
+
+
+public function readmycsvfile($filepath)
+{
+$file = fopen($filepath,"r");
+
+while(! feof($file))
+{
+  print_r(fgetcsv($file));
+}
+
+fclose($file);
+
+}//////////////end of function readfile
+
+
+ 
+	 
+
+
+	 
+	
+	
+	
+	
+	
+	
+
+}///end of class
+
+
+?>
