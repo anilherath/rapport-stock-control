@@ -58,7 +58,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 <?php 
-	$url=Yii::app()->request->getBaseUrl().'/items/admin/?&export=true';
+	$url=Yii::app()->request->getBaseUrl().'/index.php?r=items/admin&export=true';
 	echo CHtml::link('Export to excel',$url);
 ?>
 <small>&nbsp;(Only Available Quantities Items will be Exported)</small>
