@@ -1,15 +1,16 @@
 <?php
-$this->breadcrumbs=array(
-	'Outbound Items Histories'=>array('index'),
-	'Create',
-);
+ 
 
 $this->menu=array(
-	array('label'=>'List Outbound Items History', 'url'=>array('index')),
-	array('label'=>'Manage Outbound Items History', 'url'=>array('admin')),
+	 
+	array('label'=>'Show Previously Removed Items  (Outbound History)', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Outbound Items History</h1>
+<div style="float:right;"><h1>Remove Item from Stock # Outbound</h1></div>
+<br><br><br>
+  
+  
+
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

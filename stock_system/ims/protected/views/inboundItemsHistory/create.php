@@ -1,15 +1,13 @@
 <?php
-$this->breadcrumbs=array(
-	'Inbound Items Histories'=>array('index'),
-	'Create',
-);
+ 
 
 $this->menu=array(
-	array('label'=>'List Inbound Items History', 'url'=>array('index')),
-	array('label'=>'Manage Inbound Items History', 'url'=>array('admin')),
+	 
+	array('label'=>'Show Previously Added Items  (Inbound History)', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Inbound Items History</h1>
+<div style="float:left;"><h1>Add Item to Stock # Inbound</h1></div>
+
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

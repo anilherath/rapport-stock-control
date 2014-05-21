@@ -92,12 +92,12 @@ class OutboundItemsHistory extends CActiveRecord
 		return array(
 			'history_id_item' => 'History Id Item',
 			'main_item_id' => 'Main Item',
-			'quantity_moved' => 'Quantity Moved',
-			'current_quantity_in_stock' => 'Current Quantity In Stock',
-			'available_quantity_in_stock' => 'Available Quantity In Stock',
+			'quantity_moved' => 'Quantity Removed',
+			'current_quantity_in_stock' => 'Current Quantity In Stock When Item Removed',
+			'available_quantity_in_stock' => 'Available Quantity In Stock When Item Removed',
 			'comments' => 'Comments',
-			'user_id' => 'User',
-			'created' => 'Created',
+			'user_id' => 'Processed By User',
+			'created' => 'Processed On',
 		);
 	}
 	
