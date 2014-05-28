@@ -135,24 +135,7 @@ echo "Service ref no :".$reference_id ;
               </form>
              <!-- The Searchbox Ends  Here  -->
        <div id="searchresultdata" class="faq-articles"> </div>
-     </div>
+     </div><BR>
 
 
-
-<!-- ***************** CODE FOR SEARCH BOX ********************* -->
-<!---->
-<!--	<br><hr>-->
-<!--	-->
-<!--	<h3>google search</h3>-->
-<!--	-->
-<!--	<form method="get" action="http://www.google.com/search" target="_blank">-->
-<!---->
-<!--	<input type="text"   name="q" size="31"-->
-<!-- 	maxlength="255" value="" />-->
-<!--	<input type="submit" value="Google Search" />-->
-<!--	<input type="radio"  name="sitesearch" value="" />-->
-<!-- 	The Web-->
-<!--	<input type="radio"  name="sitesearch"-->
-<!-- 	value="askdavetaylor.com" checked /> Ask Dave Taylor<br />-->
-
-<!--	</form>-->
+<?php echo $this->renderPartial('/site/dashboard'); ?>

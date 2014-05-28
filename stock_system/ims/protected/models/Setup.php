@@ -640,6 +640,30 @@ class Setup extends CActiveRecord
 		return $destination_path;
 	
 	}//end of getDestinationPath().
+
+	public function enableInternetConnection()
+	{
+		////since at id 10001 in table advance settings have the parameter for the internet connectios
+		AdvanceSettings::model()->updateByPk(10001, array('value'=>'1'));
+	}//end of enableInternetConnection()
+
+	
+	public function disableInternetConnection()
+	{
+		////since at id 10001 in table advance settings have the parameter for the internet connectios
+		AdvanceSettings::model()->updateByPk(10001, array('value'=>'0'));
+	}//end of disanableInternetConnection()
+	
+	
+	public function checkInternet()
+	{
+	
+		return $conn = @fsockopen("google.com", 80, $errno, $errstr, 30);
+	
+	}///end of checkInternet()
+	
+	
+	
 	
 	
 }//end of class.

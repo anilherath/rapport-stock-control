@@ -31,7 +31,7 @@ class SetupController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('restoreDatabase', 'about', 'changeLogo', 'create','update','mailServer','mailSettings','ShowUpdateProgress'),
+				'actions'=>array('Disableinternet','Enableinternet','restoreDatabase', 'about', 'changeLogo', 'create','update','mailServer','mailSettings','ShowUpdateProgress'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -358,5 +358,29 @@ class SetupController extends Controller
 		curl_close($curl_req);
 	
 		return $contents;
-	}///e
+	}///end of curl_file_get_contents($request)
+	
+	
+	public function actionEnableinternet($current_url)
+	{
+	
+		if (Setup::model()->checkInternet())
+		{
+			Setup::model()->enableInternetConnection();
+		}
+		Yii::app()->controller->redirect($current_url);
+	}//end of showUpdateProgress().
+	
+	
+	public function actionDisableinternet($current_url)
+	{
+		Setup::model()->disableInternetConnection();
+		Yii::app()->controller->redirect($current_url);
+	}//end of showUpdateProgress().
+	
+	
+	
+	
+	
+	
 }//end of class.

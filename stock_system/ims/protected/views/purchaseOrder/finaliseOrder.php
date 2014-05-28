@@ -276,7 +276,16 @@ $this->menu=array(
 			?>
 
 		
-			<?php if ($model->order_status<3) {?>
+		<?php 
+		$setupModel = Setup::model()->findByPk(1);
+		$internet_connected =  AdvanceSettings::model()->findByAttributes(array('parameter'=>'internet_connected'));
+		$current_url=Yii::app()->request->url;
+		 
+		
+		if ($internet_connected->value==1){
+			if(Setup::model()->checkInternet())
+			{
+			if ($model->order_status<3) {?>
 			<a href="<?php echo $send_order_url; ?>" onclick="return confirm('Are you sure?')"> 
 			<?php 
 				echo CHtml::button($model->order_status==1 ? 'Send Order' : 'Resend Order');
@@ -300,7 +309,10 @@ $this->menu=array(
 		 	</a>
 			<br>
 			<small>The supplier will be notified by email about the Item status</small>
-			<?php }// end of else?>
+			<?php
+			}
+			
+				// end of else?>
 			
 		</td>
 		
@@ -311,7 +323,26 @@ $this->menu=array(
 			<a href="<?php echo $testUrl;?>" onclick = "return confirm('Are you sure you wanna send email?')">
 			<?php echo CHtml::button('Test Connection');?>
 			</a>
+			<?php
+			}//end of checkInternet
+			else
+			{
+				Yii::app()->controller->redirect(array('Setup/Disableinternet', 'current_url'=>$current_url));
+			}
+			
+		}//end of if internet_connected
+		else
+		{
+		
+			echo "<font color='red'><b>As your system is in offline mode, you can not send order. Please enable Internet:</b></font><br>";
+			echo CHtml::link('Enable Internet',array('Setup/Enableinternet', 'current_url'=>$current_url));
+		
+		
+		}
+		?>
+			
 		</td>
+		
 		
 		<th colspan="4" style="text-align: right"><?php  echo CHtml::link('PDF',array('orderPreview',
                    'id'=>$purchase_id), array('target'=>'_blank'));

@@ -15,23 +15,9 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-		<?php 
-	
-		//$request='http://www.rapportsoftware.co.uk/versions/latest_stocksystem_version.txt';	
+	<?php
 		$setupModel = Setup::model()->findByPk(1);
-		$update_url = $setupModel->version_update_url;
-		$request = $update_url.'/latest_stocksystem_version.txt';
-		//$available_version = file_get_contents($request, true);
 		
-		$available_version = file_get_contents($request, true);
-		$installed_version=Yii::app()->params['software_version'];
-		if ($available_version!=$installed_version)
-		{	?>
-			<span style="background-color:yellow; color:black;">
-			Your current version is <?php echo $installed_version; ?>
-			There is a new updated version <?php echo $available_version ?> available for this software. Please go to rapportsoftware.co.uk to download and update the package</span>
-			<?php 
-		}
 	?>
 </head>
 
@@ -69,17 +55,14 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 				array('label'=>'Outbound', 'url'=>array('/items/outboundSearch')),
 				array('label'=>'Purchase Order', 'url'=>array('/purchaseOrder/admin')),
 				array('label'=>'Items on Order', 'url'=>array('/itemOnOrder/admin')),
-				array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
+				//array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
 				//array('label'=>'My Account', 'url'=>array('/userGroups/admin')),
 				//array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
 				//array('label'=>'My Account', 'url'=>array('/user/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Set Up', 'url'=>array('/setup/view&id=1')),
 				array('label'=>'Back Up', 'url'=>array('/site/backup'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-
-					
-			),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),),
 				
 		)); ?>
 	</div><!-- mainmenu -->
