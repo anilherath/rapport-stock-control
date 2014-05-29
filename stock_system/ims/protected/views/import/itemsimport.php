@@ -3,34 +3,78 @@
 <?php
 $actionpath=Yii::app()->getBaseUrl()."/index.php?r=Import/csvuploadandimport";
 //echo $actionpath;
-
+$csv_image=Yii::app()->request->baseUrl."/images/csvexport.jpg";
 ?>
 <form enctype="multipart/form-data" action="<?php echo $actionpath; ?>" method="POST">
 Choose a file to upload: <input name="uploadedfile" type="file" /><br />
 
 <input type="submit" value="Upload File" /><br><br><br>
 <small><font color='green'> Note: Please make sure the uploaded file should be same as the sample file.<br>
-</font></small><?php
- 
-	//echo CHtml::link('Sample file',array('Site/readSample'));
-	echo CHtml::link('Sample file','uploads/sample_import_file.csv');
- 
- 
- ?>
+</font></small>
 </form>
+ <br>
+ <b>Sample CSV file</b>
+<?php
+$download_img_html= CHtml::image($csv_image,"csvexport",array("width"=>"30", "height"=>"35"));
+$download_img_link=CHtml::link('Download','uploads/sample_import_file.csv');
 
-<br>
-<br>
-<br>
+
+?>
+
+
+<table  style="width:10%">
+	<tr>
+		<td>
+			<?php echo CHtml::link($download_img_html,'uploads/sample_import_file.csv'); ?>
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			<?php echo $download_img_link; ?>
+		</td>
+		<td>
+			<a id='show_csv_format_title' href='#' onclick="show_csv_format()" > Show  </a>
+			<a id='hide_csv_format_title' href='#' onclick="hide_csv_format()" style="display:none;" > Hide  </a>
+		</td>
+	</tr>
+</table>
+
+
+
+<script>
+function show_csv_format() {
+   
+   document.getElementById('csv_format').style.display = "block";
+   document.getElementById('show_csv_format_title').style.display = "none";
+   document.getElementById('hide_csv_format_title').style.display = "block";
+   
+}
+
+function hide_csv_format() {
+   document.getElementById('csv_format').style.display = "none";
+   document.getElementById('hide_csv_format_title').style.display = "none";
+   document.getElementById('show_csv_format_title').style.display = "block";
+   
+}
+
+
+</script> 
+
+ 
  
  <style>
  
  .tt {
 		border:1px solid black;
+		width:10%;
 
 }
 
 </style>
+
+
+<div id="csv_format" style="display:none;">
  <?php
  echo "<table class='tt'>";
 		$file_handle = fopen("uploads/sample_import_file.csv","r");
@@ -79,3 +123,5 @@ Choose a file to upload: <input name="uploadedfile" type="file" /><br />
 echo "</table>";
 		
  ?>
+</div>
+
