@@ -70,8 +70,7 @@ body
 	font-size:12px;
 	font-weight:bold;
 	text-decoration:none;
-	padding:7px 18px;
-	
+	padding:7px 33px;
 }
 
 #mainmenu ul li a:hover, #mainmenu ul li.active a
@@ -80,6 +79,33 @@ body
 	background-color:#EFF4FA;
 	text-decoration:none;
 }
+
+#submenu {
+ 
+padding-top:5px; 
+padding-left:25px; 
+padding-right:1px; 
+padding-bottom:5px; 
+background:#EFEFEF;
+
+margin-top:-5px;
+margin-bottom:0px;
+
+ 
+list-style: none;
+}
+#submenu li {
+ display: inline;   
+ font-weight:bold; 
+
+}
+#submenu li + li {
+  border-left: 1px solid;
+  margin-left:2em;
+  padding-left:2em;
+
+}	
+	
 
 div.flash-error, div.flash-notice, div.flash-success
 {

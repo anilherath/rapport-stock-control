@@ -66,6 +66,28 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 				
 		)); ?>
 	</div><!-- mainmenu -->
+
+	<div id='submenu' style="text-align:center">
+		<?php
+		
+			$addons_list=Addons::model()->findAll(array('condition'=>'active=1'));
+			foreach ($addons_list as $addon)
+			{	
+			 echo "<li>";
+			 
+				echo CHtml::link($addon->addon_label,array('/'.$addon->name)); 
+				echo "</li>";
+			
+			}
+		
+		?>
+	
+	</div>
+	
+	
+	
+	
+	
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,

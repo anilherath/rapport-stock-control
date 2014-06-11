@@ -9,6 +9,7 @@
 	$smtp_encryption = '';
 	$smtp_port = '';
 	
+	
 	$url = dirname(__FILE__);
 	$filename = $url."/mail_server.json";
 	if(file_exists($filename))
@@ -36,6 +37,30 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+/******** CUSTIOM MODULES START***********/
+	$addons=array(
+		'gii'=>array(
+			'class'=>'system.gii.GiiModule',
+			'password'=>'chs',
+		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
+			'ipFilters'=>array('127.0.0.1','::1'),
+		),
+	);
+	
+	$xml=simplexml_load_file($url."/addons.xml");
+	foreach($xml->children() as $child)
+	{
+		$a=(string)$child;
+		array_push($addons,$a);
+	}
+	//print_r($addons);
+/******** CUSTIOM MODULES END***********/
+	
+
+
+
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Stock System - Rapport',
@@ -60,20 +85,10 @@ return array(
 			
 	),
 
-	'modules'=>array(
-		// uncomment the following to enable the Gii tool
-//		'userGroups'=>array(
-//					'accessCode'=>'ims',
-//					),
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'ims',
-		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
-		),
-		
-	),
+	'modules'=>$addons,
 
+	
+	
 	// application components
 	'components'=>array(
 			
