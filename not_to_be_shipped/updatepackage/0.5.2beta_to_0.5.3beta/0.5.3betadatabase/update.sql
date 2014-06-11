@@ -1,1 +1,2 @@
 CREATE TABLE "advance_settings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , "parameter" TEXT, "value" TEXT, "name" TEXT);
+CREATE TABLE addons(id INTEGER PRIMARY KEY NOT NULL, type TEXT, name TEXT, addon_label TEXT, information TEXT, active INTEGER, created_on DATETIME, created_by INTEGER, inactivated_on DATETIME, inactivated_by INTEGER)
