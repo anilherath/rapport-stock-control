@@ -261,8 +261,7 @@ class SetupController extends Controller
 	
 
 	public function actionChangeLogo()
-	{
-	    $model=new Setup('view');
+	{$model=new Setup('view');
 	
 	    // uncomment the following code to enable ajax-based validation
 	    /*
@@ -272,18 +271,59 @@ class SetupController extends Controller
 	        Yii::app()->end();
 	    }
 	    */
-	
-	    if(isset($_POST['Setup']))
+	    
+	    if(isset($_POST['finish']))
 	    {
-	        $model->attributes=$_POST['Setup'];
-	        if($model->validate())
-	        {
-	            // form inputs are valid, do something here
-	            return;
-	        }
-	    }
+	    	$allowedExts = array("jpg", "jpeg", "gif", "png", "JPG", "JPEG", "GIF", "PNG");
+	    	$info = pathinfo($_FILES['logo_url']['name']);
+	    	$extension = $info['extension'];
+	    	//echo "extention = ".$extension;
+	    	//if (( ($_FILES["logo_url"]["type"] == "image/png")) && ($_FILES["logo_url"]["size"] < 1000000))
+	    	
+	    	if ((($_FILES["logo_url"]["type"] == "image/gif")
+	    			|| ($_FILES["logo_url"]["type"] == "image/jpeg")
+	    			|| ($_FILES["logo_url"]["type"] == "image/png")
+	    			|| ($_FILES["logo_url"]["type"] == "image/pjpeg")) && in_array($extension, $allowedExts))
+			{
+	    		if ($_FILES["logo_url"]["error"] > 0)
+	    		{
+	    			echo "Return Code: " . $_FILES["logo_url"]["error"] . "<br />";
+	    		}
+	    		else
+	    		{
+	    			//echo "Upload: " . $_FILES["logo_url"]["name"] . "<br />";
+	    			//echo "Type: " . $_FILES["logo_url"]["type"] . "<br />";
+	    			//echo "Size: " . ($_FILES["logo_url"]["size"] / 1024) . " Kb<br />";
+	    			//echo "Temp uploaded: " . $_FILES["logo_url"]["tmp_name"] . "<br />";
+	    			$uploadedname="company_logo.png";
+	    			$uploaded_file= $_FILES["logo_url"]["tmp_name"];
+	    
+	    			$location="images/company_logo.png";
+	    			//echo '<br>'.$location;
+	    			if (move_uploaded_file($uploaded_file,$location))
+	    			{
+	    				echo "<br>Stored";
+						//$this->redirect(array('changeLogo'));
+						$this->redirect(array('setup/changeLogo'));
+	    			}
+	    			else
+	    			{
+	    				//echo "Problem in storing";
+	    			}
+	    
+	    
+	    		}//end of else
+	    
+	    	}///end of if(checking extention).
+	    	else
+	    	{
+ 	    		//echo "<br>Invalid FILE";
+	    	}//end of else
+	    
+	    }//end of isset POST finish
+		
 	    $this->render('changeLogo',array('model'=>$model));
-	}//end of change logo().
+	}//end of changeLogo().
 	
 	public function actionRestoreDatabase()
 	{
