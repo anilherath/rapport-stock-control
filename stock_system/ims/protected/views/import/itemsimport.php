@@ -1,5 +1,15 @@
-<h1>Importing Items </h1> 
+ <div id="sidemenu">             
+<?php include('setup_sidemenu.php'); ?>   
+</div>
 
+
+<h1>Advanced Items Import </h1>
+
+<div id="submenu">   
+<li><?php echo CHtml::link('Simple Items Import',array('simpleitemsimport')); ?></li>
+<li><?php echo CHtml::link('Advance Items Import',array('itemsimport')); ?></li>
+</div>
+ 
 <?php
 $actionpath=Yii::app()->getBaseUrl()."/index.php?r=Import/csvuploadandimport";
 //echo $actionpath;
@@ -47,8 +57,8 @@ function validateForm() {
 
 
 <br><br><br>
-<small><font color='green'> Note: Please make sure the uploaded file should be same as the sample file.<br>
-</font></small>
+<p style="font-size: 30px;"><font color='green'  > Note: This is advanced import routine. Please make sure the uploaded file should be same as the sample file.<br>
+</font></p>
 
 
 

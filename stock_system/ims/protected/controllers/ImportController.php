@@ -62,7 +62,7 @@ class ImportController extends Controller
 public function uploadfile($_FILES)
 {
 //echo "---------------";
-	$target_path = "uploads/". basename( $_FILES['uploadedfile']['name']);
+	$target_path = "temp/". basename( $_FILES['uploadedfile']['name']);
 
 	if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path))
 	{
@@ -106,6 +106,9 @@ public function actionSimpleitemsimport()
 public function actionProcesssimpleitemsimport()
 {
 
+ 
+
+	 
 	if (isset($_FILES['uploadedfile']['name']))
 	{
 		$info = pathinfo($_FILES['uploadedfile']['name']);
@@ -132,18 +135,11 @@ public function actionProcesssimpleitemsimport()
 	{
 		$this->redirect(array('import/itemsimport'));
 	}
-
-
 	
 
-	
-	
-	
-	
-	
-	
-	
-}
+
+	}///end of actionProcesssimpleitemsimport()
+
 	
 	
 	

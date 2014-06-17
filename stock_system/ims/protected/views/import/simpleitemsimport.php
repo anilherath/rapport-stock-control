@@ -12,7 +12,7 @@
 
 
 <?php
-$actionpath=Yii::app()->getBaseUrl()."/index.php?r=Import/csvuploadandimport";
+$actionpath=Yii::app()->getBaseUrl()."/index.php?r=Import/processsimpleitemsimport";
 //echo $actionpath;
 $csv_image=Yii::app()->request->baseUrl."/images/csvexport.jpg";
 ?>
@@ -59,11 +59,11 @@ function validateForm() {
 
 
 <br><br><br>
-<small><font color='green'> Note: Please make sure the uploaded file should be same as the sample file.<br>
-</font></small>
-
-
-
+<p style="font-size: 20px;"><font color='green'> Note: Please make sure the uploaded file should be same as the sample file. <br> Part Number is the required field. If you do not have part number, please enter the part name in place of part number
+<br> Part Number is always unique and you cannot have two same partnumbers. The system will not be able to save it.
+<br>
+</font></p>
+  
 
 
  <br>
@@ -170,3 +170,4 @@ echo "</table>";
 
  
 </div>
+ 
