@@ -6,7 +6,7 @@ $actionpath=Yii::app()->getBaseUrl()."/index.php?r=Import/csvuploadandimport";
 $csv_image=Yii::app()->request->baseUrl."/images/csvexport.jpg";
 ?>
 <form name="import_data_form" enctype="multipart/form-data" action="<?php echo $actionpath; ?>" method="POST" onsubmit="return validateForm()" >
-Choose a file to upload: <input name="uploadedfile" type="file" /><br />
+Choose a file to upload: <input name="uploadedfile" id="uploadedfile" type="file" /><br />
 
 <input type="submit" value="Import Now	" />
 	
@@ -21,7 +21,25 @@ function validateForm() {
         alert("Please Choose File first and then click on Import ");
         return false;
     }
-}
+	
+	var fup = document.getElementById('uploadedfile');
+	var fileName = fup.value;
+	var ext = fileName.substring(fileName.lastIndexOf('.') + 1);
+	
+	if(ext == "csv")
+	{
+		return true;
+	}	 
+	else
+	{
+		alert("Please Upload a Valid CSV file");
+		fup.focus();
+		return false;	
+	}
+	
+	
+	
+}///end of functiuon validatefoem
 </script>
 
 

@@ -3,6 +3,10 @@
 
 class ImportController extends Controller
 {
+
+	public $layout='//layouts/column2';
+
+
 	public function actionItemsimport()
 	{
 		$this->render('itemsimport');
@@ -11,7 +15,6 @@ class ImportController extends Controller
 	
 	public function actionCsvuploadandimport()
 	{
-
 	/*
 	echo "****************";
 	echo "<hr>";
@@ -24,36 +27,33 @@ class ImportController extends Controller
 
 	echo "<hr>";
 	*/
-	
-	
-	$info = pathinfo($_FILES['uploadedfile']['name']);
-	if ($info["extension"] == "csv")
+	if (isset($_FILES['uploadedfile']['name']))
 	{
+		$info = pathinfo($_FILES['uploadedfile']['name']);
+		if ($info["extension"] == "csv")
+		{
 
-	$mimes = array('text/csv', 'application/csv', 'text/comma-separated-values', 'application/excel', 'application/vnd.ms-excel', 'application/vnd.msexcel', 'application/octet-stream', 'application/txt', 'text/tsv');
-	if (in_array($_FILES['uploadedfile']['type'], $mimes))
+			$mimes = array('text/csv', 'application/csv', 'text/comma-separated-values', 'application/excel', 'application/vnd.ms-excel', 'application/vnd.msexcel', 'application/octet-stream', 'application/txt', 'text/tsv');
+			if (in_array($_FILES['uploadedfile']['type'], $mimes))
+			{
+			//	echo "<br> This is a CSV file<br>";
+			$filepath = $this->uploadfile($_FILES);
+			//	$this->readmycsvfile($filepath);
+			$this->render('csvuploadandimport',array('filepath'=>$filepath));
+			}else
+			{
+				echo "<br> This is not a Valid CSV File. Please Upload a Valid CSV file<br>";
+			}
+		}//end if if ($info["extension"] == "csv")
+		else
+			{
+				echo "This is not a CSV file";
+			}
+	}///end of if (isset($_FILES['uploadedfile']['name']))
+	else
 	{
-	//	echo "<br> This is a CSV file<br>";
-		$filepath = $this->uploadfile($_FILES);
-	//	$this->readmycsvfile($filepath);
-		$this->render('csvuploadandimport',array('filepath'=>$filepath));
-		
-		
-	}else
-	{
-		echo "<br> Nai hUa<br>";
-
+		$this->redirect(array('import/itemsimport'));
 	}
-	
-	
-}
-else
-{
-
-//echo "Not a CSV Extension";
-
-}
-
 
 }///end of action csvupload
 
@@ -97,10 +97,53 @@ fclose($file);
 
 
  
-	 
+public function actionSimpleitemsimport()
+{
+	$this->render('simpleitemsimport');
+}	 
 
 
-	 
+public function actionProcesssimpleitemsimport()
+{
+
+	if (isset($_FILES['uploadedfile']['name']))
+	{
+		$info = pathinfo($_FILES['uploadedfile']['name']);
+		if ($info["extension"] == "csv")
+		{
+			$mimes = array('text/csv', 'application/csv', 'text/comma-separated-values', 'application/excel', 'application/vnd.ms-excel', 'application/vnd.msexcel', 'application/octet-stream', 'application/txt', 'text/tsv');
+			if (in_array($_FILES['uploadedfile']['type'], $mimes))
+			{
+			//	echo "<br> This is a CSV file<br>";
+			$filepath = $this->uploadfile($_FILES);
+			//	$this->readmycsvfile($filepath);
+			$this->render('processsimpleitemsimport',array('filepath'=>$filepath));
+			}else
+			{
+				echo "<br> This is not a Valid CSV File. Please Upload a Valid CSV file<br>";
+			}
+		}//end if if ($info["extension"] == "csv")
+		else
+			{
+				echo "This is not a CSV file";
+			}
+	}///end of if (isset($_FILES['uploadedfile']['name']))
+	else
+	{
+		$this->redirect(array('import/itemsimport'));
+	}
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+}
 	
 	
 	

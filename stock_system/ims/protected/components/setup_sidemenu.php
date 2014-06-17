@@ -7,7 +7,7 @@ $this->menu=array(
 	array('label'=>'Change Logo', 'url'=>array('setup/changeLogo')),
 	array('label'=>'Internet', 'url'=>array('/advanceSettings/update&id=10001')),
 	array('label'=>'Restore Database', 'url'=>array('setup/restoreDatabase')),
-	array('label'=>'Import Data', 'url'=>array('import/itemsimport')),
+	array('label'=>'Import Data', 'url'=>array('import/simpleitemsimport')),
 	array('label'=>'About & Help', 'url'=>array('setup/about')),
 );
 ?>
