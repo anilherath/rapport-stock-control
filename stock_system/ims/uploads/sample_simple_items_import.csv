@@ -1,11 +1,11 @@
-Part Number, Item Name, Item Description, Item Barcode , Location Room,location_row,location_column,location_shelf,category_id,current_quantity,available_quantity,recommended_lowest_quantity,recommended_highest_quantity,remarks,active,image_url,sale_price,factory_due_date,suppliers_id,fits_in_model,created,modified,deleted
-1006863,Charcoalfilter mod.fwu 50,Charcoalfilter mod.fwu 50,1006863,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006864,Charcoalfilter mod.FWU 60,,,2,E,1,,0,9,9,1,9,,1,,0,,0,,,,
-1006923,Grease filter  ft 60,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006924,Lamp cover,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006929,Grease filter  ft 50,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006931,Exhaust flange  120,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006932,Plug 120,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006945,Reflection plate,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006949,Bulb 40w,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
-1006953,Masking cover fasten. set,,,,,,,0,0,0,0,0,,1,,0,,0,,,,
+Part Number,"	Item Name"," 	Quantity"," 	Location Room"," 		Location Row","	Location Column", Location Shelf ," 	Barcode"," 	Item Description"
+1006863,Charcoalfilter mod.fwu 50,50, A, B, C , D,1006863,Charcoalfilter mod.fwu 50
+1006864,Charcoalfilter mod.FWU 60,50, A, B, C , D,,
+1006923,Grease filter  ft 60,50, , ,  , ,,
+1006924,Lamp cover,50, , B, C , D,,
+1006929,Grease filter  ft 50,50, , ,  , D,,
+1006931,Exhaust flange  120,50, , B,  , D,,
+1006932,Plug 120,50, A, B, C , D,1006932,
+1006945,Reflection plate,50, A, B, C , D,,
+1006949,Bulb 40w,50, A, B, C , D,,
+1006953,Masking cover fasten. set,50, A, B,  , ,,Masking cover fasten. set
