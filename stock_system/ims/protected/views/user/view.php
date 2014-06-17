@@ -1,27 +1,18 @@
-<?php
-$this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->name,
-);
-
-
-
-$this->menu=array(
-	array('label'=>'List Users', 'url'=>array('admin')),
-	//array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
-	//array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id)),
-	//array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-);
-
-
-
-?>
-
-<h1>View User #<?php echo $model->id; ?></h1>
-<div style="text-align: right;">
-<?php echo CHtml::link('Edit',array('update', 'id'=>$model->id)); ?>
+ <div id="sidemenu">             
+<?php include('setup_sidemenu.php'); ?>   
 </div>
+<h1>View User #<?php echo $model->name; ?></h1>
+<div id="submenu">   
+<li> <?php echo CHtml::link('Manage Users',array('admin')); ?></li>
+<li><?php echo CHtml::link('Add New User',array('create')); ?></li>
+</div>
+
+<div style="text-align: right;">
+<b>
+<?php echo CHtml::link('Edit',array('update', 'id'=>$model->id)); ?>
+</b>
+</div>
+
 
 
 <?php $this->widget('zii.widgets.CDetailView', array(

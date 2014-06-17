@@ -20,11 +20,17 @@ echo "<table>";
 		
 		$i++;
 		echo "</tr>";
+		
+		
 		}////end of while (!feof($file_handle) )
 
 		fclose($file_handle);
 
 echo "</table>";
+ 
+
+
+
 function updateItem($line_of_text)
 	{
 		
@@ -98,11 +104,17 @@ function updateItem($line_of_text)
 			echo '</td></tr>';
 		
 			//print_r($model->getErrors()).'</td></tr>';
-		}
+		}//end of save else
 	
-	}
-		
-		
-		
-
+	}////end of update Item Function
+		 
+	
 ?>
+
+<div id="scroll_to_end"> 
+<?php
+echo CHtml::button('Show The Imported Items', array('submit' => array('items/admin')));
+?>
+</div>
+
+

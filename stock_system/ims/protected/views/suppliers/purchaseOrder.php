@@ -15,10 +15,17 @@ $this->menu=array(
 //)); ?>
 </div><!-- search-form -->
 
+<h1>Purchase Orders</h1>
+<h2>Please Select From the Following Suppliers to create a Purchase Order</h2>
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	//'id'=>'suppliers-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+/*
+	'selectableRows'=>1,
+	'selectionChanged'=>'function(id){ location.href = "'.$this->createUrl('PurchaseOrder/autoCreate').'/suppliers_id/"+$.fn.yiiGridView.getSelection(id);}',
+*/	
 	'columns'=>array(
 		//'id',
 		'name',

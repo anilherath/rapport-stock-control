@@ -12,6 +12,7 @@ class ImportController extends Controller
 	public function actionCsvuploadandimport()
 	{
 
+	/*
 	echo "****************";
 	echo "<hr>";
 	echo $_FILES["uploadedfile"]["type"];
@@ -22,7 +23,9 @@ class ImportController extends Controller
 	echo "<br>";
 
 	echo "<hr>";
-
+	*/
+	
+	
 	$info = pathinfo($_FILES['uploadedfile']['name']);
 	if ($info["extension"] == "csv")
 	{
@@ -30,7 +33,7 @@ class ImportController extends Controller
 	$mimes = array('text/csv', 'application/csv', 'text/comma-separated-values', 'application/excel', 'application/vnd.ms-excel', 'application/vnd.msexcel', 'application/octet-stream', 'application/txt', 'text/tsv');
 	if (in_array($_FILES['uploadedfile']['type'], $mimes))
 	{
-		echo "<br> This is a CSV file<br>";
+	//	echo "<br> This is a CSV file<br>";
 		$filepath = $this->uploadfile($_FILES);
 	//	$this->readmycsvfile($filepath);
 		$this->render('csvuploadandimport',array('filepath'=>$filepath));
@@ -47,7 +50,7 @@ class ImportController extends Controller
 else
 {
 
-echo "Not a CSV Extension";
+//echo "Not a CSV Extension";
 
 }
 
@@ -63,7 +66,7 @@ public function uploadfile($_FILES)
 
 	if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path))
 	{
-		echo "The file ".  basename( $_FILES['uploadedfile']['name']). " has been uploaded<BR>";
+		//echo "The file ".  basename( $_FILES['uploadedfile']['name']). " has been uploaded<BR>";
 		return $target_path;
 	
 	} 

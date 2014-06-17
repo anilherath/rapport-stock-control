@@ -5,13 +5,37 @@ $actionpath=Yii::app()->getBaseUrl()."/index.php?r=Import/csvuploadandimport";
 //echo $actionpath;
 $csv_image=Yii::app()->request->baseUrl."/images/csvexport.jpg";
 ?>
-<form enctype="multipart/form-data" action="<?php echo $actionpath; ?>" method="POST">
+<form name="import_data_form" enctype="multipart/form-data" action="<?php echo $actionpath; ?>" method="POST" onsubmit="return validateForm()" >
 Choose a file to upload: <input name="uploadedfile" type="file" /><br />
 
-<input type="submit" value="Upload File" /><br><br><br>
+<input type="submit" value="Import Now	" />
+	
+
+
+</form>
+
+<script>
+function validateForm() {
+    var x = document.forms["import_data_form"]["uploadedfile"].value;
+    if (x==null || x=="") {
+        alert("Please Choose File first and then click on Import ");
+        return false;
+    }
+}
+</script>
+
+
+
+
+
+<br><br><br>
 <small><font color='green'> Note: Please make sure the uploaded file should be same as the sample file.<br>
 </font></small>
-</form>
+
+
+
+
+
  <br>
  <b>Sample CSV file</b>
 <?php
@@ -122,6 +146,13 @@ function hide_csv_format() {
 
 echo "</table>";
 		
- ?>
+
+		?>
+ 
+ 
+
+ 
 </div>
+
+
 

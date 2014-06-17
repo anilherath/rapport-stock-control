@@ -1,6 +1,5 @@
 <?php
-$this->breadcrumbs=array(
-	'Items'=>array('index'));
+ 
 
 $this->menu=array(
 	array('label'=>'List Items', 'url'=>array('index')),
