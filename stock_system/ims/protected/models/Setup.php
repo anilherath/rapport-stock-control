@@ -53,6 +53,7 @@ class Setup extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, version_update_url', 'safe'),
+			array('email','email'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, company, address, town, postcode_s, postcode_e, county, country, email, telephone, mobile, alternate, fax, postcodeanywhere_account_code, postcodeanywhere_license_key, website, vat_reg_no, company_number, postcode, version_update_url', 'safe', 'on'=>'search'),
@@ -80,8 +81,8 @@ class Setup extends CActiveRecord
 			'company' => 'Company',
 			'address' => 'Address',
 			'town' => 'Town',
-			'postcode_s' => 'Postcode S',
-			'postcode_e' => 'Postcode E',
+			'postcode_s' => 'Postcode ',
+			'postcode_e' => 'Postcode ',
 			'county' => 'County',
 			'country' => 'Country',
 			'email' => 'Email',

@@ -9,10 +9,10 @@
 <?php include('setup_sidemenu.php'); ?>   
 </div>
 
-<h1>Setup</h1>
+<h1>Your Company Details</h1>
 
-<div style="text-align:right;" >
-<?php echo CHtml::link('Edit',array('update', 'id'=>$model->id)); ?>
+<div style="text-align:right; " ><b>
+<?php echo CHtml::link('Edit',array('update', 'id'=>$model->id)); ?></b>
 </div>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -32,8 +32,8 @@
 		'mobile',
 		'alternate',
 		'fax',
-		'postcodeanywhere_account_code',
-		'postcodeanywhere_license_key',
+		//'postcodeanywhere_account_code',
+		//'postcodeanywhere_license_key',
 		'website',
 		'vat_reg_no',
 		'company_number',

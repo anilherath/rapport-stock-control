@@ -34,7 +34,7 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 	<table><tr>
 		<td style="margin:20px; vertical-align:middle;" ><div id="logo" ><a href="<?php echo Yii::app()->request->baseUrl;?>"><?php echo $setupModel->company; ?></a><br><small>Stock System</small></div></td>
 		<td style="margin:20px; text-align:right;" >
-	<a href="<?php echo Yii::app()->request->baseUrl;?>">
+		<a href="<?php echo Yii::app()->request->baseUrl;?>">
 		<?php echo CHtml::image($company_logo,"ballpop",array("width"=>"200", "height"=>"75"));?> </a>
 	</td>
 	</tr>
@@ -42,17 +42,14 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 	
 	<div style="text-align: center;
 font-weight: bold;
-padding-right: 30px;
-padding-bottom: 1px;
 float: right;
 width: 150px;
-background-color: #298dcd;
-margin: 0px;
-padding: 10px;
+background-color: #FFFFFF;
+height: 20px;
 border-radius: 10px;">
 	
 	<?php 
-	if(Yii::app()->user->isGuest) {
+		if(Yii::app()->user->isGuest) {
 				echo CHtml::link( 'Login' ,array('/site/login')); 
      
 			} else {

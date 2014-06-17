@@ -6,6 +6,7 @@
 	border-radius: 15px;
 	vertical-align: top;
 	width: 75%;
+	padding:15px;
 }
 </style>
 
