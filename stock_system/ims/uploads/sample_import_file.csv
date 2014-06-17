@@ -1,0 +1,11 @@
+item_id,company_id,part_number,name,description,barcode,location_room,location_row,location_column,location_shelf,category_id,current_quantity,available_quantity,recommended_lowest_quantity,recommended_highest_quantity,remarks,active,image_url,sale_price,factory_due_date,suppliers_id,fits_in_model,created,modified,deleted
+1,0,1006863,Charcoalfilter mod.fwu 50,Charcoalfilter mod.fwu 50,1006863,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+2,0,1006864,Charcoalfilter mod.FWU 60,,,2,E,1,,0,9,9,1,9,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+3,0,1006923,Grease filter  ft 60,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+4,0,1006924,Lamp cover,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+5,0,1006929,Grease filter  ft 50,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+6,0,1006931,Exhaust flange  120,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+7,0,1006932,Plug 120,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+8,0,1006945,Reflection plate,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+9,0,1006949,Bulb 40w,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
+10,0,1006953,Masking cover fasten. set,,,,,,,0,0,0,0,0,,1,,0,0000-00-00,0,,1329569531,1329569531,0000-00-00 00:00:00
