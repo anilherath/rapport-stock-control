@@ -16,33 +16,39 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'description'); ?>
+		<?php echo $form->labelEx($model,'information'); ?>
+		<?php echo $form->textArea($model,'information',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'information'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'created_by_user'); ?>
-		<?php echo $form->textField($model,'created_by_user'); ?>
-		<?php echo $form->error($model,'created_by_user'); ?>
+		<?php echo $form->labelEx($model,'published'); ?>
+		<?php echo $form->textField($model,'published'); ?>
+		<?php echo $form->error($model,'published'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'modified_by_user'); ?>
-		<?php echo $form->textField($model,'modified_by_user'); ?>
-		<?php echo $form->error($model,'modified_by_user'); ?>
+		<?php echo $form->labelEx($model,'htmlname'); ?>
+		<?php echo $form->textArea($model,'htmlname',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'htmlname'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'created'); ?>
-		<?php echo $form->textField($model,'created'); ?>
-		<?php echo $form->error($model,'created'); ?>
+		<?php echo $form->labelEx($model,'view_order'); ?>
+		<?php echo $form->textField($model,'view_order'); ?>
+		<?php echo $form->error($model,'view_order'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'modified'); ?>
-		<?php echo $form->textField($model,'modified'); ?>
-		<?php echo $form->error($model,'modified'); ?>
+		<?php echo $form->labelEx($model,'updated_by_user'); ?>
+		<?php echo $form->textField($model,'updated_by_user'); ?>
+		<?php echo $form->error($model,'updated_by_user'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'updated'); ?>
+		<?php echo $form->textField($model,'updated'); ?>
+		<?php echo $form->error($model,'updated'); ?>
 	</div>
 
 	<div class="row buttons">

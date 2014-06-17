@@ -187,7 +187,7 @@ class PurchaseOrder extends CActiveRecord
 		$criteria->compare('suppliers_id',$this->suppliers_id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('order_number',$this->order_number);
-		//$criteria->compare('order_status',$this->order_status);
+		$criteria->compare('order_status',$this->order_status);
 		$criteria->compare('date_of_order',$this->date_of_order,true);
 		$criteria->compare('total_cost',$this->total_cost);
 		$criteria->compare('vat',$this->vat);

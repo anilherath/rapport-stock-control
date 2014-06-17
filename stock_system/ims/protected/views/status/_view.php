@@ -8,25 +8,31 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('description')); ?>:</b>
-	<?php echo CHtml::encode($data->description); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('information')); ?>:</b>
+	<?php echo CHtml::encode($data->information); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by_user')); ?>:</b>
-	<?php echo CHtml::encode($data->created_by_user); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('published')); ?>:</b>
+	<?php echo CHtml::encode($data->published); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('modified_by_user')); ?>:</b>
-	<?php echo CHtml::encode($data->modified_by_user); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('htmlname')); ?>:</b>
+	<?php echo CHtml::encode($data->htmlname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('created')); ?>:</b>
-	<?php echo CHtml::encode($data->created); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('view_order')); ?>:</b>
+	<?php echo CHtml::encode($data->view_order); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('modified')); ?>:</b>
-	<?php echo CHtml::encode($data->modified); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('updated_by_user')); ?>:</b>
+	<?php echo CHtml::encode($data->updated_by_user); ?>
 	<br />
 
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('updated')); ?>:</b>
+	<?php echo CHtml::encode($data->updated); ?>
+	<br />
+
+	*/ ?>
 
 </div>

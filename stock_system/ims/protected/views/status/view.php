@@ -20,10 +20,11 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'name',
-		'description',
-		'created_by_user',
-		'modified_by_user',
-		'created',
-		'modified',
+		'information',
+		'published',
+		'htmlname',
+		'view_order',
+		'updated_by_user',
+		'updated',
 	),
 )); ?>
