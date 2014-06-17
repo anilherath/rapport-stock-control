@@ -40,6 +40,30 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 	</tr>
 	</table>
 	
+	<div style="text-align: center;
+font-weight: bold;
+padding-right: 30px;
+padding-bottom: 1px;
+float: right;
+width: 150px;
+background-color: #298dcd;
+margin: 0px;
+padding: 10px;
+border-radius: 10px;">
+	
+	<?php 
+	if(Yii::app()->user->isGuest) {
+				echo CHtml::link( 'Login' ,array('/site/login')); 
+     
+			} else {
+				echo CHtml::link( 'Logout ('.Yii::app()->user->name.')' ,array('/site/logout')); 
+		
+			}
+			
+		?>
+		
+	</div>
+	<br><br>
 	
 	<div id="header">
 		</div><!-- header -->
@@ -54,15 +78,18 @@ $rapport_stock_logo=Yii::app()->request->baseUrl."/images/rapport_stock_logo.png
 				array('label'=>'Inbound', 'url'=>array('/items/inboundSearch')),
 				array('label'=>'Outbound', 'url'=>array('/items/outboundSearch')),
 				array('label'=>'Purchase Order', 'url'=>array('/purchaseOrder/admin')),
-				array('label'=>'Items on Order', 'url'=>array('/itemOnOrder/admin')),
+				array('label'=>'ItemsOnOrder', 'url'=>array('/itemOnOrder/admin')),
 				//array('label'=>'Suppliers', 'url'=>array('/suppliers/admin')),
 				//array('label'=>'My Account', 'url'=>array('/userGroups/admin')),
 				//array('label'=>'Login', 'url'=>array('/userGroups'), 'visible'=>Yii::app()->user->isGuest),
 				//array('label'=>'My Account', 'url'=>array('/user/'.Yii::app()->user->id), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Set Up', 'url'=>array('/setup/view&id=1')),
 				array('label'=>'Back Up', 'url'=>array('/site/backup'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),),
+				
+				//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				
+				),
 				
 		)); ?>
 	</div><!-- mainmenu -->

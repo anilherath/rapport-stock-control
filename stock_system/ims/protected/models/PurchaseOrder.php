@@ -97,7 +97,7 @@ class PurchaseOrder extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'suppliers_id' => 'Suppliers',
-			'user_id' => 'User',
+			'user_id' => 'Raised By',
 			'order_number' => 'Order Number',
 			'order_status' => 'Order Status',
 			'date_of_order' => 'Date Of Order',

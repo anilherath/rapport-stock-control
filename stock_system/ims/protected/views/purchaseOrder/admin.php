@@ -1,12 +1,9 @@
 <?php
-$this->breadcrumbs=array(
-	'Purchase Orders'=>array('index'),
-	'Manage',
-);
-
+ 
 $this->menu=array(
 	//array('label'=>'List Purchase Order', 'url'=>array('index')),
 	array('label'=>'Create Purchase Order', 'url'=>array('/suppliers/purchaseOrder')),
+	array('label'=>'Add A New Suppliers', 'url'=>array('/suppliers/create')),
 );
  
 ?>
@@ -40,6 +37,7 @@ $this->menu=array(
 	*/
 		//'user_id',
 		array( 'name'=>'user_name', 
+				'header'=>'Raised By',
 			   'value'=>'$data->user->username',
 			 ),
 		//'order_status',
@@ -61,12 +59,13 @@ $this->menu=array(
 //			'filter'=>false,
 //		),
 			array(  
-				'name'=>'date_of_order', 'value'=>'date("d-M-Y", $data->date_of_order)'
+				'name'=>'date_of_order', 'value'=>'$data->date_of_order==null ? "":date("d-M-Y",$data->date_of_order)', 'filter'=>false
 			),
-			array(  
-				'name'=>'date_of_order_recieved','value'=>'date("d-M-Y", $data->date_of_order_recieved)'
-				),
 			
+			 
+			array(  
+				'name'=>'date_of_order_recieved','value'=>'$data->date_of_order_recieved==null ? "":date("d-M-Y",$data->date_of_order_recieved)', 'filter'=>false
+			),
 		/*
 		'total_cost',
 		'vat',
