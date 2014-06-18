@@ -80,17 +80,17 @@ function updateItem($line_of_text)
 		
 		if ($model->save())
 		{
-			echo '<tr style="background-color:#EAF2D3"><td>'.$model->part_number.'</td><td>Part Number Saved</td><td></td> </tr>';
+			echo '<tr style="background-color:#EAF2D3"><td>'.$model->part_number.'</td><td>'.$model->name.'</td><td>Item Saved</td><td></td> </tr>';
 		}else
 		
 		{ 
 			$errors=$model->getErrors();
-			echo '<tr style="background-color:#FF8566"><td>'.$model->part_number.'</td><td>Part Number Not Saved</td><td>';
+			echo '<tr style="background-color:#FF8566"><td>'.$model->part_number.'</td><td>'.$model->name.'</td><td>Item Not Saved</td><td>';
 			
-			echo "Item not imported";
+			echo "Item not imported.<br><b>Reason:</b>";
 			foreach ($errors as $e)
 			{
-				echo "<br>".$e[0];
+				echo "<br>&nbsp;&nbsp;&nbsp;&nbsp;".$e[0];
 				
 			}
 			
