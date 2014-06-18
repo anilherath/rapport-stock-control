@@ -248,7 +248,7 @@ Scotland
 UK',
 		'company_contact_details'=>'Telephone:0845 172 8002 Fax:0845 172 8002 E-mail:stalati@ukwhitegoods.co.uk',
 		'vat_in_percentage'=>'20',	
-		'software_version'=>'0.5.3beta',	
+		'software_version'=>'14',	
 
 	),
 );
