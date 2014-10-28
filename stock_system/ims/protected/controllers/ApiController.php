@@ -312,5 +312,75 @@ class ApiController extends Controller
     }//end of function checkAuth
     
     
+	
+	
+	
+    public function actionUpdatestockfromcsvwithpartnumber()
+    {
+    
+		/////////STEP 1 Read The file Line by Line
+		////The first part of file is npart number and second part is stock value. So you need to store both in variables
+
+    	//echo "<h1>Hello</h1>";		
+		//$filename='stockupdate.csv';
+		$file_handle = fopen("stockupdate.csv","r");
+
+		$i=0;
+
+		while (!feof($file_handle) ) {
+
+		$line_of_text = fgetcsv($file_handle, 1024);
+
+		//echo $i.".".$line_of_text[0]."-".$line_of_text[1]."<BR>";
+		
+		$partnumber=$line_of_text[0];
+		echo "<br>".$i."-".$partnumber."<br>";
+		$stockvalue=$line_of_text[1];
+		$item_id=$this->getidbypartnumber($partnumber,$stockvalue);
+		$i++;
+		
+		
+		}///end of while
+		fclose($file_handle);
+
+		
+		
+		
+		
+    }////end of actionUpdatestockfromcsvwithpartnumber
+	
+	
+////Step 2 ; find by attribute (partnumber)
+///extracxt the id (PK) of that part number	
+	public function getidbypartnumber($partnumber,$stockvalue)
+	{
+		if($model=Items::model()->findByAttributes(array('part_number'=>$partnumber)))
+		{
+		echo '<hr> ITEM ID- '.$model->item_id."<BR>";
+		$id=$model->item_id;
+		$this->updateitemstable($id,$stockvalue);
+		}
+		else
+		{
+		echo "This PartNumber not found in database";
+		}
+	}///end of public getidbypartnumber($partnumber,$stockvalue)
+	
+
+	public function updateitemstable($id,$stockvalue)
+	///Step 3 /// Update by PK item table with the 
+	{
+	$itemModel=Items::model()->findByPk($id);
+	$itemModel->updateByPk(
+								$id,
+								array
+								(
+									'available_quantity'=>$stockvalue,
+									'current_quantity'=>$stockvalue,
+								)														
+								);		
+	echo '<hr>'.$itemModel->available_quantity."<BR>".$itemModel->current_quantity;
+	}/////end of   updateItemstable($id,$stockvalue)
+    
     
 }///end of class 
